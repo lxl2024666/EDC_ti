@@ -27,4 +27,6 @@
 
 #include "Init_SMotor.h"
 
+#include "Cont_SMotor.h"
+
 #endif // ALLHEADERS_H

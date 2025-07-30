@@ -7,29 +7,29 @@
  */
 #include "SensorProc.h"
 
-// 以下函数用于处理陀螺仪
-bool isInTheYaw(float targetYaw, float tolerance)
+Coordinate paperCornerC[4];
+
+//以下函数用于处理视觉模块，主要在绘图的时候使用
+Coordinate paper_to_camera(Coordinate paper)
 {
-    // Check if the current yaw is within the specified tolerance of the target yaw
-    float currentYaw = getYaw(); // Get the current yaw angle
-    float dif = fabs(sumTheta(currentYaw, -targetYaw)); // Calculate the difference between current and target yaw
-    // If the absolute difference is less than the tolerance, return true
-    if (dif < tolerance || 180 - dif < tolerance) {
-        return true; // If within tolerance, return true
-    } else {
-        return false; // Otherwise, return false
-    }
+    paper.x /= PAPERWIDE;
+    paper.y /= PAPERHIGHT;
+    Coordinate camera;
+    camera.x = (paperCornerC[1].x - paperCornerC[0].x) * paper.x 
+    + (paperCornerC[3].x - paperCornerC[0].x) * paper.y;
+    camera.y = (paperCornerC[1].y - paperCornerC[0].y) * paper.x
+    + (paperCornerC[3].y - paperCornerC[0].y) * paper.y;
+    return camera;
 }
 
 //以下函数用于处理灰度传感器
-
 float Grayscale_Num_To_Theta(int num)
 {
     // Convert the sensor number to an angle in degrees
     // The angle is calculated based on the sensor's position
     return RAD_TO_DEG(atan(-(num - (SENSOR_COUNT - 1) / 2.0f) * DisSensor / DisSensorToWheel));
 }
-
+ 
 float thetaGrayscale()
 {
     float theta = 0.0f;
