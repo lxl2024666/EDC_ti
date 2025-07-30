@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P</IncludePath>
+              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -439,6 +439,56 @@
               <FileName>tb6612fng.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Motor_Encoder\tb6612fng.c</FilePath>
+            </File>
+            <File>
+              <FileName>Hall_Encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Motor_Encoder\Hall_Encoder.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Initialize</GroupName>
+          <Files>
+            <File>
+              <FileName>Initialize.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Initialize\Initialize.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Motion</GroupName>
+          <Files>
+            <File>
+              <FileName>kinematics.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Motion\kinematics.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Motion\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>tracking.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Motion\tracking.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Sensor</GroupName>
+          <Files>
+            <File>
+              <FileName>Rotation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Sensor\Rotation.c</FilePath>
+            </File>
+            <File>
+              <FileName>SensorProc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Sensor\SensorProc.c</FilePath>
             </File>
           </Files>
         </Group>

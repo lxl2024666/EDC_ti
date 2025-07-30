@@ -25,6 +25,32 @@ void TIMG1_IRQHandler(void)
     }
 }
 
+// QEI中断处理函数（可选，用于方向改变检测）
+void QEI_0_INST_IRQHandler(void)
+{
+    uint32_t pending_interrupt = DL_TimerG_getPendingInterrupt(QEI_0_INST);
+    
+    if (pending_interrupt & DL_TIMER_IIDX_DIR_CHANGE) 
+    {
+        // 检测方向改变
+        DL_TIMER_QEI_DIRECTION direction = DL_TimerG_getQEIDirection(QEI_0_INST);
+        
+        if (direction == DL_TIMER_QEI_DIR_UP) 
+        {
+            // 正方向（顺时针）
+            DL_GPIO_setPins(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN);
+        } 
+        else 
+        {
+            // 负方向（逆时针）
+            DL_GPIO_clearPins(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN);
+        }
+        
+        // 清除中断标志
+        DL_TimerG_clearInterruptStatus(QEI_0_INST, DL_TIMER_IIDX_DIR_CHANGE);
+    }
+}
+
 // 初始化函数示例
 void Encoder_Example_Init(void)
 {
@@ -40,6 +66,7 @@ void Encoder_Example_Init(void)
     
     // 启用中断
     NVIC_EnableIRQ(TIMG1_INT_IRQn);
+    NVIC_EnableIRQ(QEI_0_INST_INT_IRQN);  // 启用QEI中断（可选）
 }
 
 // 使用示例

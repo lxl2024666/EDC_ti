@@ -16,24 +16,20 @@ void EncoderInit(GPTIMER_Regs *Timer, GPTIMER_Regs *realTimer,
 	encoders[numEncoders].timer = Timer;
 	encoders[numEncoders].realTimer = realTimer;
 	
-	// 初始化QEI模式
-	DL_TimerG_setQEIConfig(Timer, DL_TIMER_QEI_MODE_QUADRATURE,
-		DL_TIMER_QEI_DIRECTION_COUNTUP, DL_TIMER_QEI_INPUT_INVERTED_DISABLE);
-	DL_TimerG_enableQEI(Timer);
-	
-	// 启动定时器
+	// 启动QEI定时器计数器
 	DL_TimerG_startCounter(Timer);
 	
 	// 清除并启动实时定时器中断
 	DL_TimerG_clearInterruptStatus(realTimer, DL_TIMER_INTERRUPT_ZERO_EVENT);
 	DL_TimerG_enableInterrupt(realTimer, DL_TIMER_INTERRUPT_ZERO_EVENT);
 	DL_TimerG_startCounter(realTimer);
-	
-	encoders[numEncoders].reloadFre = ReloadTime(realTimer);
+
+	encoders[numEncoders].reloadFre = 100; // Set reload frequency to 100Hz
 	encoders[numEncoders].speed = 0; // Initialize speed to 0
 	encoders[numEncoders].dis = 0.0; // Initialize distance to 0
-	DL_TimerG_setCounterValue(Timer, 0);
-  encoders[numEncoders].prev_cnt = DL_TimerG_getCounterValue(Timer); // ��ʼ�� prev_cnt
+	// 重置QEI计数器（如果有这个功能的话，否则注释掉）
+	// DL_TimerG_setCounterValue(Timer, 0);
+	encoders[numEncoders].prev_cnt = DL_Timer_getTimerCount(Timer); // 初始化 prev_cnt
 
 
 	EncoderParamInit(&encoders[numEncoders].param, wheelLength, ppr);
@@ -73,12 +69,12 @@ void UpdateSpeed(int i, GPTIMER_Regs *reload_tim)
 	}
 	if(reload_tim == encoders[i].realTimer)
 	{
-		 int16_t current_cnt = DL_TimerG_getCounterValue(encoders[i].timer); // ��ȡ��ǰ����ֵ
-        // ��������������Ǳ�ڵ� 16 λ��ʱ�����/����
-        // ����ʹ�� 16 λ��ʱ�����Ҽ���ֵ�� int16_t ��Χ��
+		 int16_t current_cnt = DL_Timer_getTimerCount(encoders[i].timer); // 获取当前计数值
+        // 计算速度差值（考虑16位定时器溢出/下溢）
+        // 假设使用16位定时器且计数值在int16_t范围内
      encoders[i].speed = (int16_t)(current_cnt - encoders[i].prev_cnt);
 
-     encoders[i].prev_cnt = current_cnt; // ����ǰһ������ֵ�����´ε���ʹ��
+     encoders[i].prev_cnt = current_cnt; // 保存当前计数值，供下次调用使用
      encoders[i].dis += StoDis(encoders[i]);
 	}
 }
@@ -159,17 +155,4 @@ double rDis()
 		return 0.0; // No right encoder initialized
 	}
 	return getDis(1); // Distance traveled by right wheel
-}
-
-uint32_t ReloadTime(GPTIMER_Regs* tim)
-{
-	// 获取系统时钟频率 (32MHz)
-	uint32_t system_clk = CPUCLK_FREQ;
-	
-	// 获取定时器的预分频值和重载值
-	uint32_t psc = DL_TimerG_getPrescaler(tim);
-	uint32_t arr = DL_TimerG_getLoadValue(tim);
-	
-	// 计算定时器频率
-	return system_clk / ((psc + 1) * (arr + 1));
 }

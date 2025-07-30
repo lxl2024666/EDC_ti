@@ -5,6 +5,13 @@
 ".\objects\delay.o"
 ".\objects\oled.o"
 ".\objects\tb6612fng.o"
+".\objects\hall_encoder.o"
+".\objects\initialize.o"
+".\objects\kinematics.o"
+".\objects\pid.o"
+".\objects\tracking.o"
+".\objects\rotation.o"
+".\objects\sensorproc.o"
 --strict --scatter "./mspm0g3507.sct"
 ../../../source/ti/driverlib/lib/keil/m0p/mspm0g1x0x_g3x0x/driverlib.a --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

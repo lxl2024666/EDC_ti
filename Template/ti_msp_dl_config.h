@@ -150,6 +150,14 @@ extern "C" {
 #define GPIO_QEI_0_PHB_IOMUX_FUNC                     IOMUX_PINCM7_PF_TIMG8_CCP1
 
 
+/* Defines for TIMER_0 */
+#define TIMER_0_INST                                                     (TIMA0)
+#define TIMER_0_INST_IRQHandler                                 TIMA0_IRQHandler
+#define TIMER_0_INST_INT_IRQN                                   (TIMA0_INT_IRQn)
+#define TIMER_0_INST_LOAD_VALUE                                         (39999U)
+
+
+
 
 /* Defines for I2C_0 */
 #define I2C_0_INST                                                          I2C0
@@ -311,6 +319,7 @@ void SYSCFG_DL_Motor_init(void);
 void SYSCFG_DL_SMotor_init(void);
 void SYSCFG_DL_Servo_init(void);
 void SYSCFG_DL_QEI_0_init(void);
+void SYSCFG_DL_TIMER_0_init(void);
 void SYSCFG_DL_I2C_0_init(void);
 void SYSCFG_DL_I2C_1_init(void);
 void SYSCFG_DL_Debug_init(void);

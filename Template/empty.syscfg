@@ -28,6 +28,8 @@ const QEI     = scripting.addModule("/ti/driverlib/QEI", {}, false);
 const QEI1    = QEI.addInstance();
 const SYSCTL  = scripting.addModule("/ti/driverlib/SYSCTL");
 const SYSTICK = scripting.addModule("/ti/driverlib/SYSTICK");
+const TIMER   = scripting.addModule("/ti/driverlib/TIMER", {}, false);
+const TIMER1  = TIMER.addInstance();
 const UART    = scripting.addModule("/ti/driverlib/UART", {}, false);
 const UART1   = UART.addInstance();
 const UART2   = UART.addInstance();
@@ -172,6 +174,15 @@ SYSTICK.interruptEnable   = true;
 SYSTICK.systickEnable     = true;
 SYSTICK.period            = 32000;
 SYSTICK.interruptPriority = "3";
+
+TIMER1.$name              = "TIMER_0";
+TIMER1.timerClkPrescale   = 100;
+TIMER1.timerMode          = "PERIODIC";
+TIMER1.interrupts         = ["ZERO"];
+TIMER1.timerClkDiv        = 8;
+TIMER1.timerStartTimer    = true;
+TIMER1.timerPeriod        = "10ms";
+TIMER1.peripheral.$assign = "TIMA0";
 
 UART1.$name                            = "Debug";
 UART1.peripheral.$assign               = "UART0";

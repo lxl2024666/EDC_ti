@@ -31,10 +31,13 @@
  */
 
 
-#include "AllHeaders.h"
+#include "AllHeader.h"
+//编码器未测试(定时器已测试
+//灰度传感器未移植
 
 // 测试区
 int a ;
+uint32_t tick;
 
 
 int main(void)
@@ -64,6 +67,7 @@ void SysTick_Handler(void)
 		// 自分频
 		static int k = 0 ;
 		k ++ ;
+	tick ++;
 		if (k == 1000)
 		{
 			k = 0 ;
