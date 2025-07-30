@@ -264,21 +264,21 @@ SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
 
 
 /*
- * Timer clock configuration to be sourced by  / 1 (32000000 Hz)
+ * Timer clock configuration to be sourced by  / 8 (4000000 Hz)
  * timerClkFreq = (timerClkSrc / (timerClkDivRatio * (timerClkPrescale + 1)))
- *   32000000 Hz = 32000000 Hz / (1 * (0 + 1))
+ *   4000000 Hz = 4000000 Hz / (8 * (0 + 1))
  */
 static const DL_TimerG_ClockConfig gMotorClockConfig = {
     .clockSel = DL_TIMER_CLOCK_BUSCLK,
-    .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
+    .divideRatio = DL_TIMER_CLOCK_DIVIDE_8,
     .prescale = 0U
 };
 
 static const DL_TimerG_PWMConfig gMotorConfig = {
-    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN,
+    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN_UP,
     .period = 1000,
     .isTimerWithFourCC = false,
-    .startTimer = DL_TIMER_STOP,
+    .startTimer = DL_TIMER_START,
 };
 
 SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
@@ -297,14 +297,14 @@ SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
 		DL_TIMERG_CAPTURE_COMPARE_0_INDEX);
 
     DL_TimerG_setCaptCompUpdateMethod(Motor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERG_CAPTURE_COMPARE_0_INDEX);
-    DL_TimerG_setCaptureCompareValue(Motor_INST, 1000, DL_TIMER_CC_0_INDEX);
+    DL_TimerG_setCaptureCompareValue(Motor_INST, 500, DL_TIMER_CC_0_INDEX);
 
     DL_TimerG_setCaptureCompareOutCtl(Motor_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
 		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
 		DL_TIMERG_CAPTURE_COMPARE_1_INDEX);
 
     DL_TimerG_setCaptCompUpdateMethod(Motor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERG_CAPTURE_COMPARE_1_INDEX);
-    DL_TimerG_setCaptureCompareValue(Motor_INST, 1000, DL_TIMER_CC_1_INDEX);
+    DL_TimerG_setCaptureCompareValue(Motor_INST, 500, DL_TIMER_CC_1_INDEX);
 
     DL_TimerG_enableClock(Motor_INST);
 

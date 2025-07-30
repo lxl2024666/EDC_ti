@@ -9,28 +9,28 @@
 
 void OLED_W_SCL( uint8_t x)
 {
-		if ( x )
-		{
-			DL_GPIO_setPins(OLED_PORT , OLED_OLED_SCL_PIN) ;
-		}
-		else
-		{
-			DL_GPIO_clearPins(OLED_PORT , OLED_OLED_SCL_PIN) ;
-		}
-		Delay_us(1) ;
+//		if ( x )
+//		{
+//			DL_GPIO_setPins(OLED_PORT , OLED_OLED_SCL_PIN) ;
+//		}
+//		else
+//		{
+//			DL_GPIO_clearPins(OLED_PORT , OLED_OLED_SCL_PIN) ;
+//		}
+//		Delay_us(1) ;
 }
 
 void OLED_W_SDA( uint8_t x)
 {
-		if ( x )
-		{
-			DL_GPIO_setPins(OLED_PORT , OLED_OLED_SDK_PIN) ;
-		}
-		else
-		{
-			DL_GPIO_clearPins(OLED_PORT , OLED_OLED_SDK_PIN) ;
-		}
-		Delay_us(1) ;
+//		if ( x )
+//		{
+//			DL_GPIO_setPins(OLED_PORT , OLED_OLED_SDK_PIN) ;
+//		}
+//		else
+//		{
+//			DL_GPIO_clearPins(OLED_PORT , OLED_OLED_SDK_PIN) ;
+//		}
+//		Delay_us(1) ;
 }
 
 /*引脚初始化*/

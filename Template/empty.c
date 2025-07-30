@@ -31,9 +31,7 @@
  */
 
 
-#include "ti_msp_dl_config.h"
-#include "OLED.h"
-#include "Delay.h"
+#include "AllHeaders.h"
 
 // 测试区
 int a ;
@@ -48,8 +46,13 @@ int main(void)
 		OLED_Clear() ;
 		OLED_ShowString(1,1,"hello") ;
 
+		Motor M;
+		Motor_UI_Init(&M, Motor_IO_AIN1_PORT, Motor_IO_AIN1_PIN, Motor_IO_AIN2_PORT, Motor_IO_AIN2_PIN,
+			Motor_INST, DL_TIMER_CC_0_INDEX, 0);
+
     while (1) 
-		{
+	{
+			Motor_UI_Set(FOR, 300, &M); // 正转，50%占空比
 			Delay_ms(1000) ;
 			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
 			OLED_ShowNum(2,1,a++,3) ;
