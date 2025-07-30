@@ -139,7 +139,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2></Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor</IncludePath>
+              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor;..\BSP\SMotor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -455,6 +455,11 @@
               <FileType>1</FileType>
               <FilePath>..\Utils\Initialize\Initialize.c</FilePath>
             </File>
+            <File>
+              <FileName>Init_SMotor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Initialize\Init_SMotor.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -489,6 +494,16 @@
               <FileName>SensorProc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Utils\Sensor\SensorProc.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP\SMotor</GroupName>
+          <Files>
+            <File>
+              <FileName>SMotor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\SMotor\SMotor.c</FilePath>
             </File>
           </Files>
         </Group>

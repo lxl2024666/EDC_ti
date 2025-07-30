@@ -324,12 +324,12 @@ SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
 /*
  * Timer clock configuration to be sourced by  / 1 (32000000 Hz)
  * timerClkFreq = (timerClkSrc / (timerClkDivRatio * (timerClkPrescale + 1)))
- *   32000000 Hz = 32000000 Hz / (1 * (0 + 1))
+ *   8000000 Hz = 32000000 Hz / (1 * (3 + 1))
  */
 static const DL_TimerG_ClockConfig gSMotorClockConfig = {
     .clockSel = DL_TIMER_CLOCK_BUSCLK,
     .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
-    .prescale = 0U
+    .prescale = 3U
 };
 
 static const DL_TimerG_PWMConfig gSMotorConfig = {
@@ -460,7 +460,7 @@ static const DL_TimerA_ClockConfig gTIMER_0ClockConfig = {
 
 /*
  * Timer load value (where the counter starts from) is calculated as (timerPeriod * timerClockFreq) - 1
- * TIMER_0_INST_LOAD_VALUE = (1000ms * 40000 Hz) - 1
+ * TIMER_0_INST_LOAD_VALUE = (10ms * 40000 Hz) - 1
  */
 static const DL_TimerA_TimerConfig gTIMER_0TimerConfig = {
     .period     = TIMER_0_INST_LOAD_VALUE,
@@ -515,7 +515,17 @@ SYSCONFIG_WEAK void SYSCFG_DL_I2C_1_init(void) {
         DL_I2C_ANALOG_GLITCH_FILTER_WIDTH_50NS);
     DL_I2C_enableAnalogGlitchFilter(I2C_1_INST);
 
+    /* Configure Controller Mode */
+    DL_I2C_resetControllerTransfer(I2C_1_INST);
+    /* Set frequency to 400000 Hz*/
+    DL_I2C_setTimerPeriod(I2C_1_INST, 7);
+    DL_I2C_setControllerTXFIFOThreshold(I2C_1_INST, DL_I2C_TX_FIFO_LEVEL_EMPTY);
+    DL_I2C_setControllerRXFIFOThreshold(I2C_1_INST, DL_I2C_RX_FIFO_LEVEL_BYTES_1);
+    DL_I2C_enableControllerClockStretching(I2C_1_INST);
 
+
+    /* Enable module */
+    DL_I2C_enableController(I2C_1_INST);
 
 
 }

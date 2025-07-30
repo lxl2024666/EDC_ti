@@ -6,7 +6,7 @@ CarState car; // Declare car state for kinematics
 Data current_data;
 int Digital[8];
 char error_message[100]; // Buffer for error messages
-double GyroscopeChannelData[10];
+double GyroscopeChannelData[10] = {0};
 
 
 void MECInit()
@@ -30,10 +30,6 @@ void MECInit()
 
     // 初始化单个编码器 (不使用LR模式)
     EncoderInit(ENCODER_QEI_TIMER, ENCODER_REAL_TIMER, WHEEL_DIAMETER, PPR * REDUCE);
-    
-    CarState_Init(&car); // Initialize the car state
-    // Set the initial speed to default
-    car.pose.initial_theta = CalibrateYawOffset(); // Calibrate the initial yaw offset
 }
 
 void LMotorSet(MOVETYPE type, uint16_t duty)
@@ -170,6 +166,6 @@ void error_handler(void)
 {
     Break(); // Stop the motors
     OLED_Clear(); // Clear the OLED display
-    OLED_ShowString(0, 0, error_message); // Display the error message on the OLED
+    OLED_ShowString(0, 0, error_message, 8); // Display the error message on the OLED
     while(1); // Infinite loop to halt the program
 }

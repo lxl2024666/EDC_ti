@@ -99,7 +99,7 @@ extern "C" {
 #define SMotor_INST                                                        TIMG6
 #define SMotor_INST_IRQHandler                                  TIMG6_IRQHandler
 #define SMotor_INST_INT_IRQN                                    (TIMG6_INT_IRQn)
-#define SMotor_INST_CLK_FREQ                                            32000000
+#define SMotor_INST_CLK_FREQ                                             8000000
 /* GPIO defines for channel 0 */
 #define GPIO_SMotor_C0_PORT                                                GPIOA
 #define GPIO_SMotor_C0_PIN                                        DL_GPIO_PIN_29
@@ -154,7 +154,7 @@ extern "C" {
 #define TIMER_0_INST                                                     (TIMA0)
 #define TIMER_0_INST_IRQHandler                                 TIMA0_IRQHandler
 #define TIMER_0_INST_INT_IRQN                                   (TIMA0_INT_IRQn)
-#define TIMER_0_INST_LOAD_VALUE                                         (39999U)
+#define TIMER_0_INST_LOAD_VALUE                                           (399U)
 
 
 

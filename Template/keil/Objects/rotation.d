@@ -77,4 +77,5 @@
   ..\Utils\Motion\tracking.h ..\Utils\Motion\tracking_delay.h \
   ..\BSP\Motor_Encoder\Hall_Encoder.h ..\Utils\Initialize\Initialize.h \
   ..\Utils\Motion\kinematics.h ..\Utils\Motion\pid.h \
-  ..\Utils\Sensor\SensorProc.h
+  ..\Utils\Sensor\SensorProc.h ..\BSP\SMotor\SMotor.h \
+  ..\Utils\Initialize\Init_SMotor.h

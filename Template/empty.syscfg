@@ -97,12 +97,14 @@ I2C1.peripheral.sclPin.$assign = "PA1";
 I2C1.sdaPinConfig.$name        = "ti_driverlib_gpio_GPIOPinGeneric0";
 I2C1.sclPinConfig.$name        = "ti_driverlib_gpio_GPIOPinGeneric1";
 
-I2C2.$name                     = "I2C_1";
-I2C2.peripheral.$assign        = "I2C1";
-I2C2.peripheral.sdaPin.$assign = "PA10";
-I2C2.peripheral.sclPin.$assign = "PA11";
-I2C2.sdaPinConfig.$name        = "ti_driverlib_gpio_GPIOPinGeneric2";
-I2C2.sclPinConfig.$name        = "ti_driverlib_gpio_GPIOPinGeneric3";
+I2C2.$name                           = "I2C_1";
+I2C2.basicEnableController           = true;
+I2C2.basicControllerStandardBusSpeed = "Fast";
+I2C2.peripheral.$assign              = "I2C1";
+I2C2.peripheral.sdaPin.$assign       = "PA10";
+I2C2.peripheral.sclPin.$assign       = "PA11";
+I2C2.sdaPinConfig.$name              = "ti_driverlib_gpio_GPIOPinGeneric2";
+I2C2.sclPinConfig.$name              = "ti_driverlib_gpio_GPIOPinGeneric3";
 
 PWM1.$name                              = "Motor";
 PWM1.clockDivider                       = 8;
@@ -127,6 +129,7 @@ PWM1.ccp1PinConfig.onlyInternalResistor = scripting.forceWrite(false);
 PWM1.ccp1PinConfig.passedPeripheralType = scripting.forceWrite("Digital");
 
 PWM2.$name                              = "SMotor";
+PWM2.clockPrescale                      = 4;
 PWM2.peripheral.$assign                 = "TIMG6";
 PWM2.peripheral.ccp0Pin.$assign         = "PA29";
 PWM2.peripheral.ccp1Pin.$assign         = "PA30";

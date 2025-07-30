@@ -34,9 +34,11 @@
 #include "AllHeader.h"
 //编码器未测试(定时器已测试
 //灰度传感器未移植
+//OLED以及状态机
+//普通电机左右未测试
 
 // 测试区
-int a ;
+int a;
 uint32_t tick;
 
 
@@ -47,18 +49,17 @@ int main(void)
 	  // OLED配置,需要在C/C++添加路径: 				D:\appDownload\STM32\Ti\mspm0_sdk_2_04_00_06\test3_OLED\ , 否则找不到路径
 		OLED_Init() ;
 		OLED_Clear() ;
-		OLED_ShowString(1,1,"hello") ;
+		OLED_ShowString(1,1,"hello", 8);
 
-		Motor M;
-		Motor_UI_Init(&M, Motor_IO_AIN1_PORT, Motor_IO_AIN1_PIN, Motor_IO_AIN2_PORT, Motor_IO_AIN2_PIN,
-			Motor_INST, DL_TIMER_CC_0_INDEX, 0);
+		MECInit();
+		YP_SMotor_Init();
+		YP_SMotor_SetSpeed(30, -30);
+
 
     while (1) 
-	{
-			Motor_UI_Set(FOR, 300, &M); // 正转，50%占空比
+		{
 			Delay_ms(1000) ;
 			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
-			OLED_ShowNum(2,1,a++,3) ;
     }
 }
 

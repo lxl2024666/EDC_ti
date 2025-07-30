@@ -17,7 +17,7 @@ Library Manager: ArmAr.exe V6.23
 Hex Converter:   FromElf.exe V6.23
 CPU DLL:         SARMCM3.DLL V5.42.0.0
 Dialog DLL:      DARMCM1.DLL V1.19.6.0
-Target DLL:      CMSIS_AGDI.dll V1.33.22.0
+Target DLL:      Segger\JL2CM3.dll V2.99.45.0
 Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
@@ -37,12 +37,23 @@ info: SMotor(/ti/driverlib/PWM): Peripheral does not retain register contents in
 info: QEI_0(/ti/driverlib/QEI): Peripheral does not retain register contents in STOP or STANDBY modes. User should take care to save and restore register configuration in application. See Retention Configuration section for more details.
 info: TIMER_0(/ti/driverlib/TIMER): Peripheral does not retain register contents in STOP or STANDBY modes. User should take care to save and restore register configuration in application. See Retention Configuration section for more details.
 Generating Code (empty.syscfg)...
-Unchanged D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.c...
-Unchanged D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.h...
-Unchanged D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\Event.dot...
-compiling Initialize.c...
+Writing D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.c...
+Writing D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.h...
+Error: UNKNOWN: unknown error, open 'D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.h'
+    at Object.openSync (node:fs:561:18)
+    at Object.writeFileSync (node:fs:2358:35)
+    at s.writeFile (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\src\pinmux\services\fileSystem.ts:37:11)
+    at iteratee (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\src\pinmux\services\codeGeneration\codeGenerator.ts:236:8)
+    at baseEach (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\node_modules\lodash\lodash.js:530:11)
+    at Function.each (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\node_modules\lodash\lodash.js:9409:52)
+    at writeOutputFiles (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\src\pinmux\services\codeGeneration\codeGenerator.ts:223:4)
+    at iteratee (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\src\cli\cli_core.ts:135:6)
+    at baseEach (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\node_modules\lodash\lodash.js:530:11)
+    at Function.va (D:\profiles\TI\sysconfig_1.24.1\dist\webpack:\sysconfig\node_modules\lodash\lodash.js:9409:52)
+compiling ti_msp_dl_config.c...
+compiling empty.c...
 linking...
-Program Size: Code=6662 RO-data=1842 RW-data=0 ZI-data=1032  
+Program Size: Code=8684 RO-data=2476 RW-data=28 ZI-data=1588  
 FromELF: creating hex file...
 ".\Objects\empty_LP_MSPM0G3507_nortos_keil.axf" - 0 Error(s), 0 Warning(s).
 

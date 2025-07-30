@@ -23,4 +23,8 @@
 #include "SensorProc.h"
 #include "Rotation.h"
 
+#include "SMotor.h"
+
+#include "Init_SMotor.h"
+
 #endif // ALLHEADERS_H
