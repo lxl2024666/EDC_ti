@@ -394,11 +394,10 @@ ARM Macro Assembler    Page 6
 ARM Macro Assembler    Page 7 
 
 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --depend=.\o
-bjects\startup_mspm0g350x_uvision.d -o.\objects\startup_mspm0g350x_uvision.o -I
-.\RTE\_empty_LP_MSPM0G3507_nortos_keil -ID:\Keil_v5\ARM\CMSIS\Include --predefi
-ne="__UVISION_VERSION SETA 527" --predefine="__MSPM0G3507__ SETA 1" --list=.\st
-artup_mspm0g350x_uvision.lst startup_mspm0g350x_uvision.s
+Command Line: --debug --xref --diag_suppress=9931,A1950W --cpu=Cortex-M0+ --dep
+end=.\objects\startup_mspm0g350x_uvision.d -o.\objects\startup_mspm0g350x_uvisi
+on.o --predefine="__UVISION_VERSION SETA 539" --predefine="__MSPM0G3507__ SETA 
+1" --list=.\startup_mspm0g350x_uvision.lst startup_mspm0g350x_uvision.s
 
 
 

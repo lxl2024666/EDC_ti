@@ -137,7 +137,7 @@ Reset_Handler   PROC
 				; SystemInit can be called here, but not necessary for MSPM0
                 ;LDR     R0, =SystemInit
                 ;BLX     R0
-                LDR     R0, =__main
+                LDR     Rv0, =__main
                 BX      R0
                 ENDP
 

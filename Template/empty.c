@@ -51,7 +51,7 @@ int main(void)
     while (1) 
 		{
 			Delay_ms(1000) ;
-//			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
+			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
 			OLED_ShowNum(2,1,a++,3) ;
     }
 }
