@@ -69,16 +69,38 @@ void menu_init(void)
     ModeTree *ProHMenu1 = createModeTree(ProH1);
     ModeTree *ProHMenu2 = createModeTree(ProH2);
 
-    addChild(problemBMenu, ProBMenu1);
-    addChild(problemBMenu, ProBMenu2_3);
-    addChild(proHMenu, ProHMenu1);
-    addChild(proHMenu, ProHMenu2);
+    addChild(problemBMenu, ProBMenu1);//有下一级菜单
+    addChild(problemBMenu, ProBMenu2_3);//无下一级菜单
+    addChild(proHMenu, ProHMenu1);//有下一级菜单
+    addChild(proHMenu, ProHMenu2);//无下一级菜单
 
     for(int i = 0; i < 5; i++)
     {
-        char CircleNum = '0' + i + 1; // Convert to character '1', '2', etc.
-        ModeNode CircleNode = {
+        char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
+        ModeNode CircleNode = {ProB1, CircleNum};
+        ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
+        addChild(ProBMenu1, circleMenu); // Add the circle menu to the Problem B menu
+        if (circleMenu == NULL) {
+            #ifdef INITIALIZE_H
+            sprintf(error_message, "Failed to create circle menu %d", i + 1);
+            #endif
+            error_handler(); // Handle error if circle menu creation fails
+        }
+    }
 
+    for(int i = 0; i < 2; i++)
+    {
+        char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
+        ModeNode CircleNode = {ProH1, CircleNum};
+        ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
+        addChild(ProHMenu1, circleMenu); // Add the circle menu to the Problem H menu
+        if (circleMenu == NULL) {
+            #ifdef INITIALIZE_H
+            sprintf(error_message, "Failed to create circle menu %d", i + 1);
+            #endif
+            error_handler(); // Handle error if circle menu creation fails
+        }
+    }
     return;
 }
 
