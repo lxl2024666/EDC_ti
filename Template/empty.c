@@ -32,10 +32,14 @@
 
 
 #include "AllHeader.h"
+#include "Laser_USART.h"
 //编码器未测试(定时器已测试
 //灰度传感器未移植
 //OLED以及状态机
 //普通电机左右未测试
+// 激光位置串口通信测试
+extern uint8_t USART_LASER_RX_BUF[USART_LASER_RX_BUF_LEN] ;
+extern int Laser_Loc[USART_LASER_RX_BUF_LEN] ;
 
 // 测试区
 int a;
@@ -44,20 +48,44 @@ uint32_t tick;
 
 int main(void)
 {
-    SYSCFG_DL_init();
+	SYSCFG_DL_init();
 
-	  // OLED配置,需要在C/C++添加路径: 				D:\appDownload\STM32\Ti\mspm0_sdk_2_04_00_06\test3_OLED\ , 否则找不到路径
-		OLED_Init() ;
-		OLED_Clear() ;
-		OLED_ShowString(1,1,"hello", 8);
+	// OLED配置,需要在C/C++添加路径: 				D:\appDownload\STM32\Ti\mspm0_sdk_2_04_00_06\test3_OLED\ , 否则找不到路径
+	OLED_Init() ;
+	OLED_Clear() ;
+	OLED_ShowString(8,0,"Hello NUEDC!", 8);
+	
+	//Car1 Init
+	MECInit();
 
-		MECInit();
-		RSet(-300);
-
+	// 激光初始化
+	Laser_USART_Init() ;
+	Laser_Ask_for_Loc() ;
     while (1) 
 		{
-			Delay_ms(1000) ;
-			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
+			Delay_ms(1000);
+			OLED_ShowString(8,0,"Hello NUEDC!", 8);			
+    }
+}
+
+// 激光串口的中断服务函数
+void UART_0_INST_IRQHandler(void)
+{
+    //如果产生了串口中断
+    switch( DL_UART_getPendingInterrupt(LASER_UART) )
+    {
+			  //如果是接收中断
+        case DL_UART_IIDX_RX:
+					  // 处理数据(直接不要变量接收了,直接函数return为参数)
+						Laser_Loc_Update( DL_UART_Main_receiveData(LASER_UART) ) ;
+				    //重新要求发送激光数据
+            Laser_Ask_for_Loc();
+						#ifdef LASER_DEBUG
+						Laser_send_char(DL_UART_Main_receiveData(LASER_UART)) ;	// 看看回显,我发现打开这个debug之后函数发送回显会丢失第三个数据
+						#endif
+            break;
+        default://其他的串口中断
+            break;
     }
 }
 
@@ -70,7 +98,6 @@ void SysTick_Handler(void)
 		if (k == 1000)
 		{
 			k = 0 ;
-			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
 		}
 }
 

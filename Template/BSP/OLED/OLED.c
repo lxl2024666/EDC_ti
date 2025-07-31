@@ -28,19 +28,7 @@ void WriteCmd(void)
 {
     uint8_t i = 0;
     for(i = 0; i < 27; i++) {
-        // 使用TI DriverLib I2C函数发送命令
-        DL_I2C_startControllerTransfer(OLED_I2C_INST, OLED_I2C_ADDR, 
-                                       DL_I2C_CONTROLLER_DIRECTION_TX, 2);
-        
-        // 发送寄存器地址
-        DL_I2C_flushControllerTXFIFO(OLED_I2C_INST);
-        DL_I2C_fillControllerTXFIFO(OLED_I2C_INST, OLED_CMD_REG, 1);
-        
-        // 发送命令数据
-        DL_I2C_fillControllerTXFIFO(OLED_I2C_INST, &CMD_Data[i], 1);
-        
-        // 等待传输完成
-        while(DL_I2C_getControllerStatus(OLED_I2C_INST) & DL_I2C_CONTROLLER_STATUS_BUSY_BUS);
+        OLED_WR_CMD(CMD_Data[i]); // 调用已有的命令发送函数
     }
 }
 

@@ -113,24 +113,6 @@ extern "C" {
 #define GPIO_SMotor_C1_IOMUX_FUNC                     IOMUX_PINCM5_PF_TIMG6_CCP1
 #define GPIO_SMotor_C1_IDX                                   DL_TIMER_CC_1_INDEX
 
-/* Defines for Servo */
-#define Servo_INST                                                         TIMG0
-#define Servo_INST_IRQHandler                                   TIMG0_IRQHandler
-#define Servo_INST_INT_IRQN                                     (TIMG0_INT_IRQn)
-#define Servo_INST_CLK_FREQ                                             32000000
-/* GPIO defines for channel 0 */
-#define GPIO_Servo_C0_PORT                                                 GPIOA
-#define GPIO_Servo_C0_PIN                                         DL_GPIO_PIN_12
-#define GPIO_Servo_C0_IOMUX                                      (IOMUX_PINCM34)
-#define GPIO_Servo_C0_IOMUX_FUNC                     IOMUX_PINCM34_PF_TIMG0_CCP0
-#define GPIO_Servo_C0_IDX                                    DL_TIMER_CC_0_INDEX
-/* GPIO defines for channel 1 */
-#define GPIO_Servo_C1_PORT                                                 GPIOA
-#define GPIO_Servo_C1_PIN                                         DL_GPIO_PIN_13
-#define GPIO_Servo_C1_IOMUX                                      (IOMUX_PINCM35)
-#define GPIO_Servo_C1_IOMUX_FUNC                     IOMUX_PINCM35_PF_TIMG0_CCP1
-#define GPIO_Servo_C1_IDX                                    DL_TIMER_CC_1_INDEX
-
 
 
 
@@ -159,23 +141,11 @@ extern "C" {
 
 
 
-/* Defines for I2C_0 */
-#define I2C_0_INST                                                          I2C0
-#define I2C_0_INST_IRQHandler                                    I2C0_IRQHandler
-#define I2C_0_INST_INT_IRQN                                        I2C0_INT_IRQn
-#define GPIO_I2C_0_SDA_PORT                                                GPIOA
-#define GPIO_I2C_0_SDA_PIN                                         DL_GPIO_PIN_0
-#define GPIO_I2C_0_IOMUX_SDA                                      (IOMUX_PINCM1)
-#define GPIO_I2C_0_IOMUX_SDA_FUNC                       IOMUX_PINCM1_PF_I2C0_SDA
-#define GPIO_I2C_0_SCL_PORT                                                GPIOA
-#define GPIO_I2C_0_SCL_PIN                                         DL_GPIO_PIN_1
-#define GPIO_I2C_0_IOMUX_SCL                                      (IOMUX_PINCM2)
-#define GPIO_I2C_0_IOMUX_SCL_FUNC                       IOMUX_PINCM2_PF_I2C0_SCL
-
 /* Defines for I2C_1 */
 #define I2C_1_INST                                                          I2C1
 #define I2C_1_INST_IRQHandler                                    I2C1_IRQHandler
 #define I2C_1_INST_INT_IRQN                                        I2C1_INT_IRQn
+#define I2C_1_BUS_SPEED_HZ                                                800000
 #define GPIO_I2C_1_SDA_PORT                                                GPIOA
 #define GPIO_I2C_1_SDA_PIN                                        DL_GPIO_PIN_10
 #define GPIO_I2C_1_IOMUX_SDA                                     (IOMUX_PINCM21)
@@ -202,22 +172,6 @@ extern "C" {
 #define Debug_BAUD_RATE                                                   (9600)
 #define Debug_IBRD_32_MHZ_9600_BAUD                                        (208)
 #define Debug_FBRD_32_MHZ_9600_BAUD                                         (21)
-/* Defines for IMU */
-#define IMU_INST                                                           UART1
-#define IMU_INST_FREQUENCY                                              32000000
-#define IMU_INST_IRQHandler                                     UART1_IRQHandler
-#define IMU_INST_INT_IRQN                                         UART1_INT_IRQn
-#define GPIO_IMU_RX_PORT                                                   GPIOA
-#define GPIO_IMU_TX_PORT                                                   GPIOA
-#define GPIO_IMU_RX_PIN                                            DL_GPIO_PIN_9
-#define GPIO_IMU_TX_PIN                                            DL_GPIO_PIN_8
-#define GPIO_IMU_IOMUX_RX                                        (IOMUX_PINCM20)
-#define GPIO_IMU_IOMUX_TX                                        (IOMUX_PINCM19)
-#define GPIO_IMU_IOMUX_RX_FUNC                         IOMUX_PINCM20_PF_UART1_RX
-#define GPIO_IMU_IOMUX_TX_FUNC                         IOMUX_PINCM19_PF_UART1_TX
-#define IMU_BAUD_RATE                                                     (9600)
-#define IMU_IBRD_32_MHZ_9600_BAUD                                          (208)
-#define IMU_FBRD_32_MHZ_9600_BAUD                                           (21)
 /* Defines for K230 */
 #define K230_INST                                                          UART2
 #define K230_INST_FREQUENCY                                             32000000
@@ -240,23 +194,11 @@ extern "C" {
 
 
 /* Port definition for Pin Group LED */
-#define LED_PORT                                                         (GPIOA)
+#define LED_PORT                                                         (GPIOB)
 
-/* Defines for LED0: GPIOA.14 with pinCMx 36 on package pin 7 */
-#define LED_LED0_PIN                                            (DL_GPIO_PIN_14)
-#define LED_LED0_IOMUX                                           (IOMUX_PINCM36)
-/* Port definition for Pin Group Buzzer */
-#define Buzzer_PORT                                                      (GPIOB)
-
-/* Defines for PIN_0: GPIOB.13 with pinCMx 30 on package pin 1 */
-#define Buzzer_PIN_0_PIN                                        (DL_GPIO_PIN_13)
-#define Buzzer_PIN_0_IOMUX                                       (IOMUX_PINCM30)
-/* Port definition for Pin Group Tube_Sign */
-#define Tube_Sign_PORT                                                   (GPIOB)
-
-/* Defines for Sign: GPIOB.22 with pinCMx 50 on package pin 21 */
-#define Tube_Sign_Sign_PIN                                      (DL_GPIO_PIN_22)
-#define Tube_Sign_Sign_IOMUX                                     (IOMUX_PINCM50)
+/* Defines for LED0: GPIOB.22 with pinCMx 50 on package pin 21 */
+#define LED_LED0_PIN                                            (DL_GPIO_PIN_22)
+#define LED_LED0_IOMUX                                           (IOMUX_PINCM50)
 /* Port definition for Pin Group Key */
 #define Key_PORT                                                         (GPIOB)
 
@@ -294,18 +236,38 @@ extern "C" {
 #define Motor_IO_BIN2_PORT                                               (GPIOB)
 #define Motor_IO_BIN2_PIN                                       (DL_GPIO_PIN_19)
 #define Motor_IO_BIN2_IOMUX                                      (IOMUX_PINCM45)
-/* Defines for Red: GPIOA.15 with pinCMx 37 on package pin 8 */
-#define RYG_LED_Red_PORT                                                 (GPIOA)
-#define RYG_LED_Red_PIN                                         (DL_GPIO_PIN_15)
-#define RYG_LED_Red_IOMUX                                        (IOMUX_PINCM37)
-/* Defines for Yellow: GPIOA.22 with pinCMx 47 on package pin 18 */
-#define RYG_LED_Yellow_PORT                                              (GPIOA)
-#define RYG_LED_Yellow_PIN                                      (DL_GPIO_PIN_22)
-#define RYG_LED_Yellow_IOMUX                                     (IOMUX_PINCM47)
-/* Defines for Green: GPIOB.20 with pinCMx 48 on package pin 19 */
-#define RYG_LED_Green_PORT                                               (GPIOB)
-#define RYG_LED_Green_PIN                                       (DL_GPIO_PIN_20)
-#define RYG_LED_Green_IOMUX                                      (IOMUX_PINCM48)
+/* Defines for Tracking_1: GPIOB.6 with pinCMx 23 on package pin 58 */
+#define Tracking_Tracking_1_PORT                                         (GPIOB)
+#define Tracking_Tracking_1_PIN                                  (DL_GPIO_PIN_6)
+#define Tracking_Tracking_1_IOMUX                                (IOMUX_PINCM23)
+/* Defines for Tracking_2: GPIOB.7 with pinCMx 24 on package pin 59 */
+#define Tracking_Tracking_2_PORT                                         (GPIOB)
+#define Tracking_Tracking_2_PIN                                  (DL_GPIO_PIN_7)
+#define Tracking_Tracking_2_IOMUX                                (IOMUX_PINCM24)
+/* Defines for Tracking_3: GPIOB.8 with pinCMx 25 on package pin 60 */
+#define Tracking_Tracking_3_PORT                                         (GPIOB)
+#define Tracking_Tracking_3_PIN                                  (DL_GPIO_PIN_8)
+#define Tracking_Tracking_3_IOMUX                                (IOMUX_PINCM25)
+/* Defines for Tracking_4: GPIOB.9 with pinCMx 26 on package pin 61 */
+#define Tracking_Tracking_4_PORT                                         (GPIOB)
+#define Tracking_Tracking_4_PIN                                  (DL_GPIO_PIN_9)
+#define Tracking_Tracking_4_IOMUX                                (IOMUX_PINCM26)
+/* Defines for Tracking_5: GPIOA.12 with pinCMx 34 on package pin 5 */
+#define Tracking_Tracking_5_PORT                                         (GPIOA)
+#define Tracking_Tracking_5_PIN                                 (DL_GPIO_PIN_12)
+#define Tracking_Tracking_5_IOMUX                                (IOMUX_PINCM34)
+/* Defines for Tracking_6: GPIOA.13 with pinCMx 35 on package pin 6 */
+#define Tracking_Tracking_6_PORT                                         (GPIOA)
+#define Tracking_Tracking_6_PIN                                 (DL_GPIO_PIN_13)
+#define Tracking_Tracking_6_IOMUX                                (IOMUX_PINCM35)
+/* Defines for Tracking_7: GPIOB.23 with pinCMx 51 on package pin 22 */
+#define Tracking_Tracking_7_PORT                                         (GPIOB)
+#define Tracking_Tracking_7_PIN                                 (DL_GPIO_PIN_23)
+#define Tracking_Tracking_7_IOMUX                                (IOMUX_PINCM51)
+/* Defines for Tracking_8: GPIOB.26 with pinCMx 57 on package pin 28 */
+#define Tracking_Tracking_8_PORT                                         (GPIOB)
+#define Tracking_Tracking_8_PIN                                 (DL_GPIO_PIN_26)
+#define Tracking_Tracking_8_IOMUX                                (IOMUX_PINCM57)
 
 
 
@@ -317,13 +279,10 @@ void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
 void SYSCFG_DL_Motor_init(void);
 void SYSCFG_DL_SMotor_init(void);
-void SYSCFG_DL_Servo_init(void);
 void SYSCFG_DL_QEI_0_init(void);
 void SYSCFG_DL_TIMER_0_init(void);
-void SYSCFG_DL_I2C_0_init(void);
 void SYSCFG_DL_I2C_1_init(void);
 void SYSCFG_DL_Debug_init(void);
-void SYSCFG_DL_IMU_init(void);
 void SYSCFG_DL_K230_init(void);
 
 void SYSCFG_DL_SYSTICK_init(void);
