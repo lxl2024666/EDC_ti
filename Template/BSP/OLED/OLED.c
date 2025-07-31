@@ -313,7 +313,7 @@ void OLED_DrawBMP(uint8_t x,uint8_t y,uint8_t sizex, uint8_t sizey,uint8_t BMP[]
 //初始化SSD1306					    
 void OLED_Init(void)
 {
-    
+    Delay_ms(100);
     OLED_WR_Byte(0xAE,OLED_CMD);//--turn off oled panel
     OLED_WR_Byte(0x00,OLED_CMD);//---set low column address
     OLED_WR_Byte(0x10,OLED_CMD);//---set high column address

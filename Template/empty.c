@@ -47,6 +47,7 @@ uint8_t Digtal[8];
 // 测试区
 int a;
 uint32_t tick;
+char message[50];
 
 void float_to_string(char* buffer, float value, int decimal_places);
 int main(void)
