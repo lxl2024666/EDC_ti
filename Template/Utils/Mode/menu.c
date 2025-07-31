@@ -1,7 +1,5 @@
 #include "menu.h"
-#include "mode_tree.h"
-#include "circle_list.h"
-#include "key.h"
+#include "AllHeader.h"
 /**
   ******************************************************************************
   * @author  Qinghan Yang
@@ -33,7 +31,7 @@ void menu_init(void)
         #ifdef INITIALIZE_H
         sprintf(error_message, "Failed to create mode tree");
         #endif
-        Error_Handler(); // Handle error if tree creation fails
+        error_handler(); // Handle error if tree creation fails
     }
     now_mode_tree->parent = NULL; // Set the parent of the root node to NULL 
     OLED_Clear(); // Clear the OLED display
@@ -58,22 +56,27 @@ void menu_init(void)
     addChild(now_mode_tree, proHMenu); // Add the problem menu to the main menu
 
     // Add child nodes to the test menu
-    ModeNode test_dis = {test_dis, "Test Distance"}; // Create a test distance node
-    ModeNode test_cordi = {test_Cordi, "Test Coordinate"}; // Create a test coordinate node
-    ModeNode test_circle = {test_Circle, "Test Circle"}; // Create a test circle node
-    ModeNode test_track = {test_track, "Test Track"}; // Create a test track node
+    ModeNode test_dis_mode = {test_dis, "Test Distance"}; // Create a test distance node
+    ModeNode test_cordi_mode = {test_Cordi, "Test Coordinate"}; // Create a test coordinate node
+    ModeNode test_circle_mode = {test_Circle, "Test Circle"}; // Create a test circle node
+    ModeNode test_track_mode = {test_track, "Test Track"}; // Create a test track node
 
-    ModeNode ProB1 = {menu_function, "ProB1"}; // Create a sub-menu node for Problem B
-    ModeNode ProB2_3 = {ProB2_3, "ProB2/3"}; // Create a sub-menu node for Problem B
+    addChild(testMenu, createModeTree(test_dis_mode));
+    addChild(testMenu, createModeTree(test_cordi_mode));
+    addChild(testMenu, createModeTree(test_circle_mode));
+    addChild(testMenu, createModeTree(test_track_mode));
 
-    ModeNode ProH1 = {menu_function, "ProH1"}; // Create a sub-menu node for Problem H
-    ModeNode ProH2 = {ProH_2, "ProH2"};
+    ModeNode ProB1menu = {menu_function, "ProB1"}; // Create a sub-menu node for Problem B
+    ModeNode ProB2_3menu = {proB_2_3, "ProB2/3"}; // Create a sub-menu node for Problem B
 
-    ModeTree *ProBMenu1 = createModeTree(ProB1);
-    ModeTree *ProBMenu2_3 = createModeTree(ProB2_3);
+    ModeNode ProH1menu = {menu_function, "ProH1"}; // Create a sub-menu node for Problem H
+    ModeNode ProH2menu = {proH_2, "ProH2"};
 
-    ModeTree *ProHMenu1 = createModeTree(ProH1);
-    ModeTree *ProHMenu2 = createModeTree(ProH2);
+    ModeTree *ProBMenu1 = createModeTree(ProB1menu);
+    ModeTree *ProBMenu2_3 = createModeTree(ProB2_3menu);
+
+    ModeTree *ProHMenu1 = createModeTree(ProH1menu);
+    ModeTree *ProHMenu2 = createModeTree(ProH2menu);
 
     addChild(problemBMenu, ProBMenu1);//有下一级菜单
     addChild(problemBMenu, ProBMenu2_3);//无下一级菜单
@@ -83,7 +86,7 @@ void menu_init(void)
     for(int i = 0; i < 5; i++)
     {
         char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
-        ModeNode CircleNode = {ProB1, CircleNum};
+        ModeNode CircleNode = {proB_1, CircleNum};
         ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
         addChild(ProBMenu1, circleMenu); // Add the circle menu to the Problem B menu
         if (circleMenu == NULL) {
@@ -97,7 +100,7 @@ void menu_init(void)
     for(int i = 0; i < 2; i++)
     {
         char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
-        ModeNode CircleNode = {ProH1, CircleNum};
+        ModeNode CircleNode = {proH_1, CircleNum};
         ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
         addChild(ProHMenu1, circleMenu); // Add the circle menu to the Problem H menu
         if (circleMenu == NULL) {
@@ -162,22 +165,20 @@ void menu_function(void)
     while(1)
     {
         // Implement menu navigation and selection logic here
-        if(Key1_short_press()) 
+        if(Key_short_press()) 
         {
             // If Key1 is pressed, select the current menu item
-            HAL_Delay(200); // Delay to avoid rapid selection
             CircleNum = current->data->nodes.mode_name[0]; // Store the selected menu item name
             select_menu(current->data);
             break; // Exit the menu function after selection
         }
-        if(Key2_short_press())
+        if(Key_long_press())
         {
             // If Key2 is pressed, navigate to the next menu item
             current = current->next;
             OLED_ShowChar(END_X - 8, index, ' ', 8); // Clear the previous select arrow
             index = (index + 1) % total; // Move to the next item
             OLED_ShowChar(END_X - 8, index, '<', 8); // Show the select arrow at the new position
-            HAL_Delay(200); // Delay to avoid rapid scrolling
         }
     }
 }

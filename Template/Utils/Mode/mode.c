@@ -3,8 +3,8 @@
 
 extern char CircleNum; // Variable to hold the current circle number
 //Test function for the mode system
-const int turn_radius = 0.3; // Define the turn radius
-const int turn_speed = 0.3; // Define the turn speed
+const float turn_radius = 0.3; // Define the turn radius
+const float turn_speed = 0.3; // Define the turn speed
 int edge = 0; // Initialize edge variable for target coordinate calculation
 
 void test_dis(void)//在四个拐角输出距离
@@ -95,7 +95,7 @@ void proH_2(void)
 
 }
 
-int CircleNum(char num)
+int SetCircleNum(char num)
 {
     // Convert the character to an integer
     if (num >= '0' && num <= '9') {

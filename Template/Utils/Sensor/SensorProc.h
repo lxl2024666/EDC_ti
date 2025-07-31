@@ -32,5 +32,6 @@ float thetaGrayscale(); // Calculate the angle based on grayscale sensor reading
 bool Road_detect(int nummin, int nummax);
 bool half_Detect();
 bool cross_Roads_Detect();
+bool empty_Detect(); // Check if no road is detected
 
 #endif // SENSOR_PROC_H
