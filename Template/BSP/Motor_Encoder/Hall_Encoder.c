@@ -30,6 +30,9 @@ void EncoderInit(GPTIMER_Regs *Timer, GPTIMER_Regs *realTimer,
 	// 重置QEI计数器（如果有这个功能的话，否则注释掉）
 	// DL_TimerG_setCounterValue(Timer, 0);
 	encoders[numEncoders].prev_cnt = DL_Timer_getTimerCount(Timer); // 初始化 prev_cnt
+	NVIC_ClearPendingIRQ(TIMER_0_INST_INT_IRQN);
+    //使能定时器中断
+   NVIC_EnableIRQ(TIMER_0_INST_INT_IRQN);
 
 
 	EncoderParamInit(&encoders[numEncoders].param, wheelLength, ppr);
@@ -59,7 +62,7 @@ void LRInit(GPTIMER_Regs *LTimer, GPTIMER_Regs *RTimer,
 	LRFlag = 1; // Set flag to indicate left and right encoders are initialized
 }
 
-void UpdateSpeed(int i, GPTIMER_Regs *reload_tim)
+void UpdateSpeed(int i)
 	//get the speed of the motor
 	//E is the encoder speed struct, reload_tim is the timer used to measure real time
 {	
@@ -67,24 +70,23 @@ void UpdateSpeed(int i, GPTIMER_Regs *reload_tim)
 	{
 		return; // Timer not initialized
 	}
-	if(reload_tim == encoders[i].realTimer)
-	{
-		 int16_t current_cnt = DL_Timer_getTimerCount(encoders[i].timer); // 获取当前计数值
+
+	int16_t current_cnt = DL_Timer_getTimerCount(encoders[i].timer); // 获取当前计数值
         // 计算速度差值（考虑16位定时器溢出/下溢）
         // 假设使用16位定时器且计数值在int16_t范围内
-     encoders[i].speed = (int16_t)(current_cnt - encoders[i].prev_cnt);
+	 encoders[i].speed = (int16_t)(current_cnt - encoders[i].prev_cnt);
 
-     encoders[i].prev_cnt = current_cnt; // 保存当前计数值，供下次调用使用
-     encoders[i].dis += StoDis(encoders[i]);
-	}
+	 encoders[i].prev_cnt = current_cnt; // 保存当前计数值，供下次调用使用
+	 encoders[i].dis += StoDis(encoders[i]);
+	 // 更新距离 traveled by the wheel
 }
 
-void UpdateAllSpeed(GPTIMER_Regs *reload_tim)
-	//update all encoders' speed
+void UpdateAllSpeed(void)
+		//update all encoders' speed
 {
 	for (int i = 0; i < numEncoders; i++)
 	{
-		UpdateSpeed(i, reload_tim);
+		UpdateSpeed(i);
 	}
 }
 
@@ -100,9 +102,7 @@ double StoDis(EncoderSpeed e)
 //When you are using the code, please connect PE9 to E1A, PE11 to E1B, 
 double getSpeed(int index)
 {
-	return encoders[index].speed * 
-		encoders[index].param.wheelLength * 1e-3 * PI * 
-		encoders[index].reloadFre / (encoders[index].param.ppr * 2);
+	return encoders[index].speed * 0.79748 ;
 		//4.394215799e-3;
 		// Left number is computed by (length of the circle) * (frequence of the clock / (leftSpeed add number for every single circle
 		// which is (6.6e-2 * pi * (240e6 / ((65535 + 1) * (239 + 1)) / (360 * 2))

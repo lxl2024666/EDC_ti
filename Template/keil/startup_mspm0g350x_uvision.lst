@@ -77,40 +77,40 @@ ARM Macro Assembler    Page 2
    40 00000000         ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
    41 00000000         ; </h>
    42 00000000         
-   43 00000000 00000100 
+   43 00000000 00004000 
                        Stack_Size
-                               EQU              0x00000100
+                               EQU              0x00004000
    44 00000000         
    45 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
 =3
    46 00000000         Stack_Mem
                                SPACE            Stack_Size
-   47 00000100         __initial_sp
-   48 00000100         
-   49 00000100         
-   50 00000100         ; <h> Heap Configuration
-   51 00000100         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
-   52 00000100         ; </h>
-   53 00000100         
-   54 00000100 00000000 
+   47 00004000         __initial_sp
+   48 00004000         
+   49 00004000         
+   50 00004000         ; <h> Heap Configuration
+   51 00004000         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   52 00004000         ; </h>
+   53 00004000         
+   54 00004000 00001000 
                        Heap_Size
-                               EQU              0x00000000
-   55 00000100         
-   56 00000100                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
+                               EQU              0x00001000
+   55 00004000         
+   56 00004000                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
 3
    57 00000000         __heap_base
    58 00000000         Heap_Mem
                                SPACE            Heap_Size
-   59 00000000         __heap_limit
-   60 00000000         
-   61 00000000         
-   62 00000000                 PRESERVE8
-   63 00000000                 THUMB
-   64 00000000         
-   65 00000000         
-   66 00000000         ; Vector Table Mapped to Address 0 at Reset
-   67 00000000         
-   68 00000000                 AREA             RESET, DATA, READONLY
+   59 00001000         __heap_limit
+   60 00001000         
+   61 00001000         
+   62 00001000                 PRESERVE8
+   63 00001000                 THUMB
+   64 00001000         
+   65 00001000         
+   66 00001000         ; Vector Table Mapped to Address 0 at Reset
+   67 00001000         
+   68 00001000                 AREA             RESET, DATA, READONLY
    69 00000000                 EXPORT           __Vectors
    70 00000000                 EXPORT           __Vectors_End
    71 00000000                 EXPORT           __Vectors_Size
@@ -373,8 +373,8 @@ ARM Macro Assembler    Page 6
                                PROC
   240 00000010 4803            LDR              R0, =  Heap_Mem
   241 00000012 4904            LDR              R1, =(Stack_Mem + Stack_Size)
-  242 00000014 4A02            LDR              R2, = (Heap_Mem +  Heap_Size)
-  243 00000016 4B04            LDR              R3, = Stack_Mem
+  242 00000014 4A04            LDR              R2, = (Heap_Mem +  Heap_Size)
+  243 00000016 4B05            LDR              R3, = Stack_Mem
   244 00000018 4770            BX               LR
   245 0000001A                 ENDP
   246 0000001A         
@@ -386,17 +386,18 @@ ARM Macro Assembler    Page 6
   252 0000001C                 END
               00000000 
               00000000 
-              00000100 
-              00000000 
+              00004000 
+              00001000 
 
 
 
 ARM Macro Assembler    Page 7 
 
 
+              00000000 
 Command Line: --debug --xref --diag_suppress=9931,A1950W --cpu=Cortex-M0+ --dep
 end=.\objects\startup_mspm0g350x_uvision.d -o.\objects\startup_mspm0g350x_uvisi
-on.o --predefine="__UVISION_VERSION SETA 539" --predefine="__MSPM0G3507__ SETA 
+on.o --predefine="__UVISION_VERSION SETA 542" --predefine="__MSPM0G3507__ SETA 
 1" --list=.\startup_mspm0g350x_uvision.lst startup_mspm0g350x_uvision.s
 
 
@@ -421,7 +422,7 @@ Symbol: Stack_Mem
       At line 241 in file startup_mspm0g350x_uvision.s
       At line 243 in file startup_mspm0g350x_uvision.s
 
-__initial_sp 00000100
+__initial_sp 00004000
 
 Symbol: __initial_sp
    Definitions
@@ -461,7 +462,7 @@ Symbol: __heap_base
    Uses
       None
 Comment: __heap_base unused
-__heap_limit 00000000
+__heap_limit 00001000
 
 Symbol: __heap_limit
    Definitions
@@ -834,7 +835,7 @@ Comment: __user_initial_stackheap used once
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Absolute symbols
 
-Heap_Size 00000000
+Heap_Size 00001000
 
 Symbol: Heap_Size
    Definitions
@@ -843,7 +844,7 @@ Symbol: Heap_Size
       At line 58 in file startup_mspm0g350x_uvision.s
       At line 242 in file startup_mspm0g350x_uvision.s
 
-Stack_Size 00000100
+Stack_Size 00004000
 
 Symbol: Stack_Size
    Definitions

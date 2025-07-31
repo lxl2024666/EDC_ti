@@ -32,7 +32,8 @@ void test_track(void)
     // Test the track function with a linear velocity of 0.3
     while(1)
     {
-        track(0.3);
+			getTrackingSensorData(Digital);
+        lineWalking_low();
         if(empty_Detect()) // Check if the empty detection condition is met
         {
             Break(); // Break the loop if the condition is met

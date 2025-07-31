@@ -1,7 +1,7 @@
 #include "tracking.h"
 #include "AllHeader.h"
 
-#define IRR_SPEED_HIGH  400  // 高速巡线速度
+#define IRR_SPEED_HIGH  300  // 高速巡线速度
 #define IRR_SPEED_LOW   200  // 低速巡线速度
 
 // 高速PID参数
@@ -19,7 +19,7 @@ const float Integral_max = 500.0f; // 积分限幅值
 int pid_output_IRR = 0;
 uint8_t trun_flag = 0;
 static int8_t err = 0;
-extern int Digital[8];
+extern uint8_t Digital[8];
 
 // --- PID计算函数，参数可配置 ---
 float PID_IR_Calc_Custom(int16_t actual_value, float kp, float ki, float kd)

@@ -1,10 +1,11 @@
 #include "Initialize.h"
+#include "AllHeader.h"
 
 
 Motor Le, Ri;  // Declare motors for left and right
 CarState car; // Declare car state for kinematics
 Data current_data;
-int Digital[8];
+uint8_t Digital[8];
 char error_message[100]; // Buffer for error messages
 double GyroscopeChannelData[10] = {0};
 
@@ -21,7 +22,7 @@ void MECInit()
                   LEFT_MOTOR_IN2_PORT, LEFT_MOTOR_IN2_PIN,
                   LEFT_MOTOR_PWM_TIMER, LEFT_MOTOR_PWM_CHANNEL, LEFT_MOTOR_INIT_DUTY);
     
-    // 初始化右电机参数
+    // 初始化右电机参数f
     Motor_Param_Init(&Ri, REDUCE, FULL_SPEED_RPM, WHEEL_DIAMETER);
     // 初始化右电机硬件接口
     Motor_UI_Init(&Ri, RIGHT_MOTOR_IN1_PORT, RIGHT_MOTOR_IN1_PIN,

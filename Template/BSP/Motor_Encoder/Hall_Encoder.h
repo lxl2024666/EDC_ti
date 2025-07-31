@@ -37,8 +37,8 @@ void LRInit(GPTIMER_Regs *LTimer, GPTIMER_Regs *RTimer,
 			GPTIMER_Regs *realTimer);
 
 int getTimerQEICnt(GPTIMER_Regs *timer);
-void UpdateSpeed(int i, GPTIMER_Regs *reload_tim);
-void UpdateAllSpeed(GPTIMER_Regs *reload_tim);
+void UpdateSpeed(int i);
+void UpdateAllSpeed(void);
 
 double getSpeed(int index);
 double getDis(int index);
