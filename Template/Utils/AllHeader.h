@@ -14,6 +14,9 @@
 #include "tracking.h"
 #include "tracking_delay.h"
 
+//OLED头文件
+#include "OLED.h"
+
 // 霍尔编码器头文件
 #include "Hall_Encoder.h"
 

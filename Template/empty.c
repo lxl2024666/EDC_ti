@@ -56,7 +56,7 @@ int main(void)
 	// OLED Init
 	OLED_Init() ;
 	OLED_Clear() ;
-	OLED_ShowString(20,0,"Hello NUEDC!",8);
+	OLED_ShowString(24,0,"Hello NUEDC!",8);
 	
 	//Car1 Init
 	MECInit();
@@ -70,7 +70,6 @@ int main(void)
 	while (1) 
 	{
 		Delay_ms(1000);
-		OLED_ShowString(24,2,"Hello NUEDC!",8);			
 	}
 }
 

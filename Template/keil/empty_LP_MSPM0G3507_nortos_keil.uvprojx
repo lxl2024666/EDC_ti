@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED_Update;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor;..\BSP\SMotor;..\BSP\Laser_USART;..\BSP\TrackingSensor;..\BSP\key;..\Utils\Mode;..\BSP\TrackingSensor</IncludePath>
+              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor;..\BSP\SMotor;..\BSP\Laser_USART;..\BSP\TrackingSensor;..\BSP\key;..\Utils\Mode;..\BSP\TrackingSensor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -558,22 +558,12 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP\TrackingSensor</GroupName>
-          <Files>
-            <File>
-              <FileName>TrackingSensor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\TrackingSensor\TrackingSensor.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>BSP\OLED_Update</GroupName>
+          <GroupName>BSP\OLED</GroupName>
           <Files>
             <File>
               <FileName>OLED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\OLED_Update\OLED.c</FilePath>
+              <FilePath>..\BSP\OLED\OLED.c</FilePath>
             </File>
           </Files>
         </Group>
