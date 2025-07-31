@@ -78,4 +78,4 @@
   ..\Utils\Initialize\Initialize.h ..\Utils\Motion\kinematics.h \
   ..\Utils\Motion\pid.h ..\Utils\Sensor\SensorProc.h \
   ..\Utils\Sensor\Rotation.h ..\BSP\SMotor\SMotor.h \
-  ..\Utils\Initialize\Init_SMotor.h
+  ..\Utils\Initialize\Init_SMotor.h ..\Utils\Motion\Cont_SMotor.h

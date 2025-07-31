@@ -1,7 +1,7 @@
 Dependencies for Project 'empty_LP_MSPM0G3507_nortos_keil', Target 'empty_LP_MSPM0G3507_nortos_keil': (DO NOT MODIFY !)
 CompilerVersion: 6230000::V6.23::ARMCLANG
-F (../empty.c)(0x688A03C4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MMD)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+F (../empty.c)(0x688AB9BD)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MMD)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -85,14 +85,15 @@ I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x6889793A)
 I (..\Utils\Initialize\Initialize.h)(0x6889C9D5)
 I (..\Utils\Motion\kinematics.h)(0x6884913F)
 I (..\Utils\Motion\pid.h)(0x688491CE)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
-F (../empty.syscfg)(0x688A0453)()
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)
+F (../empty.syscfg)(0x688A3296)()
 F (startup_mspm0g350x_uvision.s)(0x6889719C)(--cpu Cortex-M0+ -g --diag_suppress=A1950W--pd "__UVISION_VERSION SETA 542"--pd "__MSPM0G3507__ SETA 1"--list .\startup_mspm0g350x_uvision.lst--xref -o .\objects\startup_mspm0g350x_uvision.o--depend .\objects\startup_mspm0g350x_uvision.d)
 F (../ti_msp_dl_config.h)(0x6889E85F)()
-F (../ti_msp_dl_config.c)(0x688A045A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
+F (../ti_msp_dl_config.c)(0x688AB975)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
 I (..\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -242,7 +243,7 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-F (..\BSP\OLED\OLED.c)(0x688A02E2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MMD)
+F (..\BSP\OLED\OLED.c)(0x688A169E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MMD)
 I (..\BSP\OLED\oled.h)(0x688A0381)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
@@ -474,7 +475,7 @@ I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 F (..\Utils\Initialize\Initialize.c)(0x688A0313)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/initialize.o -MMD)
 I (..\Utils\Initialize\Initialize.h)(0x6889C9D5)
 I (..\Utils\Motion\kinematics.h)(0x6884913F)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -556,10 +557,11 @@ I (..\Utils\Motion\tracking.h)(0x6881D1A2)
 I (..\Utils\Motion\tracking_delay.h)(0x6889C10F)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x6889793A)
 I (..\Utils\Motion\pid.h)(0x688491CE)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)
 F (..\Utils\Initialize\Init_SMotor.c)(0x6889FBC1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/init_smotor.o -MMD)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
@@ -639,7 +641,7 @@ I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 F (..\Utils\Motion\kinematics.c)(0x6889C6B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/kinematics.o -MMD)
 I (..\Utils\Motion\kinematics.h)(0x6884913F)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -722,15 +724,16 @@ I (..\Utils\Motion\tracking_delay.h)(0x6889C10F)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x6889793A)
 I (..\Utils\Initialize\Initialize.h)(0x6889C9D5)
 I (..\Utils\Motion\pid.h)(0x688491CE)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)
 F (..\Utils\Motion\pid.c)(0x68849129)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid.o -MMD)
 I (..\Utils\Motion\pid.h)(0x688491CE)
 F (..\Utils\Motion\tracking.c)(0x6889C886)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tracking.o -MMD)
 I (..\Utils\Motion\tracking.h)(0x6881D1A2)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -813,13 +816,14 @@ I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x6889793A)
 I (..\Utils\Initialize\Initialize.h)(0x6889C9D5)
 I (..\Utils\Motion\kinematics.h)(0x6884913F)
 I (..\Utils\Motion\pid.h)(0x688491CE)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)
 F (..\Utils\Sensor\Rotation.c)(0x6883720C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/rotation.o -MMD)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -903,12 +907,13 @@ I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x6889793A)
 I (..\Utils\Initialize\Initialize.h)(0x6889C9D5)
 I (..\Utils\Motion\kinematics.h)(0x6884913F)
 I (..\Utils\Motion\pid.h)(0x688491CE)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
-F (..\Utils\Sensor\SensorProc.c)(0x6881CC0E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sensorproc.o -MMD)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)
+F (..\Utils\Sensor\SensorProc.c)(0x688A2D4F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sensorproc.o -MMD)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -995,6 +1000,7 @@ I (..\Utils\Motion\pid.h)(0x688491CE)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)
 F (..\BSP\SMotor\SMotor.c)(0x6889F730)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/smotor.o -MMD)
 I (..\BSP\SMotor\SMotor.h)(0x6889DECC)
 I (..\..\Template\ti_msp_dl_config.h)(0x6889E85F)
@@ -1071,7 +1077,7 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x6889FC3A)
+I (..\Utils\AllHeader.h)(0x688A24EA)
 I (..\BSP\OLED\OLED.h)(0x688A0381)
 I (..\Utils\Delay.h)(0x68834258)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x68897AF2)
@@ -1081,6 +1087,7 @@ I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x6889793A)
 I (..\Utils\Initialize\Initialize.h)(0x6889C9D5)
 I (..\Utils\Motion\kinematics.h)(0x6884913F)
 I (..\Utils\Motion\pid.h)(0x688491CE)
-I (..\Utils\Sensor\SensorProc.h)(0x6881D1ED)
+I (..\Utils\Sensor\SensorProc.h)(0x688A2873)
 I (..\Utils\Sensor\Rotation.h)(0x68837549)
 I (..\Utils\Initialize\Init_SMotor.h)(0x6889FCA6)
+I (..\Utils\Motion\Cont_SMotor.h)(0x688779C4)

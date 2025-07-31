@@ -206,7 +206,9 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 
     DL_GPIO_initDigitalOutput(SMotor_IO_EN2_IOMUX);
 
-    DL_GPIO_initDigitalOutput(Motor_IO_AIN1_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(Motor_IO_AIN1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
     DL_GPIO_initDigitalOutput(Motor_IO_AIN2_IOMUX);
 

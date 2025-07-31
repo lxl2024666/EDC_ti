@@ -62,16 +62,17 @@ GPIO3.associatedPins[2].pin.$assign = "PB16";
 GPIO3.associatedPins[3].$name       = "EN2";
 GPIO3.associatedPins[3].pin.$assign = "PB2";
 
-GPIO4.$name                         = "Motor_IO";
+GPIO4.$name                              = "Motor_IO";
 GPIO4.associatedPins.create(4);
-GPIO4.associatedPins[0].$name       = "AIN1";
-GPIO4.associatedPins[0].pin.$assign = "PA16";
-GPIO4.associatedPins[1].$name       = "AIN2";
-GPIO4.associatedPins[1].pin.$assign = "PB17";
-GPIO4.associatedPins[2].$name       = "BIN1";
-GPIO4.associatedPins[2].pin.$assign = "PB18";
-GPIO4.associatedPins[3].$name       = "BIN2";
-GPIO4.associatedPins[3].pin.$assign = "PB19";
+GPIO4.associatedPins[0].$name            = "AIN1";
+GPIO4.associatedPins[0].internalResistor = "PULL_DOWN";
+GPIO4.associatedPins[0].pin.$assign      = "PA16";
+GPIO4.associatedPins[1].$name            = "AIN2";
+GPIO4.associatedPins[1].pin.$assign      = "PB17";
+GPIO4.associatedPins[2].$name            = "BIN1";
+GPIO4.associatedPins[2].pin.$assign      = "PB18";
+GPIO4.associatedPins[3].$name            = "BIN2";
+GPIO4.associatedPins[3].pin.$assign      = "PB19";
 
 GPIO5.$name                         = "RYG_LED";
 GPIO5.associatedPins.create(3);

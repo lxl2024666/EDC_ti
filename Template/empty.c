@@ -52,9 +52,7 @@ int main(void)
 		OLED_ShowString(1,1,"hello", 8);
 
 		MECInit();
-		YP_SMotor_Init();
-		YP_SMotor_SetSpeed(30, -30);
-
+		RSet(-300);
 
     while (1) 
 		{
