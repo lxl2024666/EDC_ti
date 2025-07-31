@@ -166,6 +166,6 @@ void error_handler(void)
 {
     Break(); // Stop the motors
     OLED_Clear(); // Clear the OLED display
-    OLED_ShowString(0, 0, error_message, 8); // Display the error message on the OLED
+    OLED_ShowString(0, 0, error_message,8); // Display the error message on the OLED
     while(1); // Infinite loop to halt the program
 }

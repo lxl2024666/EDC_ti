@@ -1,58 +1,151 @@
-#ifndef __OLED_H_
-#define __OLED_H_	
+/**
+ * @file      OLED.h
+ * @brief     SSD1306 OLEDÏÔÊ¾ÆÁÇı¶¯¿âµÄÍ·ÎÄ¼ş (Èí¼şI2C)
+ * @details   ±¾Çı¶¯Ê¹ÓÃÈí¼şÄ£ÄâI2CĞ­ÒéÓëOLEDÍ¨ĞÅ¡£ËüÌá¹©ÁËOLED³õÊ¼»¯¡¢
+ * ÏÔÊ¾×Ö·û¡¢Êı×Ö¡¢×Ö·û´®ºÍÎ»Í¼µÈ¹¦ÄÜ¡£
+ * @author    Jianing Wang
+ * @version   1.1
+ * @date      2025-07-31
+ * @note      - ±¾Çı¶¯ÒÀÀµÓÚÒ»¸öÌá¹©Î¢Ãë¼¶ÑÓÊ±º¯Êı `Delay_us()` µÄÑÓÊ±¿â¡£
+ * - Ê¹ÓÃÇ°£¬ÇëÈ·±£ÒÑÔÚSysConfigÖĞÅäÖÃÁËSCLºÍSDAÒı½Å£¬²¢ÔÚ´ËÎÄ¼şÖĞ
+ * ÕıÈ·¶¨ÒåÁË`OLED_GPIO_PORT`¡¢`OLED_SCL_PIN`ºÍ`OLED_SDA_PIN`¡£
+ */
 
-#include "stdint.h"
-#include "ti_msp_dl_config.h"
+#ifndef __OLED_H__
+#define __OLED_H__
 
-// OLED I2Cé…ç½®
-#define OLED_I2C_INST               I2C_1_INST       // I2Cå®ä¾‹ (éœ€è¦åœ¨SysConfigä¸­é…ç½®)
-#define OLED_I2C_ADDR               0x78             // OLED I2Cåœ°å€
-#define OLED_CMD_REG                0x00             // å‘½ä»¤å¯„å­˜å™¨åœ°å€
-#define OLED_DATA_REG               0x40             // æ•°æ®å¯„å­˜å™¨åœ°å€
+#include "ti_msp_dl_config.h" // ÒıÈëTI MSPM0µÄµ×²ã¿â
+#include <stdint.h>          // ÒıÈë±ê×¼ÕûÊıÀàĞÍ
+
+//==================================================================================
+// ÓÃ»§ÅäÖÃÇø (User Configuration)
+//==================================================================================
+
+// ¶¨ÒåOLEDÁ¬½ÓµÄGPIO¶Ë¿Ú
+// ÀıÈç£ºÈç¹ûÄú½«SCLºÍSDA¶¼Á¬½Óµ½GPIOA£¬ÕâÀï¾ÍÊ¹ÓÃGPIOA
+#define OLED_GPIO_PORT      (GPIOA)
+
+// ¶¨ÒåOLEDµÄSCLºÍSDAÒı½Å (ÇëÓëSysConfigÖĞµÄÃüÃûºÍÅäÖÃ±£³ÖÒ»ÖÂ)
+#define OLED_SCL_PIN        (GPIO_OLED_SCL_PIN)
+#define OLED_SDA_PIN        (GPIO_OLED_SDA_PIN)
 
 
+//==================================================================================
+// ÄÚ²¿ºê¶¨Òå (Internal Macros)
+//==================================================================================
 
-	
-void WriteCmd(void);
-//å‘è®¾å¤‡å†™æ§åˆ¶å‘½ä»¤
-void OLED_WR_CMD(uint8_t cmd);
-//å‘è®¾å¤‡å†™æ•°æ®
-void OLED_WR_DATA(uint8_t data);
-//åˆå§‹åŒ–oledå±å¹•
+#define OLED_CMD            (0) // Ğ´ÃüÁîÄ£Ê½
+#define OLED_DATA           (1) // Ğ´Êı¾İÄ£Ê½
+
+//----------------------------------------------------------------------------------
+// OLED SSD1306 I2C Ê±ÖÓ SCL Òı½Å²Ù×÷
+#define OLED_SCL_Set()      (DL_GPIO_setPins(OLED_GPIO_PORT, OLED_SCL_PIN))
+#define OLED_SCL_Clr()      (DL_GPIO_clearPins(OLED_GPIO_PORT, OLED_SCL_PIN))
+
+//----------------------------------------------------------------------------------
+// OLED SSD1306 I2C Êı¾İ SDA Òı½Å²Ù×÷
+#define OLED_SDA_Set()      (DL_GPIO_setPins(OLED_GPIO_PORT, OLED_SDA_PIN))
+#define OLED_SDA_Clr()      (DL_GPIO_clearPins(OLED_GPIO_PORT, OLED_SDA_PIN))
+#define OLED_SDA_Read()     (DL_GPIO_readPins(OLED_GPIO_PORT, OLED_SDA_PIN))
+
+
+//==================================================================================
+// º¯ÊıÔ­ĞÍÉùÃ÷ (Function Prototypes)
+//==================================================================================
+
+/**
+ * @brief  OLEDÇı¶¯³õÊ¼»¯
+ * @details ³õÊ¼»¯GPIOÒı½Å²¢·¢ËÍÒ»ÏµÁĞÖ¸ÁîÀ´ÅäÖÃOLEDÄ£¿é¡£
+ * @param  None
+ * @retval None
+ */
 void OLED_Init(void);
-	//æ¸…å±
+
+/**
+ * @brief  Çå¿ÕÕû¸öOLEDÆÁÄ»
+ * @details ½«ÏÔ´æµÄËùÓĞÎ»¶¼ÉèÖÃÎª0£¬ÆÁÄ»½«±äºÚ¡£
+ * @param  None
+ * @retval None
+ */
 void OLED_Clear(void);
-//æ¸…è¡Œ
-void OLED_Clearrow(uint8_t i);
-//å¼€å¯OLEDæ˜¾ç¤º    
+
+/**
+ * @brief  ÉèÖÃÏÔÊ¾ÑÕÉ«·´×ª
+ * @param  i 0: Õı³£ÏÔÊ¾, 1: ÑÕÉ«·´×ª (ºÚµ×°××Ö±ä°×µ×ºÚ×Ö)
+ * @retval None
+ */
+void OLED_ColorTurn(uint8_t i);
+
+/**
+ * @brief  ÉèÖÃÆÁÄ»ÄÚÈİĞı×ª180¶È
+ * @param  i 0: Õı³£ÏÔÊ¾, 1: Ğı×ª180¶È
+ * @retval None
+ */
+void OLED_DisplayTurn(uint8_t i);
+
+/**
+ * @brief  ´ò¿ªOLEDÏÔÊ¾
+ * @param  None
+ * @retval None
+ */
 void OLED_Display_On(void);
-//å…³é—­OLEDæ˜¾ç¤º     
+
+/**
+ * @brief  ¹Ø±ÕOLEDÏÔÊ¾ (½øÈëĞİÃß)
+ * @param  None
+ * @retval None
+ */
 void OLED_Display_Off(void);
-//è®¾ç½®å…‰æ ‡
-void OLED_Set_Pos(uint8_t x, uint8_t y);
 
-void OLED_On(void);
-	
-//åœ¨æŒ‡å®šä½ç½®æ˜¾ç¤ºä¸€ä¸ªå­—ç¬¦,åŒ…æ‹¬éƒ¨åˆ†å­—ç¬¦
-//x:0~127
-//y:0~63
-//mode:0,åç™½æ˜¾ç¤º;1,æ­£å¸¸æ˜¾ç¤º				 
-//size:é€‰æ‹©å­—ä½“ 16/12 
-void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t Char_Size);
+/**
+ * @brief  ÔÚÖ¸¶¨Î»ÖÃÏÔÊ¾Ò»¸öASCII×Ö·û
+ * @param  x      ÆğÊ¼ÁĞ×ø±ê (0-127)
+ * @param  y      ÆğÊ¼Ò³×ø±ê (0-7 for 16-size font, 0-63 for direct addressing)
+ * @param  chr    ÒªÏÔÊ¾µÄASCII×Ö·û
+ * @param  sizey  ×ÖÌå´óĞ¡ (Ö§³Ö 8 ºÍ 16)
+ * @retval None
+ */
+void OLED_ShowChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t sizey);
 
- //æ˜¾ç¤º2ä¸ªæ•°å­—
-//x,y :èµ·ç‚¹åæ ‡	 
-//len :æ•°å­—çš„ä½æ•°
-//size:å­—ä½“å¤§å°
-//mode:æ¨¡å¼	0,å¡«å……æ¨¡å¼;1,å åŠ æ¨¡å¼
-//num:æ•°å€¼(0~4294967295);	 		  
-void OLED_ShowNum(uint8_t x,uint8_t y,unsigned int num,uint8_t len,uint8_t size2);
+/**
+ * @brief  ÔÚÖ¸¶¨Î»ÖÃÏÔÊ¾×Ö·û´®
+ * @param  x      ÆğÊ¼ÁĞ×ø±ê (0-127)
+ * @param  y      ÆğÊ¼Ò³×ø±ê (0-7)
+ * @param  chr    Ö¸Ïò×Ö·û´®µÄÖ¸Õë
+ * @param  sizey  ×ÖÌå´óĞ¡ (Ö§³Ö 8 ºÍ 16)
+ * @retval None
+ */
+void OLED_ShowString(uint8_t x, uint8_t y, uint8_t *chr, uint8_t sizey);
 
-//æ˜¾ç¤ºä¸€ä¸ªå­—ç¬¦å·ä¸²
-void OLED_ShowString(uint8_t x,uint8_t y,const char *chr,uint8_t Char_Size);
+/**
+ * @brief  ÏÔÊ¾Ò»¸öÎŞ·ûºÅÊ®½øÖÆÊı×Ö
+ * @param  x      ÆğÊ¼ÁĞ×ø±ê (0-127)
+ * @param  y      ÆğÊ¼Ò³×ø±ê (0-7)
+ * @param  num    ÒªÏÔÊ¾µÄÊı×Ö (0-4294967295)
+ * @param  len    ÒªÏÔÊ¾µÄÊı×Ö³¤¶È
+ * @param  sizey  ×ÖÌå´óĞ¡
+ * @retval None
+ */
+void OLED_ShowNum(uint8_t x, uint8_t y, uint32_t num, uint8_t len, uint8_t sizey);
 
-//æ˜¾ç¤ºæ±‰å­—
-//hzk ç”¨å–æ¨¡è½¯ä»¶å¾—å‡ºçš„æ•°ç»„
-void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t no);
+/**
+ * @brief  ÔÚÖ¸¶¨Î»ÖÃÏÔÊ¾Ò»¸ö16x16µÄºº×Ö
+ * @param  x      ÆğÊ¼ÁĞ×ø±ê (0-127)
+ * @param  y      ÆğÊ¼Ò³×ø±ê (0-7)
+ * @param  no     ÒªÏÔÊ¾µÄºº×ÖÔÚ×Ö¿â `Hzk` ÖĞµÄË÷ÒıºÅ
+ * @retval None
+ */
+void OLED_ShowChinese(uint8_t x, uint8_t y, uint8_t no);
 
-#endif
+/**
+ * @brief  ÏÔÊ¾Ò»·ùÎ»Í¼
+ * @param  x      Í¼Æ¬×óÉÏ½ÇÆğÊ¼ÁĞ×ø±ê (0-127)
+ * @param  y      Í¼Æ¬×óÉÏ½ÇÆğÊ¼Ò³×ø±ê (0-7)
+ * @param  sizex  Í¼Æ¬µÄ¿í¶È£¨ÏñËØ£©
+ * @param  sizey  Í¼Æ¬µÄ¸ß¶È£¨ÏñËØ£©
+ * @param  BMP    Ö¸ÏòÎ»Í¼Êı¾İÊı×éµÄÖ¸Õë
+ * @retval None
+ */
+void OLED_DrawBMP(uint8_t x, uint8_t y, uint8_t sizex, uint8_t sizey, uint8_t BMP[]);
+
+#endif /* __OLED_H__ */

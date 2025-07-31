@@ -1,5 +1,4 @@
-./objects/rotation.o: ..\Utils\Sensor\Rotation.c \
-  ..\Utils\Sensor\Rotation.h ..\Utils\AllHeader.h \
+./objects/laser_usart.o: ..\BSP\Laser_USART\Laser_USART.c \
   ..\..\Template\ti_msp_dl_config.h ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
@@ -83,13 +82,4 @@
   ..\..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\..\source\ti\driverlib\m0p\dl_interrupt.h \
   ..\..\..\source\ti\driverlib\m0p\dl_systick.h \
-  ..\BSP\OLED_Update\OLED.h ..\Utils\Delay.h \
-  ..\BSP\Motor_Encoder\tb6612fng.h ..\Utils\Motion\tracking.h \
-  ..\Utils\Motion\tracking_delay.h ..\BSP\Motor_Encoder\Hall_Encoder.h \
-  ..\Utils\Initialize\Initialize.h ..\Utils\Motion\kinematics.h \
-  ..\Utils\Motion\pid.h \
-  D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h \
-  ..\Utils\Sensor\SensorProc.h ..\BSP\SMotor\SMotor.h \
-  ..\Utils\Initialize\Init_SMotor.h ..\Utils\Motion\Cont_SMotor.h \
-  ..\BSP\Laser_USART\Laser_USART.h \
-  ..\BSP\TrackingSensor\TrackingSensor.h
+  ..\BSP\Laser_USART\Laser_USART.h

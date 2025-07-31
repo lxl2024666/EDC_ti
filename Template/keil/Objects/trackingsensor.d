@@ -1,9 +1,10 @@
-./objects/rotation.o: ..\Utils\Sensor\Rotation.c \
-  ..\Utils\Sensor\Rotation.h ..\Utils\AllHeader.h \
-  ..\..\Template\ti_msp_dl_config.h ..\..\..\source\ti\devices\msp\msp.h \
+./objects/trackingsensor.o: ..\BSP\TrackingSensor\TrackingSensor.c \
+  ..\BSP\TrackingSensor\TrackingSensor.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h \
+  ..\Utils\AllHeader.h ..\..\Template\ti_msp_dl_config.h \
+  ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
-  D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h \
   D:\Application\Keil5\ARM\ARMCLANG\include\stdbool.h \
   ..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
   D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_version.h \
@@ -89,7 +90,6 @@
   ..\Utils\Initialize\Initialize.h ..\Utils\Motion\kinematics.h \
   ..\Utils\Motion\pid.h \
   D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h \
-  ..\Utils\Sensor\SensorProc.h ..\BSP\SMotor\SMotor.h \
-  ..\Utils\Initialize\Init_SMotor.h ..\Utils\Motion\Cont_SMotor.h \
-  ..\BSP\Laser_USART\Laser_USART.h \
-  ..\BSP\TrackingSensor\TrackingSensor.h
+  ..\Utils\Sensor\SensorProc.h ..\Utils\Sensor\Rotation.h \
+  ..\BSP\SMotor\SMotor.h ..\Utils\Initialize\Init_SMotor.h \
+  ..\Utils\Motion\Cont_SMotor.h ..\BSP\Laser_USART\Laser_USART.h
