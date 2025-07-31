@@ -3,8 +3,8 @@
 // 接受数组长度
 #define USART_LASER_RX_BUF_LEN 25
 // 串口宏定义
-#define LASER_UART UART0
-#define LASER_INI_IRQn	UART0_INT_IRQn
+#define LASER_UART UART2
+#define LASER_INI_IRQn	UART2_INT_IRQn
 #define Laser_Msg_Num 6	// 帧格式的长度
 //#define LASER_DEBUG
 

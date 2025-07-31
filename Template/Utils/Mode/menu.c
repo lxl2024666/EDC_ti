@@ -20,6 +20,7 @@
   */
 
 static ModeTree *now_mode_tree = NULL; // Pointer to the current mode tree
+char CircleNum = '0'; // Variable to hold the current circle number
 
 
 void menu_init(void)
@@ -45,26 +46,61 @@ void menu_init(void)
     // 构建测试菜单树结构
     // 创建主菜单的子菜单项
     ModeNode TestNode = {menu_function, "Test Menu"}; // Create a test menu node
-    ModeNode ProbNode = {menu_function, "Problem Menu"}; // Create a problem menu node
-    ModeNode MyNode = {menu_function, "QINGHAN YANG"}; // Create a custom menu node
+    ModeNode ProBNode = {menu_function, "Problem B"}; // Create a problem menu node
+    ModeNode ProHNode = {menu_function, "Problem H"}; // Create a custom menu node
 
     ModeTree *testMenu = createModeTree(TestNode); // Create the test menu tree
-    ModeTree *problemMenu = createModeTree(ProbNode); // Create the problem menu tree
-    ModeTree *myMenu = createModeTree(MyNode); // Create the custom menu tree   
+    ModeTree *problemBMenu = createModeTree(ProBNode); // Create the problem menu tree
+    ModeTree *proHMenu = createModeTree(ProHNode); // Create the custom menu tree
 
     addChild(now_mode_tree, testMenu);
-    addChild(now_mode_tree, problemMenu);
-    addChild(now_mode_tree, myMenu);
+    addChild(now_mode_tree, problemBMenu);
+    addChild(now_mode_tree, proHMenu); // Add the problem menu to the main menu
     // Add child nodes to the test menu
-    ModeNode TestSubNode1 = {menu_function, "Test Sub Menu 1"};
-    ModeNode TestSubNode2 = {menu_function, "Test Sub Menu 2"};
+    ModeNode ProB1 = {menu_function, "ProB1"}; // Create a sub-menu node for Problem B
+    ModeNode ProB2_3 = {ProB2_3, "ProB2/3"}; // Create a sub-menu node for Problem B
 
-    ModeTree *testSubMenu1 = createModeTree(TestSubNode1);
-    ModeTree *testSubMenu2 = createModeTree(TestSubNode2);
+    ModeNode ProH1 = {menu_function, "ProH1"}; // Create a sub-menu node for Problem H
+    ModeNode ProH2 = {ProH_2, "ProH2"};
 
-    addChild(testMenu, testSubMenu1);
-    addChild(testMenu, testSubMenu2);
+    ModeTree *ProBMenu1 = createModeTree(ProB1);
+    ModeTree *ProBMenu2_3 = createModeTree(ProB2_3);
 
+    ModeTree *ProHMenu1 = createModeTree(ProH1);
+    ModeTree *ProHMenu2 = createModeTree(ProH2);
+
+    addChild(problemBMenu, ProBMenu1);//有下一级菜单
+    addChild(problemBMenu, ProBMenu2_3);//无下一级菜单
+    addChild(proHMenu, ProHMenu1);//有下一级菜单
+    addChild(proHMenu, ProHMenu2);//无下一级菜单
+
+    for(int i = 0; i < 5; i++)
+    {
+        char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
+        ModeNode CircleNode = {ProB1, CircleNum};
+        ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
+        addChild(ProBMenu1, circleMenu); // Add the circle menu to the Problem B menu
+        if (circleMenu == NULL) {
+            #ifdef INITIALIZE_H
+            sprintf(error_message, "Failed to create circle menu %d", i + 1);
+            #endif
+            error_handler(); // Handle error if circle menu creation fails
+        }
+    }
+
+    for(int i = 0; i < 2; i++)
+    {
+        char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
+        ModeNode CircleNode = {ProH1, CircleNum};
+        ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
+        addChild(ProHMenu1, circleMenu); // Add the circle menu to the Problem H menu
+        if (circleMenu == NULL) {
+            #ifdef INITIALIZE_H
+            sprintf(error_message, "Failed to create circle menu %d", i + 1);
+            #endif
+            error_handler(); // Handle error if circle menu creation fails
+        }
+    }
     return;
 }
 
@@ -124,6 +160,7 @@ void menu_function(void)
         {
             // If Key1 is pressed, select the current menu item
             HAL_Delay(200); // Delay to avoid rapid selection
+            CircleNum = current->data->nodes.mode_name[0]; // Store the selected menu item name
             select_menu(current->data);
             break; // Exit the menu function after selection
         }
