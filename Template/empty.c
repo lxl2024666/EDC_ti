@@ -69,7 +69,7 @@ int main(void)
 }
 
 // 激光串口的中断服务函数
-void UART_0_INST_IRQHandler(void)
+void UART_2_INST_IRQHandler(void)
 {
     //如果产生了串口中断
     switch( DL_UART_getPendingInterrupt(LASER_UART) )

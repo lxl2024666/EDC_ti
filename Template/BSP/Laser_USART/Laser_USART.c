@@ -93,7 +93,7 @@ void Laser_Loc_Update(char uart_data)
 			}
 		}
 		else
-	 {
+	  {
 			Laser_Rx_Count = 0 ;
 		}
 }

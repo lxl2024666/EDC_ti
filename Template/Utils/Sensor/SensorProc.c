@@ -8,7 +8,7 @@
 #include "SensorProc.h"
 
 Coordinate paperCornerC[4];
-extern int edge;
+int edge;
 
 //以下函数用于处理视觉模块，主要在绘图的时候使用(未测)
 Coordinate paper_to_camera(Coordinate paper)

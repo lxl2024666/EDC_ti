@@ -209,10 +209,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 
     DL_GPIO_clearPins(GPIOA, Motor_IO_AIN1_PIN |
 		Tracking_Tracking_5_PIN |
-		Tracking_Tracking_6_PIN);
+		Tracking_Tracking_8_PIN);
     DL_GPIO_enableOutput(GPIOA, Motor_IO_AIN1_PIN |
 		Tracking_Tracking_5_PIN |
-		Tracking_Tracking_6_PIN);
+		Tracking_Tracking_8_PIN);
     DL_GPIO_clearPins(GPIOB, LED_LED0_PIN |
 		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
@@ -226,8 +226,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		Tracking_Tracking_2_PIN |
 		Tracking_Tracking_3_PIN |
 		Tracking_Tracking_4_PIN |
-		Tracking_Tracking_7_PIN |
-		Tracking_Tracking_8_PIN);
+		Tracking_Tracking_6_PIN |
+		Tracking_Tracking_7_PIN);
     DL_GPIO_enableOutput(GPIOB, LED_LED0_PIN |
 		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
@@ -241,8 +241,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		Tracking_Tracking_2_PIN |
 		Tracking_Tracking_3_PIN |
 		Tracking_Tracking_4_PIN |
-		Tracking_Tracking_7_PIN |
-		Tracking_Tracking_8_PIN);
+		Tracking_Tracking_6_PIN |
+		Tracking_Tracking_7_PIN);
 
 }
 
@@ -509,12 +509,17 @@ SYSCONFIG_WEAK void SYSCFG_DL_K230_init(void)
     DL_UART_Main_init(K230_INST, (DL_UART_Main_Config *) &gK230Config);
     /*
      * Configure baud rate by setting oversampling and baud rate divisors.
-     *  Target baud rate: 9600
-     *  Actual baud rate: 9600.24
+     *  Target baud rate: 115200
+     *  Actual baud rate: 115211.52
      */
     DL_UART_Main_setOversampling(K230_INST, DL_UART_OVERSAMPLING_RATE_16X);
-    DL_UART_Main_setBaudRateDivisor(K230_INST, K230_IBRD_32_MHZ_9600_BAUD, K230_FBRD_32_MHZ_9600_BAUD);
+    DL_UART_Main_setBaudRateDivisor(K230_INST, K230_IBRD_32_MHZ_115200_BAUD, K230_FBRD_32_MHZ_115200_BAUD);
 
+
+    /* Configure Interrupts */
+    DL_UART_Main_enableInterrupt(K230_INST,
+                                 DL_UART_MAIN_INTERRUPT_RX |
+                                 DL_UART_MAIN_INTERRUPT_TX);
 
 
     DL_UART_Main_enable(K230_INST);

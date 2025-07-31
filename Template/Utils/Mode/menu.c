@@ -45,16 +45,16 @@ void menu_init(void)
     // 构建测试菜单树结构
     // 创建主菜单的子菜单项
     ModeNode TestNode = {menu_function, "Test Menu"}; // Create a test menu node
-    ModeNode ProbNode = {menu_function, "Problem Menu"}; // Create a problem menu node
-    ModeNode MyNode = {menu_function, "QINGHAN YANG"}; // Create a custom menu node
+    ModeNode ProBNode = {menu_function, "Problem B"}; // Create a problem menu node
+    ModeNode ProHNode = {menu_function, "Problem H"}; // Create a custom menu node
 
     ModeTree *testMenu = createModeTree(TestNode); // Create the test menu tree
-    ModeTree *problemMenu = createModeTree(ProbNode); // Create the problem menu tree
-    ModeTree *myMenu = createModeTree(MyNode); // Create the custom menu tree   
+    ModeTree *problemBMenu = createModeTree(ProBNode); // Create the problem menu tree
+    ModeTree *proHMenu = createModeTree(ProHNode); // Create the custom menu tree
 
     addChild(now_mode_tree, testMenu);
-    addChild(now_mode_tree, problemMenu);
-    addChild(now_mode_tree, myMenu);
+    addChild(now_mode_tree, problemBMenu);
+    addChild(now_mode_tree, proHMenu); // Add the problem menu to the main menu
     // Add child nodes to the test menu
     ModeNode TestSubNode1 = {menu_function, "Test Sub Menu 1"};
     ModeNode TestSubNode2 = {menu_function, "Test Sub Menu 2"};

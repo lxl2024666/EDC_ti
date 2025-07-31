@@ -1,7 +1,6 @@
-./objects/initialize.o: ..\Utils\Initialize\Initialize.c \
-  ..\Utils\Initialize\Initialize.h ..\Utils\Motion\kinematics.h \
-  ..\Utils\AllHeader.h ..\..\Template\ti_msp_dl_config.h \
-  ..\..\..\source\ti\devices\msp\msp.h \
+./objects/cont_smotor.o: ..\Utils\Motion\Cont_SMotor.c \
+  ..\Utils\Motion\Cont_SMotor.h ..\BSP\SMotor\SMotor.h \
+  ..\..\Template\ti_msp_dl_config.h ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
   ..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
@@ -73,10 +72,10 @@
   ..\..\..\source\ti\driverlib\dl_vref.h \
   ..\..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\..\source\ti\driverlib\m0p\dl_systick.h ..\BSP\OLED\OLED.h \
-  ..\Utils\Delay.h ..\BSP\Motor_Encoder\tb6612fng.h \
+  ..\..\..\source\ti\driverlib\m0p\dl_systick.h ..\Utils\Motion\pid.h \
+  ..\Utils\Initialize\Init_SMotor.h ..\Utils\AllHeader.h \
+  ..\BSP\OLED\OLED.h ..\Utils\Delay.h ..\BSP\Motor_Encoder\tb6612fng.h \
   ..\Utils\Motion\tracking.h ..\Utils\Motion\tracking_delay.h \
-  ..\BSP\Motor_Encoder\Hall_Encoder.h ..\Utils\Motion\pid.h \
-  ..\Utils\Sensor\SensorProc.h ..\Utils\Sensor\Rotation.h \
-  ..\BSP\SMotor\SMotor.h ..\Utils\Initialize\Init_SMotor.h \
-  ..\Utils\Motion\Cont_SMotor.h
+  ..\BSP\Motor_Encoder\Hall_Encoder.h ..\Utils\Initialize\Initialize.h \
+  ..\Utils\Motion\kinematics.h ..\Utils\Sensor\SensorProc.h \
+  ..\Utils\Sensor\Rotation.h

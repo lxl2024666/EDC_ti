@@ -185,9 +185,9 @@ extern "C" {
 #define GPIO_K230_IOMUX_TX                                       (IOMUX_PINCM53)
 #define GPIO_K230_IOMUX_RX_FUNC                        IOMUX_PINCM54_PF_UART2_RX
 #define GPIO_K230_IOMUX_TX_FUNC                        IOMUX_PINCM53_PF_UART2_TX
-#define K230_BAUD_RATE                                                    (9600)
-#define K230_IBRD_32_MHZ_9600_BAUD                                         (208)
-#define K230_FBRD_32_MHZ_9600_BAUD                                          (21)
+#define K230_BAUD_RATE                                                  (115200)
+#define K230_IBRD_32_MHZ_115200_BAUD                                        (17)
+#define K230_FBRD_32_MHZ_115200_BAUD                                        (23)
 
 
 
@@ -256,18 +256,18 @@ extern "C" {
 #define Tracking_Tracking_5_PORT                                         (GPIOA)
 #define Tracking_Tracking_5_PIN                                 (DL_GPIO_PIN_12)
 #define Tracking_Tracking_5_IOMUX                                (IOMUX_PINCM34)
-/* Defines for Tracking_6: GPIOA.13 with pinCMx 35 on package pin 6 */
-#define Tracking_Tracking_6_PORT                                         (GPIOA)
-#define Tracking_Tracking_6_PIN                                 (DL_GPIO_PIN_13)
-#define Tracking_Tracking_6_IOMUX                                (IOMUX_PINCM35)
+/* Defines for Tracking_6: GPIOB.26 with pinCMx 57 on package pin 28 */
+#define Tracking_Tracking_6_PORT                                         (GPIOB)
+#define Tracking_Tracking_6_PIN                                 (DL_GPIO_PIN_26)
+#define Tracking_Tracking_6_IOMUX                                (IOMUX_PINCM57)
 /* Defines for Tracking_7: GPIOB.23 with pinCMx 51 on package pin 22 */
 #define Tracking_Tracking_7_PORT                                         (GPIOB)
 #define Tracking_Tracking_7_PIN                                 (DL_GPIO_PIN_23)
 #define Tracking_Tracking_7_IOMUX                                (IOMUX_PINCM51)
-/* Defines for Tracking_8: GPIOB.26 with pinCMx 57 on package pin 28 */
-#define Tracking_Tracking_8_PORT                                         (GPIOB)
-#define Tracking_Tracking_8_PIN                                 (DL_GPIO_PIN_26)
-#define Tracking_Tracking_8_IOMUX                                (IOMUX_PINCM57)
+/* Defines for Tracking_8: GPIOA.13 with pinCMx 35 on package pin 6 */
+#define Tracking_Tracking_8_PORT                                         (GPIOA)
+#define Tracking_Tracking_8_PIN                                 (DL_GPIO_PIN_13)
+#define Tracking_Tracking_8_IOMUX                                (IOMUX_PINCM35)
 
 
 
