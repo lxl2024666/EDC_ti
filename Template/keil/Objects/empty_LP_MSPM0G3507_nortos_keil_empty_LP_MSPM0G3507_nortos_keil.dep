@@ -1,1834 +1,10 @@
 Dependencies for Project 'empty_LP_MSPM0G3507_nortos_keil', Target 'empty_LP_MSPM0G3507_nortos_keil': (DO NOT MODIFY !)
-<<<<<<< HEAD
-CompilerVersion: 6230000::V6.23::ARMCLANG
-F (../empty.c)(0x688B5F4E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MMD)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (../empty.syscfg)(0x688B3885)()
-F (startup_mspm0g350x_uvision.s)(0x688B5CEE)(--cpu Cortex-M0+ -g --diag_suppress=A1950W--pd "__UVISION_VERSION SETA 542"--pd "__MSPM0G3507__ SETA 1"--list .\startup_mspm0g350x_uvision.lst--xref -o .\objects\startup_mspm0g350x_uvision.o--depend .\objects\startup_mspm0g350x_uvision.d)
-F (../ti_msp_dl_config.h)(0x688B3885)()
-F (../ti_msp_dl_config.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
-I (..\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-F (..\Utils\Delay.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/delay.o -MMD)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-F (..\BSP\Motor_Encoder\tb6612fng.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tb6612fng.o -MMD)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-F (..\BSP\Motor_Encoder\Hall_Encoder.c)(0x688B5A6D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/hall_encoder.o -MMD)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-F (..\Utils\Initialize\Initialize.c)(0x688B608D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/initialize.o -MMD)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Initialize\Init_SMotor.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/init_smotor.o -MMD)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-F (..\Utils\Motion\kinematics.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/kinematics.o -MMD)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Motion\pid.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid.o -MMD)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-F (..\Utils\Motion\tracking.c)(0x688B60E5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tracking.o -MMD)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Motion\Cont_SMotor.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/cont_smotor.o -MMD)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Sensor\Rotation.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/rotation.o -MMD)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Sensor\SensorProc.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sensorproc.o -MMD)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\BSP\SMotor\SMotor.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/smotor.o -MMD)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\BSP\Laser_USART\Laser_USART.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/laser_usart.o -MMD)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-F (..\BSP\TrackingSensor\TrackingSensor.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/trackingsensor.o -MMD)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Mode\circle_list.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/circle_list.o -MMD)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-F (..\Utils\Mode\menu.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/menu.o -MMD)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\BSP\OLED\oled.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Mode\mode.c)(0x688B6049)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode.o -MMD)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\Utils\Mode\mode_tree.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode_tree.o -MMD)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-F (..\BSP\key\key.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/key.o -MMD)
-I (..\BSP\key\key.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-F (..\BSP\OLED\OLED.c)(0x688B3885)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MMD)
-I (..\BSP\OLED\OLED.h)(0x688B3885)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B3885)
-I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x686639FA)
-I (..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_aes.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_comp.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_crc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dac12.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_dma.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_flashctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gpio.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_gptimer.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_i2c.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_iomux.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mathacl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_mcan.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_oa.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_rtc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_spi.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_trng.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_uart.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_vref.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wuc.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\hw_wwdt.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_factoryregion.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x686639FA)
-I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FA)
-I (..\..\..\source\ti\driverlib\driverlib.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_core.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aes.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_aesadv.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_comp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_crcp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dac12.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_dma.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_flashctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_sysctl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\sysctl\dl_sysctl_mspm0g1x0x_g3x0x.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpamp.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_gpio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_i2c.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_iwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lfss.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_keystorectl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_lcd.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mathacl.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_mcan.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_opa.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_common.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_a.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_rtc_b.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_scratchpad.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_spi.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_tamperio.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timera.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timer.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_timerg.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_trng.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_extend.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_uart_main.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
-I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\OLED\OLED_Font.h)(0x688B3885)
-I (..\Utils\AllHeader.h)(0x688B3E9D)
-I (..\Utils\Delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B3885)
-I (..\Utils\Motion\tracking.h)(0x688B3885)
-I (..\Utils\Motion\tracking_delay.h)(0x688B3885)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B3AF7)
-I (..\Utils\Initialize\Initialize.h)(0x688B60D7)
-I (..\Utils\Motion\kinematics.h)(0x688B3885)
-I (..\Utils\Motion\pid.h)(0x688B3885)
-I (..\Utils\Sensor\SensorProc.h)(0x688B3885)
-I (..\Utils\Sensor\Rotation.h)(0x688B3885)
-I (..\BSP\SMotor\SMotor.h)(0x688B3885)
-I (..\Utils\Initialize\Init_SMotor.h)(0x688B3885)
-I (..\Utils\Motion\Cont_SMotor.h)(0x688B3885)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B3885)
-I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B3885)
-I (..\Utils\Mode\menu.h)(0x688B3885)
-I (..\Utils\Mode\mode_tree.h)(0x688B3885)
-I (..\Utils\Mode\circle_list.h)(0x688B3885)
-I (..\Utils\Mode\mode.h)(0x688B3885)
-I (..\BSP\key\key.h)(0x688B3885)
-=======
 CompilerVersion: 6210000::V6.21::ARMCLANG
-F (../empty.c)(0x688B6286)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MD)
+F (../empty.c)(0x688BC6EA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MD)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -1921,10 +97,10 @@ I (..\Utils\Motion\Cont_SMotor.hs.\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\BSP\TrackingSensor\TrackingSensor.hs.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (../empty.syscfg)(0x688B1FB0)()
-F (startup_mspm0g350x_uvision.s)(0x688B6048)(--cpu Cortex-M0+ -g --pd "__MICROLIB SETA 1" --diag_suppress=A1950W--pd "__UVISION_VERSION SETA 539"--pd "__MSPM0G3507__ SETA 1"--list .\startup_mspm0g350x_uvision.lst--xref -o .\objects\startup_mspm0g350x_uvision.o--depend .\objects\startup_mspm0g350x_uvision.d)
-F (../ti_msp_dl_config.h)(0x688B1FB7)()
-F (../ti_msp_dl_config.c)(0x688B1FB7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MD)
+F (../empty.syscfg)(0x688BCA0C)()
+F (startup_mspm0g350x_uvision.s)(0x688B7574)(--cpu Cortex-M0+ -g --pd "__MICROLIB SETA 1" --diag_suppress=A1950W--pd "__UVISION_VERSION SETA 539"--pd "__MSPM0G3507__ SETA 1"--list .\startup_mspm0g350x_uvision.lst--xref -o .\objects\startup_mspm0g350x_uvision.o--depend .\objects\startup_mspm0g350x_uvision.d)
+F (../ti_msp_dl_config.h)(0x688BCA1C)()
+F (../ti_msp_dl_config.c)(0x688BCA1C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MD)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2008,7 +184,7 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-F (..\Utils\Delay.c)(0x6880CEE2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/delay.o -MD)
+F (..\Utils\Delay.c)(0x6880CEE2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/delay.o -MD)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
@@ -2046,7 +222,7 @@ I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_cpuss.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_debugss.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\peripherals\m0p\hw_sysctl.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h)(0x6841E4A5)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B1FB7)
+I (..\..\Template\ti_msp_dl_config.h)(0x688BCA1C)
 I (..\..\..\source\ti\driverlib\driverlib.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\dl_adc12.h)(0x6841E4A5)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
@@ -2092,7 +268,7 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-F (..\BSP\Motor_Encoder\tb6612fng.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tb6612fng.o -MD)
+F (..\BSP\Motor_Encoder\tb6612fng.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tb6612fng.o -MD)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B0D39)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
@@ -2177,8 +353,8 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-F (..\BSP\Motor_Encoder\Hall_Encoder.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/hall_encoder.o -MD)
-I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688B0D39)
+F (..\BSP\Motor_Encoder\Hall_Encoder.c)(0x688BCA19)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/hall_encoder.o -MD)
+I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688BBEAA)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2262,12 +438,13 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-F (..\Utils\Initialize\Initialize.c)(0x688B21BB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/initialize.o -MD)
-I (..\Utils\Initialize\Initialize.h)(0x688B0D39)
+F (..\Utils\Initialize\Initialize.c)(0x688BBE44)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/initialize.o -MD)
+I (..\Utils\Initialize\Initialize.h)(0x688BBC06)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdbool.h)(0x6569B012)
 I (..\Utils\AllHeader.h\:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2358,9 +535,9 @@ I (..\Utils\Motion\Cont_SMotor.hs.\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\BSP\TrackingSensor\TrackingSensor.hs.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Initialize\Init_SMotor.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/init_smotor.o -MD)
+F (..\Utils\Initialize\Init_SMotor.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/init_smotor.o -MD)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B0D39)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B1FB7)
+I (..\..\Template\ti_msp_dl_config.h)(0x688BCA1C)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
@@ -2443,12 +620,13 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
-F (..\Utils\Motion\kinematics.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/kinematics.o -MD)
-I (..\Utils\Motion\kinematics.h)(0x688B0D39)
+F (..\Utils\Motion\kinematics.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/kinematics.o -MD)
+I (..\Utils\Motion\kinematics.h)(0x688BBC06)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdbool.h)(0x6569B012)
 I (..\Utils\AllHeader.h\:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2540,14 +718,15 @@ I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Motion\pid.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid.o -MD)
+F (..\Utils\Motion\pid.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid.o -MD)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
-F (..\Utils\Motion\tracking.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tracking.o -MD)
+F (..\Utils\Motion\tracking.c)(0x688B70F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tracking.o -MD)
 I (..\Utils\Motion\tracking.h)(0x688B0D39)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2640,7 +819,7 @@ I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Motion\Cont_SMotor.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/cont_smotor.o -MD)
+F (..\Utils\Motion\Cont_SMotor.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/cont_smotor.o -MD)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B0D39)
 I (..\..\Template\ti_msp_dl_config.hS.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
@@ -2727,7 +906,8 @@ I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h..\Utils\Motion\pid.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (..\Utils\Initialize\Init_SMotor.h\.\Utils\AllHeader.h)(0x00000000)
-I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.hr\BSP\OLED\OLED.h)(0x00000000)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Utils\Delay.he.\BSP\Motor_Encoder\tb6612fng.h)(0x00000000)
 I (..\Utils\Motion\tracking.ho.\Utils\Motion\tracking_delay.h)(0x00000000)
 I (..\BSP\Motor_Encoder\Hall_Encoder.hM.\Utils\Initialize\Initialize.h)(0x00000000)
@@ -2736,11 +916,12 @@ I (..\Utils\Sensor\Rotation.h..\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\BSP\TrackingSensor\TrackingSensor.h_.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Sensor\Rotation.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/rotation.o -MD)
+F (..\Utils\Sensor\Rotation.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/rotation.o -MD)
 I (..\Utils\Sensor\Rotation.h)(0x688B0D39)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2833,11 +1014,12 @@ I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Sensor\SensorProc.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sensorproc.o -MD)
+F (..\Utils\Sensor\SensorProc.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sensorproc.o -MD)
 I (..\Utils\Sensor\SensorProc.h)(0x688B26A7)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -2930,7 +1112,7 @@ I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\BSP\SMotor\SMotor.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/smotor.o -MD)
+F (..\BSP\SMotor\SMotor.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/smotor.o -MD)
 I (..\..\Template\ti_msp_dl_config.ho.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -3015,7 +1197,8 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h..\Utils\AllHeader.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
-I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.hi\BSP\OLED\OLED.h)(0x00000000)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Utils\Delay.he.\BSP\Motor_Encoder\tb6612fng.h)(0x00000000)
 I (..\Utils\Motion\tracking.ho.\Utils\Motion\tracking_delay.h)(0x00000000)
 I (..\BSP\Motor_Encoder\Hall_Encoder.hM.\Utils\Initialize\Initialize.h)(0x00000000)
@@ -3026,8 +1209,8 @@ I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\BSP\Laser_USART\Laser_USART.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/laser_usart.o -MD)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B1FB7)
+F (..\BSP\Laser_USART\Laser_USART.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/laser_usart.o -MD)
+I (..\..\Template\ti_msp_dl_config.hy.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
@@ -3111,12 +1294,13 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x6841E4A5)
 I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
-F (..\BSP\TrackingSensor\TrackingSensor.c)(0x688B6303)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/trackingsensor.o -MD)
+F (..\BSP\TrackingSensor\TrackingSensor.c)(0x688B785E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/trackingsensor.o -MD)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B0B67)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
 I (..\Utils\AllHeader.h\:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -3207,11 +1391,11 @@ I (..\BSP\SMotor\SMotor.hP.\Utils\Initialize\Init_SMotor.h)(0x00000000)
 I (..\Utils\Motion\Cont_SMotor.hs.\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\Utils\Mode\menu.h_.\Utils\Mode\mode_tree.h)(0x00000000)
 I (..\Utils\Mode\circle_list.hs.\Utils\Mode\mode.h\.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Mode\circle_list.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/circle_list.o -MD)
+F (..\Utils\Mode\circle_list.c)(0x688B0D39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/circle_list.o -MD)
 I (..\Utils\Mode\circle_list.h)(0x688B0D39)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stddef.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
-F (..\Utils\Mode\menu.c)(0x688B359A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/menu.o -MD)
+F (..\Utils\Mode\menu.c)(0x688B359A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/menu.o -MD)
 I (..\Utils\Mode\mode_tree.h)(0x688B0D39)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stddef.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
@@ -3297,7 +1481,8 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h..\Utils\AllHeader.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
-I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.hi\Utils\Delay.h)(0x00000000)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\BSP\Motor_Encoder\tb6612fng.hG.\Utils\Motion\tracking.h)(0x00000000)
 I (..\Utils\Motion\tracking_delay.hG.\BSP\Motor_Encoder\Hall_Encoder.h)(0x00000000)
 I (..\Utils\Initialize\Initialize.hG.\Utils\Motion\kinematics.h)(0x00000000)
@@ -3307,11 +1492,12 @@ I (..\Utils\Initialize\Init_SMotor.hS.\Utils\Motion\Cont_SMotor.h)(0x00000000)
 I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Mode\mode.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode.o -MD)
+F (..\Utils\Mode\mode.c)(0x688B70F4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode.o -MD)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdbool.h)(0x6569B012)
 I (..\Utils\AllHeader.h\:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -3402,13 +1588,14 @@ I (..\BSP\SMotor\SMotor.hP.\Utils\Initialize\Init_SMotor.h)(0x00000000)
 I (..\Utils\Motion\Cont_SMotor.hs.\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\BSP\TrackingSensor\TrackingSensor.hs.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.hm.\BSP\key\key.h)(0x00000000)
-F (..\Utils\Mode\mode_tree.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode_tree.o -MD)
+F (..\Utils\Mode\mode_tree.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode_tree.o -MD)
 I (..\Utils\Mode\mode_tree.h)(0x688B0D39)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stddef.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
 I (..\Utils\AllHeader.h\:\Application\Keil5\ARM\ARMCLANG\include\math.h)(0x00000000)
-I (..\..\Template\ti_msp_dl_config.hn.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
+I (..\..\Template\ti_msp_dl_config.h\.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
@@ -3498,8 +1685,8 @@ I (..\BSP\SMotor\SMotor.hP.\Utils\Initialize\Init_SMotor.h)(0x00000000)
 I (..\Utils\Motion\Cont_SMotor.hs.\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\BSP\TrackingSensor\TrackingSensor.hs.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\circle_list.hi.\Utils\Mode\mode.hM.\BSP\key\key.h)(0x00000000)
-F (..\BSP\key\key.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/key.o -MD)
-I (..\..\Template\ti_msp_dl_config.h)(0x688B1FB7)
+F (..\BSP\key\key.c)(0x688B26A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/key.o -MD)
+I (..\..\Template\ti_msp_dl_config.h)(0x688BCA1C)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h)(0x6569B012)
@@ -3583,7 +1770,8 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h..\Utils\AllHeader.h)(0x00000000)
 I (D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x6569B012)
-I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.hi\BSP\OLED\OLED.h)(0x00000000)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\Utils\Delay.he.\BSP\Motor_Encoder\tb6612fng.h)(0x00000000)
 I (..\Utils\Motion\tracking.ho.\Utils\Motion\tracking_delay.h)(0x00000000)
 I (..\BSP\Motor_Encoder\Hall_Encoder.hM.\Utils\Initialize\Initialize.h)(0x00000000)
@@ -3594,7 +1782,7 @@ I (..\Utils\Motion\Cont_SMotor.hs.\BSP\Laser_USART\Laser_USART.h)(0x00000000)
 I (..\BSP\TrackingSensor\TrackingSensor.hs.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.h)(0x688B26A7)
-F (..\BSP\OLED\OLED.c)(0x688B6366)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MD)
+F (..\BSP\OLED\OLED.c)(0x688B6388)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="539" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MD)
 I (..\..\Template\ti_msp_dl_config.hD.\..\..\source\ti\devices\msp\msp.h)(0x00000000)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x6841E4A5)
 I (..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h)(0x6841E4A5)
@@ -3679,7 +1867,8 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x6841E4A5)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h..\BSP\OLED\OLED_Font.h)(0x00000000)
 I (..\Utils\AllHeader.hr:\Application\Keil5\ARM\ARMCLANG\include\stdio.h)(0x00000000)
-I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.hA\Utils\Delay.h)(0x00000000)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x6569B012)
+I (D:\Application\Keil5\ARM\ARMCLANG\include\string.h)(0x6569B012)
 I (..\BSP\Motor_Encoder\tb6612fng.hG.\Utils\Motion\tracking.h)(0x00000000)
 I (..\Utils\Motion\tracking_delay.hG.\BSP\Motor_Encoder\Hall_Encoder.h)(0x00000000)
 I (..\Utils\Initialize\Initialize.hG.\Utils\Motion\kinematics.h)(0x00000000)
@@ -3690,4 +1879,3 @@ I (..\BSP\Laser_USART\Laser_USART.h)(0x688B0D39)
 I (..\BSP\TrackingSensor\TrackingSensor.hi.\Utils\Mode\menu.h)(0x00000000)
 I (..\Utils\Mode\mode_tree.hc.\Utils\Mode\circle_list.h)(0x00000000)
 I (..\Utils\Mode\mode.hr.\BSP\key\key.h)(0x00000000)
->>>>>>> badbb3cf5dc34a90b8ad1542ac00877c8a41d0a3

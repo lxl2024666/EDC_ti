@@ -37,10 +37,6 @@
 #define LEFT_MOTOR_PWM_CHANNEL  DL_TIMER_CC_1_INDEX
 #define LEFT_MOTOR_INIT_DUTY    0
 
-// 编码器初始化参数 (单个编码器，不使用LR模式)
-#define ENCODER_QEI_TIMER       QEI_0_INST
-#define ENCODER_REAL_TIMER      (GPTIMER_Regs*)TIMA0_BASE
-
 
 #ifdef __cplusplus
 extern "C" {

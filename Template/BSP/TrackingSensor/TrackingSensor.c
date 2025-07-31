@@ -20,4 +20,6 @@ void getTrackingSensorData(uint8_t digitalArray[8])
 	digitalArray[5] = (DL_GPIO_readPins(Tracking_Tracking_6_PORT, Tracking_Tracking_6_PIN) == 0);
 	digitalArray[6] = (DL_GPIO_readPins(Tracking_Tracking_7_PORT, Tracking_Tracking_7_PIN) == 0);
 	digitalArray[7] = (DL_GPIO_readPins(Tracking_Tracking_8_PORT, Tracking_Tracking_8_PIN) == 0);
+	
+	
 }

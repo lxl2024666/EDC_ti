@@ -28,9 +28,6 @@ void MECInit()
     Motor_UI_Init(&Ri, RIGHT_MOTOR_IN1_PORT, RIGHT_MOTOR_IN1_PIN,
                   RIGHT_MOTOR_IN2_PORT, RIGHT_MOTOR_IN2_PIN,
                   RIGHT_MOTOR_PWM_TIMER, RIGHT_MOTOR_PWM_CHANNEL, RIGHT_MOTOR_INIT_DUTY);
-
-    // 初始化单个编码器 (不使用LR模式)
-    EncoderInit(ENCODER_QEI_TIMER, ENCODER_REAL_TIMER, WHEEL_DIAMETER, PPR * REDUCE);
 }
 
 void LMotorSet(MOVETYPE type, uint16_t duty)
@@ -133,7 +130,7 @@ void UpdateData()
     static volatile bool first_run = true; // Flag to indicate the first run
     /* static float last_yaw = 0.0f; // Last yaw value for the first run
  */
-    current_data.speed.linear_velocity = getSpeed(0) * speedCorrection; // Get speed from single encoder (index 0)
+    current_data.speed.linear_velocity = getSpeed() * speedCorrection; // Get speed from single encoder (index 0)
     current_data.yaw = getYaw();// current_data.angles = getRotationAngles(); // Get the current rotation angles
     current_data.speed.angular_velocity = getWz(); // Get the current angular velocity
 //    IIC_Get_Digital(Digital);
