@@ -66,7 +66,7 @@ int main(void)
 	Laser_Ask_for_Loc();
 	
 	getTrackingSensorData(Digtal);
-	
+//test_track();
 	while (1) 
 	{
 		Delay_ms(1000);

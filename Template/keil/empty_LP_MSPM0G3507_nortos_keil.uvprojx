@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED_Update;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor;..\BSP\SMotor;..\BSP\Laser_USART;..\BSP\TrackingSensor</IncludePath>
+              <IncludePath>..\..\..\source\third_party\CMSIS\Core\Include;..\..\..\source;..\BSP\OLED_Update;..\Utils;..\..\Template;..\BSP\Motor_Encoder;..\BSP\LED;..\BSP\JY61P;..\Utils\Initialize;..\Utils\Motion;..\Utils\Sensor;..\BSP\SMotor;..\BSP\Laser_USART;..\BSP\TrackingSensor;..\BSP\key;..\Utils\Mode;..\BSP\TrackingSensor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -509,6 +509,51 @@
               <FileName>Laser_USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\Laser_USART\Laser_USART.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP\TrackingSensor</GroupName>
+          <Files>
+            <File>
+              <FileName>TrackingSensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\TrackingSensor\TrackingSensor.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Mode</GroupName>
+          <Files>
+            <File>
+              <FileName>circle_list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Mode\circle_list.c</FilePath>
+            </File>
+            <File>
+              <FileName>menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Mode\menu.c</FilePath>
+            </File>
+            <File>
+              <FileName>mode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Mode\mode.c</FilePath>
+            </File>
+            <File>
+              <FileName>mode_tree.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Utils\Mode\mode_tree.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP\key</GroupName>
+          <Files>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\key\key.c</FilePath>
             </File>
           </Files>
         </Group>

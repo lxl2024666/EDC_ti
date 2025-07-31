@@ -1,6 +1,10 @@
 #ifndef ALLHEADERS_H
 #define ALLHEADERS_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
 #include "ti_msp_dl_config.h"
 #include "OLED.h"
 #include "Delay.h"
@@ -35,5 +39,10 @@
 //八路传感器头文件
 #include "TrackingSensor.h"
 
-
+//状态机
+#include "menu.h"
+#include "mode_tree.h"
+#include "circle_list.h"
+#include "mode.h"
+#include "key.h"
 #endif // ALLHEADERS_H

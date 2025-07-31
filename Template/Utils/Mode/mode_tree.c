@@ -1,7 +1,7 @@
 #include "mode_tree.h"
 #include "stdio.h"
-#include "main.h"
 #include "stdlib.h"
+#include "AllHeader.h"
 
 ModeTree *createModeTree(ModeNode node) {
     ModeTree *newTree = (ModeTree *)malloc(sizeof(ModeTree));
@@ -16,7 +16,7 @@ ModeTree *createModeTree(ModeNode node) {
 
 void addChild(ModeTree *parent, ModeTree *child) {
     if (parent == NULL || child == NULL) {
-        Error_Handler(); // Handle error for null pointers
+        error_handler(); // Handle error for null pointers
         return; // Invalid input
     }
     child->parent = parent; // Set the parent pointer

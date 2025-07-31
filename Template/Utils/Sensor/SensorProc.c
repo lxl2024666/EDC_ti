@@ -8,7 +8,7 @@
 #include "SensorProc.h"
 
 Coordinate paperCornerC[4];
-int edge;
+extern int edge;
 
 //以下函数用于处理视觉模块，主要在绘图的时候使用(未测)
 Coordinate paper_to_camera(Coordinate paper)
@@ -64,6 +64,8 @@ float thetaGrayscale()
             sum++;
         }
     }
+		if(sum == 0)
+			return 0.0;
     return theta / sum;
 }
 
@@ -83,4 +85,9 @@ bool half_Detect(){
 bool cross_Roads_Detect(){
 //十字路口（丁字路口）检测
 	return Road_detect(7, 8);
+}
+
+bool empty_Detect()
+{
+	return Road_detect(0, 0);
 }
