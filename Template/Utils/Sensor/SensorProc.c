@@ -8,8 +8,9 @@
 #include "SensorProc.h"
 
 Coordinate paperCornerC[4];
+extern int edge;
 
-//以下函数用于处理视觉模块，主要在绘图的时候使用
+//以下函数用于处理视觉模块，主要在绘图的时候使用(未测)
 Coordinate paper_to_camera(Coordinate paper)
 {
     paper.x /= PAPERWIDE;
@@ -22,6 +23,26 @@ Coordinate paper_to_camera(Coordinate paper)
     return camera;
 }
 
+//以下函数用于通过视觉传感器以及编码器获得所需的光点坐标（未测）
+Coordinate get_target_coordinate()
+{
+    Coordinate target;
+    float target_theta = (edge - 1) * 90.0f; // 计算目标角度 有个疑虑，在出发点edge = 0 而且编码器的数值还没叠加起来
+    target.x = CIRCLERADIUS * cosf(DEG_TO_RAD(target_theta));
+    target.y = CIRCLERADIUS * sinf(DEG_TO_RAD(target_theta));
+    // 将目标坐标转换为相对于纸张中心的坐标
+    target.x += PAPERWIDE / 2.0f;
+    target.y += PAPERHIGHT / 2.0f;
+    return target;
+}
+
+Coordinate getCenter(void)
+{
+    Coordinate center;
+    center.x = PAPERWIDE / 2.0f;
+    center.y = PAPERHIGHT / 2.0f;
+    return center;
+}
 //以下函数用于处理灰度传感器
 float Grayscale_Num_To_Theta(int num)
 {

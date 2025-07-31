@@ -13,6 +13,7 @@
 //以下是关于视觉处理部分的宏定义
 #define PAPERWIDE 250 //单位mm
 #define PAPERHIGHT 250 //单位mm
+#define CIRCLERADIUS 60 //单位mm
 
 #define XDISM 500
 #define YDIS 500
