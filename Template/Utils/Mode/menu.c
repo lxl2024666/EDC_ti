@@ -56,7 +56,13 @@ void menu_init(void)
     addChild(now_mode_tree, testMenu);
     addChild(now_mode_tree, problemBMenu);
     addChild(now_mode_tree, proHMenu); // Add the problem menu to the main menu
+
     // Add child nodes to the test menu
+    ModeNode test_dis = {test_dis, "Test Distance"}; // Create a test distance node
+    ModeNode test_cordi = {test_Cordi, "Test Coordinate"}; // Create a test coordinate node
+    ModeNode test_circle = {test_Circle, "Test Circle"}; // Create a test circle node
+    ModeNode test_track = {test_track, "Test Track"}; // Create a test track node
+
     ModeNode ProB1 = {menu_function, "ProB1"}; // Create a sub-menu node for Problem B
     ModeNode ProB2_3 = {ProB2_3, "ProB2/3"}; // Create a sub-menu node for Problem B
 
