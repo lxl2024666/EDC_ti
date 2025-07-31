@@ -1,10 +1,18 @@
 ./objects/initialize.o: ..\Utils\Initialize\Initialize.c \
   ..\Utils\Initialize\Initialize.h ..\Utils\Motion\kinematics.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdbool.h \
   ..\Utils\AllHeader.h ..\..\Template\ti_msp_dl_config.h \
   ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h \
   ..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_version.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_compiler.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_armclang.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\arm_compat.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\arm_acle.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\mpu_armv7.h \
   ..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h \
   ..\..\..\source\ti\devices\msp\peripherals\hw_aes.h \
   ..\..\..\source\ti\devices\msp\peripherals\hw_comp.h \
@@ -33,10 +41,12 @@
   ..\..\..\source\ti\devices\msp\peripherals\m0p\sysctl\hw_sysctl_mspm0g1x0x_g3x0x.h \
   ..\..\..\source\ti\driverlib\driverlib.h \
   ..\..\..\source\ti\driverlib\dl_adc12.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\math.h \
   ..\..\..\source\ti\driverlib\dl_common.h \
   ..\..\..\source\ti\driverlib\m0p\dl_factoryregion.h \
   ..\..\..\source\ti\driverlib\m0p\dl_core.h \
   ..\..\..\source\ti\driverlib\dl_aes.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stddef.h \
   ..\..\..\source\ti\driverlib\dl_aesadv.h \
   ..\..\..\source\ti\driverlib\dl_comp.h \
   ..\..\..\source\ti\driverlib\dl_crc.h \
@@ -77,5 +87,6 @@
   ..\Utils\Delay.h ..\BSP\Motor_Encoder\tb6612fng.h \
   ..\Utils\Motion\tracking.h ..\Utils\Motion\tracking_delay.h \
   ..\BSP\Motor_Encoder\Hall_Encoder.h ..\Utils\Motion\pid.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h \
   ..\Utils\Sensor\SensorProc.h ..\Utils\Sensor\Rotation.h \
   ..\BSP\SMotor\SMotor.h ..\Utils\Initialize\Init_SMotor.h

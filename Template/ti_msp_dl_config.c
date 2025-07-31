@@ -57,13 +57,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     SYSCFG_DL_SYSCTL_init();
     SYSCFG_DL_Motor_init();
     SYSCFG_DL_SMotor_init();
-    SYSCFG_DL_Servo_init();
     SYSCFG_DL_QEI_0_init();
     SYSCFG_DL_TIMER_0_init();
-    SYSCFG_DL_I2C_0_init();
     SYSCFG_DL_I2C_1_init();
     SYSCFG_DL_Debug_init();
-    SYSCFG_DL_IMU_init();
     SYSCFG_DL_K230_init();
     SYSCFG_DL_SYSTICK_init();
     /* Ensure backup structures have no valid state */
@@ -109,13 +106,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_reset(GPIOB);
     DL_TimerG_reset(Motor_INST);
     DL_TimerG_reset(SMotor_INST);
-    DL_TimerG_reset(Servo_INST);
     DL_TimerG_reset(QEI_0_INST);
     DL_TimerA_reset(TIMER_0_INST);
-    DL_I2C_reset(I2C_0_INST);
     DL_I2C_reset(I2C_1_INST);
     DL_UART_Main_reset(Debug_INST);
-    DL_UART_Main_reset(IMU_INST);
     DL_UART_Main_reset(K230_INST);
 
 
@@ -123,13 +117,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_GPIO_enablePower(GPIOB);
     DL_TimerG_enablePower(Motor_INST);
     DL_TimerG_enablePower(SMotor_INST);
-    DL_TimerG_enablePower(Servo_INST);
     DL_TimerG_enablePower(QEI_0_INST);
     DL_TimerA_enablePower(TIMER_0_INST);
-    DL_I2C_enablePower(I2C_0_INST);
     DL_I2C_enablePower(I2C_1_INST);
     DL_UART_Main_enablePower(Debug_INST);
-    DL_UART_Main_enablePower(IMU_INST);
     DL_UART_Main_enablePower(K230_INST);
 
     delay_cycles(POWER_STARTUP_DELAY);
@@ -146,24 +137,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_enableOutput(GPIO_SMotor_C0_PORT, GPIO_SMotor_C0_PIN);
     DL_GPIO_initPeripheralOutputFunction(GPIO_SMotor_C1_IOMUX,GPIO_SMotor_C1_IOMUX_FUNC);
     DL_GPIO_enableOutput(GPIO_SMotor_C1_PORT, GPIO_SMotor_C1_PIN);
-    DL_GPIO_initPeripheralOutputFunction(GPIO_Servo_C0_IOMUX,GPIO_Servo_C0_IOMUX_FUNC);
-    DL_GPIO_enableOutput(GPIO_Servo_C0_PORT, GPIO_Servo_C0_PIN);
-    DL_GPIO_initPeripheralOutputFunction(GPIO_Servo_C1_IOMUX,GPIO_Servo_C1_IOMUX_FUNC);
-    DL_GPIO_enableOutput(GPIO_Servo_C1_PORT, GPIO_Servo_C1_PIN);
 
     DL_GPIO_initPeripheralInputFunction(GPIO_QEI_0_PHA_IOMUX,GPIO_QEI_0_PHA_IOMUX_FUNC);
     DL_GPIO_initPeripheralInputFunction(GPIO_QEI_0_PHB_IOMUX,GPIO_QEI_0_PHB_IOMUX_FUNC);
 
-    DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_I2C_0_IOMUX_SDA,
-        GPIO_I2C_0_IOMUX_SDA_FUNC, DL_GPIO_INVERSION_DISABLE,
-        DL_GPIO_RESISTOR_NONE, DL_GPIO_HYSTERESIS_DISABLE,
-        DL_GPIO_WAKEUP_DISABLE);
-    DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_I2C_0_IOMUX_SCL,
-        GPIO_I2C_0_IOMUX_SCL_FUNC, DL_GPIO_INVERSION_DISABLE,
-        DL_GPIO_RESISTOR_NONE, DL_GPIO_HYSTERESIS_DISABLE,
-        DL_GPIO_WAKEUP_DISABLE);
-    DL_GPIO_enableHiZ(GPIO_I2C_0_IOMUX_SDA);
-    DL_GPIO_enableHiZ(GPIO_I2C_0_IOMUX_SCL);
     DL_GPIO_initPeripheralInputFunctionFeatures(GPIO_I2C_1_IOMUX_SDA,
         GPIO_I2C_1_IOMUX_SDA_FUNC, DL_GPIO_INVERSION_DISABLE,
         DL_GPIO_RESISTOR_NONE, DL_GPIO_HYSTERESIS_DISABLE,
@@ -180,10 +157,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_initPeripheralInputFunction(
         GPIO_Debug_IOMUX_RX, GPIO_Debug_IOMUX_RX_FUNC);
     DL_GPIO_initPeripheralOutputFunction(
-        GPIO_IMU_IOMUX_TX, GPIO_IMU_IOMUX_TX_FUNC);
-    DL_GPIO_initPeripheralInputFunction(
-        GPIO_IMU_IOMUX_RX, GPIO_IMU_IOMUX_RX_FUNC);
-    DL_GPIO_initPeripheralOutputFunction(
         GPIO_K230_IOMUX_TX, GPIO_K230_IOMUX_TX_FUNC);
     DL_GPIO_initPeripheralInputFunction(
         GPIO_K230_IOMUX_RX, GPIO_K230_IOMUX_RX_FUNC);
@@ -191,10 +164,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_initDigitalOutputFeatures(LED_LED0_IOMUX,
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
 		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
-
-    DL_GPIO_initDigitalOutput(Buzzer_PIN_0_IOMUX);
-
-    DL_GPIO_initDigitalOutput(Tube_Sign_Sign_IOMUX);
 
     DL_GPIO_initDigitalOutput(Key_PIN_1_IOMUX);
 
@@ -206,30 +175,45 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 
     DL_GPIO_initDigitalOutput(SMotor_IO_EN2_IOMUX);
 
-    DL_GPIO_initDigitalOutput(Motor_IO_AIN1_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(Motor_IO_AIN1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Motor_IO_AIN2_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(Motor_IO_AIN2_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Motor_IO_BIN1_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(Motor_IO_BIN1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Motor_IO_BIN2_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(Motor_IO_BIN2_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(RYG_LED_Red_IOMUX);
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_1_IOMUX);
 
-    DL_GPIO_initDigitalOutput(RYG_LED_Yellow_IOMUX);
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_2_IOMUX);
 
-    DL_GPIO_initDigitalOutput(RYG_LED_Green_IOMUX);
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_3_IOMUX);
 
-    DL_GPIO_clearPins(GPIOA, LED_LED0_PIN |
-		Motor_IO_AIN1_PIN |
-		RYG_LED_Red_PIN |
-		RYG_LED_Yellow_PIN);
-    DL_GPIO_enableOutput(GPIOA, LED_LED0_PIN |
-		Motor_IO_AIN1_PIN |
-		RYG_LED_Red_PIN |
-		RYG_LED_Yellow_PIN);
-    DL_GPIO_clearPins(GPIOB, Buzzer_PIN_0_PIN |
-		Tube_Sign_Sign_PIN |
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_4_IOMUX);
+
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_5_IOMUX);
+
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_6_IOMUX);
+
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_7_IOMUX);
+
+    DL_GPIO_initDigitalOutput(Tracking_Tracking_8_IOMUX);
+
+    DL_GPIO_clearPins(GPIOA, Motor_IO_AIN1_PIN |
+		Tracking_Tracking_5_PIN |
+		Tracking_Tracking_6_PIN);
+    DL_GPIO_enableOutput(GPIOA, Motor_IO_AIN1_PIN |
+		Tracking_Tracking_5_PIN |
+		Tracking_Tracking_6_PIN);
+    DL_GPIO_clearPins(GPIOB, LED_LED0_PIN |
 		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
 		SMotor_IO_DIR2_PIN |
@@ -238,9 +222,13 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		Motor_IO_AIN2_PIN |
 		Motor_IO_BIN1_PIN |
 		Motor_IO_BIN2_PIN |
-		RYG_LED_Green_PIN);
-    DL_GPIO_enableOutput(GPIOB, Buzzer_PIN_0_PIN |
-		Tube_Sign_Sign_PIN |
+		Tracking_Tracking_1_PIN |
+		Tracking_Tracking_2_PIN |
+		Tracking_Tracking_3_PIN |
+		Tracking_Tracking_4_PIN |
+		Tracking_Tracking_7_PIN |
+		Tracking_Tracking_8_PIN);
+    DL_GPIO_enableOutput(GPIOB, LED_LED0_PIN |
 		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
 		SMotor_IO_DIR2_PIN |
@@ -249,7 +237,12 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		Motor_IO_AIN2_PIN |
 		Motor_IO_BIN1_PIN |
 		Motor_IO_BIN2_PIN |
-		RYG_LED_Green_PIN);
+		Tracking_Tracking_1_PIN |
+		Tracking_Tracking_2_PIN |
+		Tracking_Tracking_3_PIN |
+		Tracking_Tracking_4_PIN |
+		Tracking_Tracking_7_PIN |
+		Tracking_Tracking_8_PIN);
 
 }
 
@@ -372,57 +365,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_SMotor_init(void) {
 
 
 }
-/*
- * Timer clock configuration to be sourced by  / 1 (32000000 Hz)
- * timerClkFreq = (timerClkSrc / (timerClkDivRatio * (timerClkPrescale + 1)))
- *   32000000 Hz = 32000000 Hz / (1 * (0 + 1))
- */
-static const DL_TimerG_ClockConfig gServoClockConfig = {
-    .clockSel = DL_TIMER_CLOCK_BUSCLK,
-    .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
-    .prescale = 0U
-};
-
-static const DL_TimerG_PWMConfig gServoConfig = {
-    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN,
-    .period = 1000,
-    .isTimerWithFourCC = false,
-    .startTimer = DL_TIMER_STOP,
-};
-
-SYSCONFIG_WEAK void SYSCFG_DL_Servo_init(void) {
-
-    DL_TimerG_setClockConfig(
-        Servo_INST, (DL_TimerG_ClockConfig *) &gServoClockConfig);
-
-    DL_TimerG_initPWMMode(
-        Servo_INST, (DL_TimerG_PWMConfig *) &gServoConfig);
-
-    // Set Counter control to the smallest CC index being used
-    DL_TimerG_setCounterControl(Servo_INST,DL_TIMER_CZC_CCCTL0_ZCOND,DL_TIMER_CAC_CCCTL0_ACOND,DL_TIMER_CLC_CCCTL0_LCOND);
-
-    DL_TimerG_setCaptureCompareOutCtl(Servo_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
-		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
-		DL_TIMERG_CAPTURE_COMPARE_0_INDEX);
-
-    DL_TimerG_setCaptCompUpdateMethod(Servo_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERG_CAPTURE_COMPARE_0_INDEX);
-    DL_TimerG_setCaptureCompareValue(Servo_INST, 1000, DL_TIMER_CC_0_INDEX);
-
-    DL_TimerG_setCaptureCompareOutCtl(Servo_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
-		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
-		DL_TIMERG_CAPTURE_COMPARE_1_INDEX);
-
-    DL_TimerG_setCaptCompUpdateMethod(Servo_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERG_CAPTURE_COMPARE_1_INDEX);
-    DL_TimerG_setCaptureCompareValue(Servo_INST, 1000, DL_TIMER_CC_1_INDEX);
-
-    DL_TimerG_enableClock(Servo_INST);
-
-
-    
-    DL_TimerG_setCCPDirection(Servo_INST , DL_TIMER_CC0_OUTPUT | DL_TIMER_CC1_OUTPUT );
-
-
-}
 
 
 static const DL_TimerG_ClockConfig gQEI_0ClockConfig = {
@@ -485,23 +427,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_TIMER_0_init(void) {
 }
 
 
-static const DL_I2C_ClockConfig gI2C_0ClockConfig = {
-    .clockSel = DL_I2C_CLOCK_BUSCLK,
-    .divideRatio = DL_I2C_CLOCK_DIVIDE_1,
-};
-
-SYSCONFIG_WEAK void SYSCFG_DL_I2C_0_init(void) {
-
-    DL_I2C_setClockConfig(I2C_0_INST,
-        (DL_I2C_ClockConfig *) &gI2C_0ClockConfig);
-    DL_I2C_setAnalogGlitchFilterPulseWidth(I2C_0_INST,
-        DL_I2C_ANALOG_GLITCH_FILTER_WIDTH_50NS);
-    DL_I2C_enableAnalogGlitchFilter(I2C_0_INST);
-
-
-
-
-}
 static const DL_I2C_ClockConfig gI2C_1ClockConfig = {
     .clockSel = DL_I2C_CLOCK_BUSCLK,
     .divideRatio = DL_I2C_CLOCK_DIVIDE_1,
@@ -514,13 +439,15 @@ SYSCONFIG_WEAK void SYSCFG_DL_I2C_1_init(void) {
     DL_I2C_setAnalogGlitchFilterPulseWidth(I2C_1_INST,
         DL_I2C_ANALOG_GLITCH_FILTER_WIDTH_50NS);
     DL_I2C_enableAnalogGlitchFilter(I2C_1_INST);
+    DL_I2C_setDigitalGlitchFilterPulseWidth(I2C_1_INST,
+        DL_I2C_DIGITAL_GLITCH_FILTER_WIDTH_CLOCKS_1);
 
     /* Configure Controller Mode */
     DL_I2C_resetControllerTransfer(I2C_1_INST);
-    /* Set frequency to 400000 Hz*/
-    DL_I2C_setTimerPeriod(I2C_1_INST, 7);
-    DL_I2C_setControllerTXFIFOThreshold(I2C_1_INST, DL_I2C_TX_FIFO_LEVEL_EMPTY);
-    DL_I2C_setControllerRXFIFOThreshold(I2C_1_INST, DL_I2C_RX_FIFO_LEVEL_BYTES_1);
+    /* Set frequency to 800000 Hz*/
+    DL_I2C_setTimerPeriod(I2C_1_INST, 3);
+    DL_I2C_setControllerTXFIFOThreshold(I2C_1_INST, DL_I2C_TX_FIFO_LEVEL_BYTES_7);
+    DL_I2C_setControllerRXFIFOThreshold(I2C_1_INST, DL_I2C_RX_FIFO_LEVEL_BYTES_8);
     DL_I2C_enableControllerClockStretching(I2C_1_INST);
 
 
@@ -560,37 +487,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_Debug_init(void)
 
 
     DL_UART_Main_enable(Debug_INST);
-}
-static const DL_UART_Main_ClockConfig gIMUClockConfig = {
-    .clockSel    = DL_UART_MAIN_CLOCK_BUSCLK,
-    .divideRatio = DL_UART_MAIN_CLOCK_DIVIDE_RATIO_1
-};
-
-static const DL_UART_Main_Config gIMUConfig = {
-    .mode        = DL_UART_MAIN_MODE_NORMAL,
-    .direction   = DL_UART_MAIN_DIRECTION_TX_RX,
-    .flowControl = DL_UART_MAIN_FLOW_CONTROL_NONE,
-    .parity      = DL_UART_MAIN_PARITY_NONE,
-    .wordLength  = DL_UART_MAIN_WORD_LENGTH_8_BITS,
-    .stopBits    = DL_UART_MAIN_STOP_BITS_ONE
-};
-
-SYSCONFIG_WEAK void SYSCFG_DL_IMU_init(void)
-{
-    DL_UART_Main_setClockConfig(IMU_INST, (DL_UART_Main_ClockConfig *) &gIMUClockConfig);
-
-    DL_UART_Main_init(IMU_INST, (DL_UART_Main_Config *) &gIMUConfig);
-    /*
-     * Configure baud rate by setting oversampling and baud rate divisors.
-     *  Target baud rate: 9600
-     *  Actual baud rate: 9600.24
-     */
-    DL_UART_Main_setOversampling(IMU_INST, DL_UART_OVERSAMPLING_RATE_16X);
-    DL_UART_Main_setBaudRateDivisor(IMU_INST, IMU_IBRD_32_MHZ_9600_BAUD, IMU_FBRD_32_MHZ_9600_BAUD);
-
-
-
-    DL_UART_Main_enable(IMU_INST);
 }
 static const DL_UART_Main_ClockConfig gK230ClockConfig = {
     .clockSel    = DL_UART_MAIN_CLOCK_BUSCLK,

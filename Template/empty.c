@@ -44,22 +44,21 @@ uint32_t tick;
 
 int main(void)
 {
-    SYSCFG_DL_init();
+	SYSCFG_DL_init();
 
-	  // OLED配置,需要在C/C++添加路径: 				D:\appDownload\STM32\Ti\mspm0_sdk_2_04_00_06\test3_OLED\ , 否则找不到路径
-		OLED_Init() ;
-		OLED_Clear() ;
-		OLED_ShowString(1,1,"hello", 8);
-
-		MECInit();
-		YP_SMotor_Init();
-		YP_SMotor_SetSpeed(30, -30);
+	// OLED配置,需要在C/C++添加路径: 				D:\appDownload\STM32\Ti\mspm0_sdk_2_04_00_06\test3_OLED\ , 否则找不到路径
+	OLED_Init() ;
+	OLED_Clear() ;
+	OLED_ShowString(8,0,"Hello NUEDC!", 8);
+	
+	//Car1 Init
+	MECInit();
 
 
     while (1) 
 		{
-			Delay_ms(1000) ;
-			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
+			Delay_ms(1000);
+			OLED_ShowString(8,0,"Hello NUEDC!", 8);			
     }
 }
 
@@ -72,7 +71,6 @@ void SysTick_Handler(void)
 		if (k == 1000)
 		{
 			k = 0 ;
-			DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
 		}
 }
 
