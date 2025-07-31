@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\empty_LP_MSPM0G3507_nortos_keil.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\empty_LP_MSPM0G3507_nortos_keil.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Thu Jul 31 00:57:33 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Thu Jul 31 12:35:21 2025
 <BR><P>
 <H3>Maximum Stack Usage =        184 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; MECInit &rArr; SYSCFG_DL_init &rArr; SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalOutputFeatures
+main &rArr; OLED_ShowString &rArr; OLED_ShowChar &rArr; OLED_Set_Pos &rArr; OLED_WR_CMD &rArr; DL_I2C_startControllerTransfer &rArr; DL_Common_updateReg
 <P>
 <H3>
 Mutually Recursive functions
@@ -60,7 +60,7 @@ Global Symbols
 <P><STRONG><a name="[1f]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(.text)
 </UL>
-<P><STRONG><a name="[7f]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[80]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[20]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -70,15 +70,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[80]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[81]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[81]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[82]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[82]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[83]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[83]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[84]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[84]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[85]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, startup_mspm0g350x_uvision.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_mspm0g350x_uvision.o(RESET)
@@ -195,10 +195,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[85]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[86]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[44]"></a>DL_Common_delayCycles</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dl_common.o(.text.DL_Common_delayCycles))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 </UL>
 
@@ -214,65 +214,65 @@ Global Symbols
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WR_CMD
 </UL>
 
-<P><STRONG><a name="[5a]"></a>DL_I2C_setClockConfig</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, dl_i2c.o(.text.DL_I2C_setClockConfig))
+<P><STRONG><a name="[5b]"></a>DL_I2C_setClockConfig</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, dl_i2c.o(.text.DL_I2C_setClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_I2C_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
-<P><STRONG><a name="[63]"></a>DL_Timer_initFourCCPWMMode</STRONG> (Thumb, 264 bytes, Stack size 20 bytes, dl_timer.o(.text.DL_Timer_initFourCCPWMMode))
+<P><STRONG><a name="[64]"></a>DL_Timer_initFourCCPWMMode</STRONG> (Thumb, 264 bytes, Stack size 20 bytes, dl_timer.o(.text.DL_Timer_initFourCCPWMMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = DL_Timer_initFourCCPWMMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
-<P><STRONG><a name="[73]"></a>DL_Timer_initTimerMode</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, dl_timer.o(.text.DL_Timer_initTimerMode))
+<P><STRONG><a name="[74]"></a>DL_Timer_initTimerMode</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, dl_timer.o(.text.DL_Timer_initTimerMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_Timer_initTimerMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
 </UL>
 
-<P><STRONG><a name="[65]"></a>DL_Timer_setCaptCompUpdateMethod</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod))
+<P><STRONG><a name="[66]"></a>DL_Timer_setCaptCompUpdateMethod</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setCaptCompUpdateMethod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
-<P><STRONG><a name="[64]"></a>DL_Timer_setCaptureCompareOutCtl</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl))
+<P><STRONG><a name="[65]"></a>DL_Timer_setCaptureCompareOutCtl</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setCaptureCompareOutCtl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
 <P><STRONG><a name="[3f]"></a>DL_Timer_setCaptureCompareValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, dl_timer.o(.text.DL_Timer_setCaptureCompareValue))
 <BR><BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor_UI_Init
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
-<P><STRONG><a name="[62]"></a>DL_Timer_setClockConfig</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setClockConfig))
+<P><STRONG><a name="[63]"></a>DL_Timer_setClockConfig</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, dl_timer.o(.text.DL_Timer_setClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
 <P><STRONG><a name="[4e]"></a>DL_UART_init</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, dl_uart.o(.text.DL_UART_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DL_UART_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Debug_init
 </UL>
 
 <P><STRONG><a name="[4d]"></a>DL_UART_setClockConfig</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, dl_uart.o(.text.DL_UART_setClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_UART_setClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Debug_init
 </UL>
 
@@ -309,7 +309,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[39]"></a>MECInit</STRONG> (Thumb, 136 bytes, Stack size 56 bytes, initialize.o(.text.MECInit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = MECInit &rArr; SYSCFG_DL_init &rArr; SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalOutputFeatures
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = MECInit &rArr; SYSCFG_DL_init &rArr; SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalInputFeatures
 </UL>
 <BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EncoderInit
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor_UI_Init
@@ -415,10 +415,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[50]"></a>SYSCFG_DL_GPIO_init</STRONG> (Thumb, 392 bytes, Stack size 80 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalOutputFeatures
+<P><STRONG><a name="[50]"></a>SYSCFG_DL_GPIO_init</STRONG> (Thumb, 452 bytes, Stack size 72 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalInputFeatures
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_clearPins
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_clearPins
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_initDigitalInputFeatures
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_initDigitalOutput
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_initDigitalOutputFeatures
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_enableHiZ
@@ -430,24 +431,24 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[59]"></a>SYSCFG_DL_I2C_1_init</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_I2C_1_init))
+<P><STRONG><a name="[5a]"></a>SYSCFG_DL_I2C_1_init</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_I2C_1_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SYSCFG_DL_I2C_1_init &rArr; DL_I2C_setControllerRXFIFOThreshold &rArr; DL_Common_updateReg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setClockConfig
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enableController
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enableControllerClockStretching
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setClockConfig
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enableController
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enableControllerClockStretching
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setControllerRXFIFOThreshold
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setControllerTXFIFOThreshold
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setTimerPeriod
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_resetControllerTransfer
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setTimerPeriod
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_resetControllerTransfer
 <LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setDigitalGlitchFilterPulseWidth
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enableAnalogGlitchFilter
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enableAnalogGlitchFilter
 <LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_setAnalogGlitchFilterPulseWidth
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[60]"></a>SYSCFG_DL_K230_init</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_K230_init))
+<P><STRONG><a name="[61]"></a>SYSCFG_DL_K230_init</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_K230_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = SYSCFG_DL_K230_init &rArr; DL_UART_setBaudRateDivisor &rArr; DL_Common_updateReg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_init
@@ -459,110 +460,110 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[61]"></a>SYSCFG_DL_Motor_init</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_init))
+<P><STRONG><a name="[62]"></a>SYSCFG_DL_Motor_init</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = SYSCFG_DL_Motor_init &rArr; DL_Timer_setCounterControl &rArr; DL_Common_updateReg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareValue
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptCompUpdateMethod
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareOutCtl
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initFourCCPWMMode
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCCPDirection
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptCompUpdateMethod
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareOutCtl
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initFourCCPWMMode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCCPDirection
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCounterControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[68]"></a>SYSCFG_DL_QEI_0_init</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_QEI_0_init))
+<P><STRONG><a name="[69]"></a>SYSCFG_DL_QEI_0_init</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_QEI_0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = SYSCFG_DL_QEI_0_init &rArr; DL_Timer_configQEI
 </UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setLoadValue
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_configQEI
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
+<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setLoadValue
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_configQEI
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[6b]"></a>SYSCFG_DL_SMotor_init</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_SMotor_init))
+<P><STRONG><a name="[6c]"></a>SYSCFG_DL_SMotor_init</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_SMotor_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = SYSCFG_DL_SMotor_init &rArr; DL_Timer_setCounterControl &rArr; DL_Common_updateReg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareValue
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptCompUpdateMethod
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareOutCtl
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initFourCCPWMMode
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCCPDirection
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptCompUpdateMethod
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCaptureCompareOutCtl
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initFourCCPWMMode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCCPDirection
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setCounterControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[6c]"></a>SYSCFG_DL_SYSCTL_init</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init))
+<P><STRONG><a name="[6d]"></a>SYSCFG_DL_SYSCTL_init</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SYSCFG_DL_SYSCTL_init &rArr; DL_SYSCTL_setMCLKDivider &rArr; DL_Common_updateReg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setMCLKDivider
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setULPCLKDivider
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_disableSYSPLL
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_disableHFXT
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_disableSYSPLL
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_disableHFXT
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setSYSOSCFreq
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setBORThreshold
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setBORThreshold
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[70]"></a>SYSCFG_DL_SYSTICK_init</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init))
+<P><STRONG><a name="[71]"></a>SYSCFG_DL_SYSTICK_init</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = SYSCFG_DL_SYSTICK_init &rArr; SysTick_Config &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
-<P><STRONG><a name="[72]"></a>SYSCFG_DL_TIMER_0_init</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init))
+<P><STRONG><a name="[73]"></a>SYSCFG_DL_TIMER_0_init</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SYSCFG_DL_TIMER_0_init &rArr; DL_Timer_initTimerMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initTimerMode
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableInterrupt
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_initTimerMode
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_setClockConfig
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableInterrupt
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
 
 <P><STRONG><a name="[3a]"></a>SYSCFG_DL_init</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = SYSCFG_DL_init &rArr; SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalOutputFeatures
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = SYSCFG_DL_init &rArr; SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalInputFeatures
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSTICK_init
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSTICK_init
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Debug_init
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_GPIO_init
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MECInit
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[75]"></a>SYSCFG_DL_initPower</STRONG> (Thumb, 140 bytes, Stack size 48 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_initPower))
+<P><STRONG><a name="[76]"></a>SYSCFG_DL_initPower</STRONG> (Thumb, 140 bytes, Stack size 48 bytes, ti_msp_dl_config.o(.text.SYSCFG_DL_initPower))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = SYSCFG_DL_initPower &rArr; DL_UART_enablePower
 </UL>
 <BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_delayCycles
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_enablePower
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enablePower
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enablePower
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_enablePower
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_reset
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_reset
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_reset
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_reset
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_enablePower
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_enablePower
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_enablePower
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_enablePower
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_UART_reset
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_I2C_reset
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Timer_reset
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_GPIO_reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_init
 </UL>
@@ -579,7 +580,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1e]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, empty.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = main &rArr; MECInit &rArr; SYSCFG_DL_init &rArr; SYSCFG_DL_GPIO_init &rArr; DL_GPIO_initDigitalOutputFeatures
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = main &rArr; OLED_ShowString &rArr; OLED_ShowChar &rArr; OLED_Set_Pos &rArr; OLED_WR_CMD &rArr; DL_I2C_startControllerTransfer &rArr; DL_Common_updateReg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MECInit
@@ -590,61 +591,61 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[86]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[87]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[87]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[88]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[88]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[89]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[76]"></a>DL_GPIO_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_GPIO_reset))
+<P><STRONG><a name="[77]"></a>DL_GPIO_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_GPIO_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_GPIO_reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[77]"></a>DL_Timer_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_Timer_reset))
+<P><STRONG><a name="[78]"></a>DL_Timer_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_Timer_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_Timer_reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[78]"></a>DL_I2C_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_reset))
+<P><STRONG><a name="[79]"></a>DL_I2C_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_I2C_reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[79]"></a>DL_UART_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_UART_reset))
+<P><STRONG><a name="[7a]"></a>DL_UART_reset</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_UART_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_UART_reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[7a]"></a>DL_GPIO_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_GPIO_enablePower))
+<P><STRONG><a name="[7b]"></a>DL_GPIO_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_GPIO_enablePower))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_GPIO_enablePower
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[7b]"></a>DL_Timer_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_Timer_enablePower))
+<P><STRONG><a name="[7c]"></a>DL_Timer_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_Timer_enablePower))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_Timer_enablePower
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[7c]"></a>DL_I2C_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enablePower))
+<P><STRONG><a name="[7d]"></a>DL_I2C_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enablePower))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_I2C_enablePower
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
-<P><STRONG><a name="[7d]"></a>DL_UART_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_UART_enablePower))
+<P><STRONG><a name="[7e]"></a>DL_UART_enablePower</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_UART_enablePower))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_UART_enablePower
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_initPower
 </UL>
 
 <P><STRONG><a name="[51]"></a>DL_GPIO_initPeripheralOutputFunction</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralOutputFunction))
@@ -689,16 +690,22 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_GPIO_init
 </UL>
 
-<P><STRONG><a name="[58]"></a>DL_GPIO_clearPins</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_GPIO_clearPins))
+<P><STRONG><a name="[58]"></a>DL_GPIO_initDigitalInputFeatures</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.DL_GPIO_initDigitalInputFeatures))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = DL_GPIO_initDigitalInputFeatures
+</UL>
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_GPIO_init
+</UL>
+
+<P><STRONG><a name="[59]"></a>DL_GPIO_clearPins</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_GPIO_clearPins))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_GPIO_clearPins
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_GPIO_init
 </UL>
 
-<P><STRONG><a name="[6d]"></a>DL_SYSCTL_setBORThreshold</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold))
+<P><STRONG><a name="[6e]"></a>DL_SYSCTL_setBORThreshold</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_SYSCTL_setBORThreshold
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 </UL>
 
 <P><STRONG><a name="[2c]"></a>DL_SYSCTL_setSYSOSCFreq</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq))
@@ -706,15 +713,15 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 </UL>
 
-<P><STRONG><a name="[6e]"></a>DL_SYSCTL_disableHFXT</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT))
-<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<P><STRONG><a name="[6f]"></a>DL_SYSCTL_disableHFXT</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 </UL>
 
-<P><STRONG><a name="[6f]"></a>DL_SYSCTL_disableSYSPLL</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL))
-<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<P><STRONG><a name="[70]"></a>DL_SYSCTL_disableSYSPLL</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 </UL>
 
 <P><STRONG><a name="[2d]"></a>DL_SYSCTL_setULPCLKDivider</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider))
@@ -722,7 +729,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 </UL>
 
 <P><STRONG><a name="[2b]"></a>DL_SYSCTL_setMCLKDivider</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.DL_SYSCTL_setMCLKDivider))
@@ -730,7 +737,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSCTL_init
 </UL>
 
 <P><STRONG><a name="[2e]"></a>DL_Timer_setCounterControl</STRONG> (Thumb, 52 bytes, Stack size 32 bytes, ti_msp_dl_config.o(.text.DL_Timer_setCounterControl))
@@ -738,42 +745,42 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
-<P><STRONG><a name="[66]"></a>DL_Timer_enableClock</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_Timer_enableClock))
+<P><STRONG><a name="[67]"></a>DL_Timer_enableClock</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_Timer_enableClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_Timer_enableClock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
-<P><STRONG><a name="[67]"></a>DL_Timer_setCCPDirection</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_Timer_setCCPDirection))
+<P><STRONG><a name="[68]"></a>DL_Timer_setCCPDirection</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_Timer_setCCPDirection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setCCPDirection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SMotor_init
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Motor_init
 </UL>
 
-<P><STRONG><a name="[69]"></a>DL_Timer_configQEI</STRONG> (Thumb, 68 bytes, Stack size 28 bytes, ti_msp_dl_config.o(.text.DL_Timer_configQEI))
+<P><STRONG><a name="[6a]"></a>DL_Timer_configQEI</STRONG> (Thumb, 68 bytes, Stack size 28 bytes, ti_msp_dl_config.o(.text.DL_Timer_configQEI))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = DL_Timer_configQEI
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
 </UL>
 
-<P><STRONG><a name="[6a]"></a>DL_Timer_setLoadValue</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_Timer_setLoadValue))
+<P><STRONG><a name="[6b]"></a>DL_Timer_setLoadValue</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_Timer_setLoadValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_setLoadValue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_QEI_0_init
 </UL>
 
-<P><STRONG><a name="[74]"></a>DL_Timer_enableInterrupt</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_Timer_enableInterrupt))
+<P><STRONG><a name="[75]"></a>DL_Timer_enableInterrupt</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_Timer_enableInterrupt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_Timer_enableInterrupt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_TIMER_0_init
 </UL>
 
 <P><STRONG><a name="[24]"></a>DL_I2C_setAnalogGlitchFilterPulseWidth</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.DL_I2C_setAnalogGlitchFilterPulseWidth))
@@ -781,13 +788,13 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
-<P><STRONG><a name="[5b]"></a>DL_I2C_enableAnalogGlitchFilter</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enableAnalogGlitchFilter))
+<P><STRONG><a name="[5c]"></a>DL_I2C_enableAnalogGlitchFilter</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enableAnalogGlitchFilter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_I2C_enableAnalogGlitchFilter
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
 <P><STRONG><a name="[28]"></a>DL_I2C_setDigitalGlitchFilterPulseWidth</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.DL_I2C_setDigitalGlitchFilterPulseWidth))
@@ -795,19 +802,19 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
-<P><STRONG><a name="[5c]"></a>DL_I2C_resetControllerTransfer</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_resetControllerTransfer))
+<P><STRONG><a name="[5d]"></a>DL_I2C_resetControllerTransfer</STRONG> (Thumb, 16 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_resetControllerTransfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_I2C_resetControllerTransfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
-<P><STRONG><a name="[5d]"></a>DL_I2C_setTimerPeriod</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_I2C_setTimerPeriod))
+<P><STRONG><a name="[5e]"></a>DL_I2C_setTimerPeriod</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, ti_msp_dl_config.o(.text.DL_I2C_setTimerPeriod))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DL_I2C_setTimerPeriod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
 <P><STRONG><a name="[27]"></a>DL_I2C_setControllerTXFIFOThreshold</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.DL_I2C_setControllerTXFIFOThreshold))
@@ -815,7 +822,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
 <P><STRONG><a name="[26]"></a>DL_I2C_setControllerRXFIFOThreshold</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.DL_I2C_setControllerRXFIFOThreshold))
@@ -823,19 +830,19 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
-<P><STRONG><a name="[5e]"></a>DL_I2C_enableControllerClockStretching</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enableControllerClockStretching))
+<P><STRONG><a name="[5f]"></a>DL_I2C_enableControllerClockStretching</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enableControllerClockStretching))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_I2C_enableControllerClockStretching
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
-<P><STRONG><a name="[5f]"></a>DL_I2C_enableController</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enableController))
+<P><STRONG><a name="[60]"></a>DL_I2C_enableController</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_I2C_enableController))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_I2C_enableController
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
+<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_I2C_1_init
 </UL>
 
 <P><STRONG><a name="[30]"></a>DL_UART_setOversampling</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.DL_UART_setOversampling))
@@ -843,7 +850,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Debug_init
 </UL>
 
@@ -852,23 +859,23 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_Common_updateReg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Debug_init
 </UL>
 
 <P><STRONG><a name="[4f]"></a>DL_UART_enable</STRONG> (Thumb, 22 bytes, Stack size 4 bytes, ti_msp_dl_config.o(.text.DL_UART_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DL_UART_enable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_K230_init
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_Debug_init
 </UL>
 
-<P><STRONG><a name="[71]"></a>SysTick_Config</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SysTick_Config))
+<P><STRONG><a name="[72]"></a>SysTick_Config</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.SysTick_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SysTick_Config &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSTICK_init
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSCFG_DL_SYSTICK_init
 </UL>
 
 <P><STRONG><a name="[25]"></a>DL_Common_updateReg</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, ti_msp_dl_config.o(.text.DL_Common_updateReg))
@@ -886,10 +893,10 @@ Local Symbols
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DL_SYSCTL_setSYSOSCFreq
 </UL>
 
-<P><STRONG><a name="[7e]"></a>__NVIC_SetPriority</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.__NVIC_SetPriority))
+<P><STRONG><a name="[7f]"></a>__NVIC_SetPriority</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, ti_msp_dl_config.o(.text.__NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
+<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
 </UL>
 
 <P><STRONG><a name="[29]"></a>DL_I2C_startControllerTransfer</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, oled.o(.text.DL_I2C_startControllerTransfer))

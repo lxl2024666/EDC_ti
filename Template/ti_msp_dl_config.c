@@ -191,28 +191,40 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
 		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_1_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_2_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_2_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_3_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_3_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_4_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_4_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_5_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_5_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_6_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_6_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_7_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_7_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Tracking_Tracking_8_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Tracking_Tracking_8_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_clearPins(GPIOA, Motor_IO_AIN1_PIN |
-		Tracking_Tracking_5_PIN |
-		Tracking_Tracking_6_PIN);
-    DL_GPIO_enableOutput(GPIOA, Motor_IO_AIN1_PIN |
-		Tracking_Tracking_5_PIN |
-		Tracking_Tracking_6_PIN);
+    DL_GPIO_clearPins(GPIOA, Motor_IO_AIN1_PIN);
+    DL_GPIO_enableOutput(GPIOA, Motor_IO_AIN1_PIN);
     DL_GPIO_clearPins(GPIOB, LED_LED0_PIN |
 		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
@@ -221,13 +233,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		SMotor_IO_EN2_PIN |
 		Motor_IO_AIN2_PIN |
 		Motor_IO_BIN1_PIN |
-		Motor_IO_BIN2_PIN |
-		Tracking_Tracking_1_PIN |
-		Tracking_Tracking_2_PIN |
-		Tracking_Tracking_3_PIN |
-		Tracking_Tracking_4_PIN |
-		Tracking_Tracking_7_PIN |
-		Tracking_Tracking_8_PIN);
+		Motor_IO_BIN2_PIN);
     DL_GPIO_enableOutput(GPIOB, LED_LED0_PIN |
 		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
@@ -236,13 +242,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		SMotor_IO_EN2_PIN |
 		Motor_IO_AIN2_PIN |
 		Motor_IO_BIN1_PIN |
-		Motor_IO_BIN2_PIN |
-		Tracking_Tracking_1_PIN |
-		Tracking_Tracking_2_PIN |
-		Tracking_Tracking_3_PIN |
-		Tracking_Tracking_4_PIN |
-		Tracking_Tracking_7_PIN |
-		Tracking_Tracking_8_PIN);
+		Motor_IO_BIN2_PIN);
 
 }
 

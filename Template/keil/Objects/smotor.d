@@ -88,4 +88,4 @@
   ..\Utils\Motion\kinematics.h ..\Utils\Motion\pid.h \
   D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h \
   ..\Utils\Sensor\SensorProc.h ..\Utils\Sensor\Rotation.h \
-  ..\Utils\Initialize\Init_SMotor.h
+  ..\Utils\Initialize\Init_SMotor.h ..\Utils\Motion\Cont_SMotor.h
