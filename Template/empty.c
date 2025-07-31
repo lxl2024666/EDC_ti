@@ -74,14 +74,9 @@ int main(void)
 	while (1) 
 	{
 		getTrackingSensorData(Digtal);
-		snprintf(message, sizeof(message), "%d %d %d %d %d %d %d %d",
-				 Digtal[0], Digtal[1], Digtal[2], Digtal[3],
-				 Digtal[4], Digtal[5], Digtal[6], Digtal[7]);
-		OLED_ShowString(0,2, message, 8);
-		
 		snprintf(message, sizeof(message), "%.5f",getSpeed());
 		OLED_ShowString(0,4, message, 8);
-		Delay_ms(100);
+		Delay_ms(40);
 	}
 }
 
