@@ -10,6 +10,14 @@
 
 #include "AllHeader.h"
 
+//以下是关于视觉处理部分的宏定义
+#define PAPERWIDE 250 //单位mm
+#define PAPERHIGHT 250 //单位mm
+
+#define XDISM 500
+#define YDIS 500
+#define LINELENGTH 1000
+
 //以下是关于灰度传感器的宏定义
 #define SENSOR_COUNT 8 // 定义传感器数量
 #define DisSensorToWheel 195 // 灰度传感器到轮子的垂直距离
