@@ -32,7 +32,7 @@
 
 
 #include "AllHeader.h"
-#include "Laser_USART.h"
+
 //编码器未测试(定时器已测试
 //灰度传感器未移植
 //OLED以及状态机
@@ -40,6 +40,9 @@
 // 激光位置串口通信测试
 extern uint8_t USART_LASER_RX_BUF[USART_LASER_RX_BUF_LEN] ;
 extern int Laser_Loc[USART_LASER_RX_BUF_LEN] ;
+
+//灰度传感器数据变量
+uint8_t Digtal[8];
 
 // 测试区
 int a;
@@ -50,7 +53,7 @@ int main(void)
 {
 	SYSCFG_DL_init();
 
-	// OLED配置,需要在C/C++添加路径: 				D:\appDownload\STM32\Ti\mspm0_sdk_2_04_00_06\test3_OLED\ , 否则找不到路径
+	// OLED Init
 	OLED_Init() ;
 	OLED_Clear() ;
 	OLED_ShowString(8,0,"Hello NUEDC!", 8);
@@ -58,14 +61,17 @@ int main(void)
 	//Car1 Init
 	MECInit();
 
-	// 激光初始化
-	Laser_USART_Init() ;
-	Laser_Ask_for_Loc() ;
-    while (1) 
-		{
-			Delay_ms(1000);
-			OLED_ShowString(8,0,"Hello NUEDC!", 8);			
-    }
+	//Laser Init
+	Laser_USART_Init();
+	Laser_Ask_for_Loc();
+	
+	getTrackingSensorData(Digtal);
+	
+	while (1) 
+	{
+		Delay_ms(1000);
+		OLED_ShowString(8,0,"Hello NUEDC!", 8);			
+	}
 }
 
 // 激光串口的中断服务函数
@@ -101,39 +107,6 @@ void SysTick_Handler(void)
 		}
 }
 
-//#include "ti_msp_dl_config.h"
-
-//volatile unsigned int delay_times = 0;
-
-//void delay_ms(unsigned int ms) 
-//{
-//        delay_times = ms;
-//        while( delay_times != 0 );
-//}        
-
-//int main(void)
-//{
-//    
-//    SYSCFG_DL_init();
-//    
-//    while (1) 
-//    {                        
-//       
-//        DL_GPIO_setPins(LED_PORT, LED_LED0_PIN);
-//        delay_ms(1000);
-//       
-//        DL_GPIO_clearPins(LED_PORT, LED_LED0_PIN);
-//        delay_ms(1000);
-//    }
-//}
-
-//void SysTick_Handler(void)
-//{
-//        if( delay_times != 0 )
-//        {
-//                delay_times--;
-//        }
-//}
 
 
 
