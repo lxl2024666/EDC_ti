@@ -20,6 +20,7 @@
   */
 
 static ModeTree *now_mode_tree = NULL; // Pointer to the current mode tree
+char CircleNum = '0'; // Variable to hold the current circle number
 
 
 void menu_init(void)
@@ -56,14 +57,27 @@ void menu_init(void)
     addChild(now_mode_tree, problemBMenu);
     addChild(now_mode_tree, proHMenu); // Add the problem menu to the main menu
     // Add child nodes to the test menu
-    ModeNode TestSubNode1 = {menu_function, "Test Sub Menu 1"};
-    ModeNode TestSubNode2 = {menu_function, "Test Sub Menu 2"};
+    ModeNode ProB1 = {menu_function, "ProB1"}; // Create a sub-menu node for Problem B
+    ModeNode ProB2_3 = {ProB2_3, "ProB2/3"}; // Create a sub-menu node for Problem B
 
-    ModeTree *testSubMenu1 = createModeTree(TestSubNode1);
-    ModeTree *testSubMenu2 = createModeTree(TestSubNode2);
+    ModeNode ProH1 = {menu_function, "ProH1"}; // Create a sub-menu node for Problem H
+    ModeNode ProH2 = {ProH_2, "ProH2"};
 
-    addChild(testMenu, testSubMenu1);
-    addChild(testMenu, testSubMenu2);
+    ModeTree *ProBMenu1 = createModeTree(ProB1);
+    ModeTree *ProBMenu2_3 = createModeTree(ProB2_3);
+
+    ModeTree *ProHMenu1 = createModeTree(ProH1);
+    ModeTree *ProHMenu2 = createModeTree(ProH2);
+
+    addChild(problemBMenu, ProBMenu1);
+    addChild(problemBMenu, ProBMenu2_3);
+    addChild(proHMenu, ProHMenu1);
+    addChild(proHMenu, ProHMenu2);
+
+    for(int i = 0; i < 5; i++)
+    {
+        char CircleNum = '0' + i + 1; // Convert to character '1', '2', etc.
+        ModeNode CircleNode = {
 
     return;
 }
@@ -124,6 +138,7 @@ void menu_function(void)
         {
             // If Key1 is pressed, select the current menu item
             HAL_Delay(200); // Delay to avoid rapid selection
+            CircleNum = current->data->nodes.mode_name[0]; // Store the selected menu item name
             select_menu(current->data);
             break; // Exit the menu function after selection
         }
