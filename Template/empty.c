@@ -47,6 +47,7 @@ uint8_t Digtal[8];
 // 测试区
 int a;
 uint32_t tick;
+char message[50];
 
 
 int main(void)
@@ -58,18 +59,25 @@ int main(void)
 	OLED_Clear() ;
 	OLED_ShowString(24,0,"Hello NUEDC!",8);
 	
-	//Car1 Init
-	MECInit();
+//	//Car1 Init
+//	MECInit();
 
-	//Laser Init
-	Laser_USART_Init();
-	Laser_Ask_for_Loc();
+//	//Laser Init
+//	Laser_USART_Init();
+//	Laser_Ask_for_Loc();
 	
-	getTrackingSensorData(Digtal);
+
+
 //test_track();
 	while (1) 
 	{
-		Delay_ms(1000);
+		getTrackingSensorData(Digtal);
+	
+		snprintf(message, sizeof(message), "%d %d %d %d %d %d %d %d",
+						 Digtal[0], Digtal[1], Digtal[2], Digtal[3],
+						 Digtal[4], Digtal[5], Digtal[6], Digtal[7]);
+		OLED_ShowString(0,3, message, 8);
+		Delay_ms(100);
 	}
 }
 
