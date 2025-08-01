@@ -23,9 +23,12 @@ void MECInit()
     Motor_UI_Init(&Ri, RIGHT_MOTOR_IN1_PORT, RIGHT_MOTOR_IN1_PIN,
                   RIGHT_MOTOR_IN2_PORT, RIGHT_MOTOR_IN2_PIN,
                   RIGHT_MOTOR_PWM_TIMER, RIGHT_MOTOR_PWM_CHANNEL, RIGHT_MOTOR_INIT_DUTY);
+<<<<<<< HEAD
 
     // 初始化单个编码器 (不使用LR模式)
 //    EncoderInit(ENCODER_QEI_TIMER, ENCODER_REAL_TIMER, WHEEL_DIAMETER, PPR * REDUCE);
+=======
+>>>>>>> 13c77300c73b1a2c476ecdedc7d086eb754af8a8
 }
 
 void LMotorSet(MOVETYPE type, uint16_t duty)
@@ -71,6 +74,96 @@ void Break()
     RMotorSet(BREAK, 0);
 }
 
+<<<<<<< HEAD
+=======
+float getYaw()
+{
+    float yaw = GyroscopeChannelData[8];
+    if(yaw < -360.0f || yaw > 360.0f) {
+        snprintf(error_message, sizeof(error_message), "Yaw value out of range: %.2f", yaw);
+        error_handler(); // Handle error if yaw is out of range
+    }
+    if(yaw < -180.0f) {
+        yaw += 360.0f; // Normalize yaw to the range [-180, 180]
+    } else if(yaw > 180.0f) {
+        yaw -= 360.0f; // Normalize yaw to the range [-180, 180]
+    }
+    return yaw; // Return the normalized yaw value
+}
+
+/* RotationAngles getRotationAngles()
+{
+    // Get the rotation angles from the MS601M sensor
+    atk_ms601m_attitude_data_t attitude_dat;
+    atk_ms601m_get_attitude(&attitude_dat, 10);
+    
+    RotationAngles angles;
+    angles.yaw = attitude_dat.yaw; // Set yaw angle
+    angles.pitch = attitude_dat.pitch; // Set pitch angle
+    angles.roll = attitude_dat.roll; // Set roll angle
+    
+    return angles; // Return the rotation angles
+} */
+
+float getWz()
+{
+    return GyroscopeChannelData[5]; // Return the angular velocity around the z-axis
+}
+
+float CalibrateYawOffset()
+{
+    float sum = 0;
+    int N = 100;
+    for(int i = 0; i < N; ++i) {
+        sum += getYaw();
+        Delay_ms(10);  
+        //引用delay里面的函数
+    }
+    float yaw_offset = sum / N;
+    // Calculate the average yaw offset over N samples
+    // This helps to reduce noise and improve accuracy
+    return yaw_offset; // Return the calibrated yaw offset
+}
+
+void UpdateData()
+{
+    const float speedCorrection = 1.03f; // Speed correction factor
+    static uint32_t last_time = 0; // Last update time
+    uint32_t now = tick; // Get the current time (TI equivalent)
+    static volatile bool first_run = true; // Flag to indicate the first run
+    /* static float last_yaw = 0.0f; // Last yaw value for the first run
+ */
+    current_data.speed.linear_velocity = getSpeed() * speedCorrection; // Get speed from single encoder (index 0)
+    current_data.yaw = getYaw();// current_data.angles = getRotationAngles(); // Get the current rotation angles
+    current_data.speed.angular_velocity = getWz(); // Get the current angular velocity
+//    IIC_Get_Digital(Digital);
+
+    if(first_run)
+    {
+        first_run = false; // Set the flag to false after the first run
+        current_data.dt = 0; // Initialize dt on the first run
+        /* current_data.speed.angular_velocity = getWz(); // 因为没有相对时间，所以在第一次运行时直接获取当前的角速度
+ */   }
+    else
+    {
+        current_data.dt = (now - last_time) * 1e-3f; // Calculate the time difference in seconds
+        //current_data.speed.angular_velocity = (current_data.yaw - last_yaw) / current_data.dt; // Calculate the angular velocity
+    }
+    if(current_data.dt <= 0.0f) current_data.dt = 0.01f; // Ensure dt is not zero to avoid division by zero 
+    last_time = now; // Initialize last_time on the first run
+		//last_yaw = current_data.yaw; // Store the last yaw value
+
+    return; // Exit the function
+}
+
+void UpdateData_Car()
+{
+    // Update the car state with the current data
+    UpdateData(); // Update the current data
+    CarState_Update(&car, current_data); // Update the car state with the current data
+}
+
+>>>>>>> 13c77300c73b1a2c476ecdedc7d086eb754af8a8
 void error_handler(void)
 {
     Break(); // Stop the motors

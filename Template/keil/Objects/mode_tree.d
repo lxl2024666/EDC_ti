@@ -1,9 +1,22 @@
 ./objects/mode_tree.o: ..\Utils\Mode\mode_tree.c \
-  ..\Utils\Mode\mode_tree.h ..\Utils\AllHeader.h \
+  ..\Utils\Mode\mode_tree.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stddef.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdio.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdlib.h \
+  ..\Utils\AllHeader.h D:\Application\Keil5\ARM\ARMCLANG\include\math.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\string.h \
   ..\..\Template\ti_msp_dl_config.h ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdint.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\stdbool.h \
   ..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_version.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_compiler.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\cmsis_armclang.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\arm_compat.h \
+  D:\Application\Keil5\ARM\ARMCLANG\include\arm_acle.h \
+  D:\TI\mspm0_sdk_2_05_00_05\source\third_party\CMSIS\Core\Include\mpu_armv7.h \
   ..\..\..\source\ti\devices\msp\peripherals\hw_adc12.h \
   ..\..\..\source\ti\devices\msp\peripherals\hw_aes.h \
   ..\..\..\source\ti\devices\msp\peripherals\hw_comp.h \

@@ -52,11 +52,18 @@ char message[50];
 int main(void)
 {
 	SYSCFG_DL_init();
+	
+	//编码器初始化
+	encoder_init();
 
+	//定时器初始化
+	timer_init();
+	DL_TimerG_startCounter(TIMER_0_INST);
+	
 	// OLED Init
 	OLED_Init() ;
 	//Car1 Init
-	MECInit();
+	//MECInit();
 //	LSet(0);
 //	RSet(0);
 	//Laser Init
@@ -65,16 +72,13 @@ int main(void)
 //	menu_init();
 //	menu_begin();
 	
-	getTrackingSensorData(Digtal);
-	test_track();
+	//test_track();
 	while (1) 
-	{		
-		snprintf(message, sizeof(message), "%d %d %d %d %d %d %d %d",
-						 Digtal[0], Digtal[1], Digtal[2], Digtal[3],
-						 Digtal[4], Digtal[5], Digtal[6], Digtal[7]);
-		OLED_ShowString(0,3, message, 8);
-
-		
+	{
+		getTrackingSensorData(Digtal);
+		snprintf(message, sizeof(message), "%.5f",getSpeed());
+		OLED_ShowString(0,4, message, 8);
+		Delay_ms(40);
 	}
 }
 
@@ -110,56 +114,5 @@ void SysTick_Handler(void)
 			k = 0 ;
 		}
 }
-
-//void TIMER_0_INST_IRQHandler(void)
-//{
-//    //如果产生了定时器中断
-//    switch( DL_TimerG_getPendingInterrupt(TIMER_0_INST) )
-//    {
-//        case DL_TIMER_IIDX_ZERO://如果是0溢出中断
-//            //将LED灯的状态翻转
-//						UpdateAllSpeed(); // 更新所有编码器的速度
-//            break;
-
-//        default://其他的定时器中断
-//            break;
-//    }
-//}
-
-void my_itoa(int value, char* str, int base) {
-    char *ptr = str, *ptr1 = str, tmp_char;
-    int tmp_value;
-
-    if (value == 0) {
-        *ptr++ = '0';
-        *ptr = '\0';
-        return;
-    }
-
-    // Handle negative numbers in base 10
-    if (value < 0 && base == 10) {
-        *ptr++ = '-';
-        value = -value;
-        ptr1++;
-    }
-
-    while (value != 0) {
-        tmp_value = value % base;
-        *ptr++ = (tmp_value < 10) ? tmp_value + '0' : tmp_value - 10 + 'A';
-        value /= base;
-    }
-
-    *ptr = '\0';
-
-    // Reverse the string
-    while (ptr1 < --ptr) {
-        tmp_char = *ptr;
-        *ptr = *ptr1;
-        *ptr1 = tmp_char;
-        ptr1++;
-    }
-}
-
-
 
 
