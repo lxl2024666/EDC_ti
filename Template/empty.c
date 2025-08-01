@@ -82,18 +82,21 @@ int main(void)
 	  MECInit();
 //	LSet(0);
 //	RSet(0);
+	Key_Init();
 
-//	menu_init();
-//	menu_begin();
-//	test_Connect(); // 注释
-	test_Cordi();
+	menu_init();
+	menu_begin();
+	
 	while (1) 
 	{
-		
-//		getTrackingSensorData(Digtal);
-//		snprintf(message, sizeof(message), "%.5f",getSpeed());
-//		OLED_ShowString(0,4, message, 8);
-//		Delay_ms(40);
+               if( DL_GPIO_readPins(Key_PORT, Key_PIN_1_PIN) == 0 )
+                {
+                        DL_GPIO_setPins(LED_PORT, LED_LED0_PIN);  //LED控制输出高电平
+                }
+                else//如果PA21引脚为高电平
+                {
+                        DL_GPIO_clearPins(LED_PORT, LED_LED0_PIN);//LED控制输出低电平
+                }
 	}
 }
 
@@ -116,9 +119,9 @@ void SysTick_Handler(void)
 		static int k = 0 ;
 		k ++ ;
 		tick ++;
-		if (k == 1000)
+		if (k == 10)
 		{
-			
+			Key_Scan();
 			k = 0 ;
 		}
 }
