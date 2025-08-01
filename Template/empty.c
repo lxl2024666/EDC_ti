@@ -56,8 +56,8 @@ char message[50];
 int main(void)
 {
 	SYSCFG_DL_init();
-	SysTick_Config(32000);
-	__enable_irq();
+//	SysTick_Config(32000);
+//	__enable_irq();
 	
 	//编码器初始化
 	encoder_init();
@@ -68,21 +68,19 @@ int main(void)
 	DL_TimerG_startCounter(TIMER_0_INST);
 	
 	// CanMV初始化
-	Laser_USART_Init() ;
-	
+//	Laser_USART_Init() ;
+	Delay_ms(10);
 	// OLED Init
-	OLED_Init() ;
+  	OLED_Init();
 	//Car1 Init
 	MECInit();
 //	LSet(0);
 //	RSet(0);
-	//Laser Init
-//	Laser_USART_Init();
-//	Laser_Ask_for_Loc();
+
 //	menu_init();
 //	menu_begin();
 
-	test_Connect();
+	proB_1();
 	DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
 	while (1) 
 	{
@@ -110,17 +108,5 @@ void UART_2_INST_IRQHandler(void)
     }
 }
 
-
-void SysTick_Handler(void)
-{
-		// 自分频
-		static int k = 0 ;
-		k ++ ;
-	tick ++;
-		if (k == 1000)
-		{
-			k = 0 ;
-		}
-}
 
 

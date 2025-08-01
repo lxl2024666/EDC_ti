@@ -6,6 +6,7 @@ extern char CircleNum; // Variable to hold the current circle number
 const float turn_radius = 0.3; // Define the turn radius
 const float turn_speed = 0.3; // Define the turn speed
 
+#define DEBUG // Uncomment to enable debug mode
 void test_dis(void)//在四个拐角输出距离
 {
 
@@ -14,7 +15,6 @@ void test_dis(void)//在四个拐角输出距离
 void test_Cordi(void)//在设定位置输出坐标
 {
     // Implement the functionality for test_Cordi here
-
 }
 
 void test_Circle(void)//测试圆周运动
@@ -66,7 +66,7 @@ void proB_1(void)
     #endif
     while(1)
     {
-			getTrackingSensorData(Digital);
+		getTrackingSensorData(Digital);
         if(half_Detect() && (cn * 4 == edge + 1))//注意不要忘记给detect加延时
         {
             Break(); // Break the loop if the condition is met
@@ -106,7 +106,7 @@ void proH_1(void)
 			getTrackingSensorData(Digital);
    
 
-			if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
+		if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -165,15 +165,25 @@ bool turn_func(void)
 {
     static int isturn = 0; // Variable to track if the robot is turning
 		static uint32_t starttime = 0;
+        #ifdef DEBUG
+    char debug_message[50];
+    sprintf(debug_message, "Edge: %d, isturn: %d", edge, isturn);
+    OLED_ShowString(0, 0, debug_message, 8); // Display the edge and turning status on the OLED
+        #endif
 		if(tick < starttime + 1000 && isturn)
 		{
-			LSet(100);
+			LSet(90);
 			RSet(350);
 			return true;
 		}
 		isturn = 0;
     if(half_Detect() && isturn == 0)
     {
+        #ifdef DEBUG
+    char debug_message[50];
+    sprintf(debug_message, "Edge: %d, isturn: %d", edge, isturn);
+    OLED_ShowString(0, 0, debug_message, 8); // Display the edge and turning status on the OLED
+        #endif
         edge ++; // Increment the edge variable
         isturn = 1; // Set the turning flag
 				starttime = tick;
