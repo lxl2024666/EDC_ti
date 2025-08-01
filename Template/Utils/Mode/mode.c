@@ -16,12 +16,7 @@ void test_Cordi(void)//在设定位置输出坐标
 {
 	YP_SMotor_Init();
     // Implement the functionality for test_Cordi here
-	YP_SMotor_SetSpeed(0,0);
-	while(1)
-	{
-		YP_SMotor_UpdateState();
-		Delay_ms(10);
-	}
+	YP_SMotor_SetSpeed(30,10);
 }
 
 void test_Circle(void)//测试圆周运动

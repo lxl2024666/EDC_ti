@@ -95,23 +95,29 @@ extern "C" {
 #define GPIO_Motor_C1_IOMUX_FUNC                     IOMUX_PINCM40_PF_TIMG7_CCP1
 #define GPIO_Motor_C1_IDX                                    DL_TIMER_CC_1_INDEX
 
-/* Defines for SMotor */
-#define SMotor_INST                                                        TIMG6
-#define SMotor_INST_IRQHandler                                  TIMG6_IRQHandler
-#define SMotor_INST_INT_IRQN                                    (TIMG6_INT_IRQn)
-#define SMotor_INST_CLK_FREQ                                             8000000
+/* Defines for SMotor_1 */
+#define SMotor_1_INST                                                      TIMG6
+#define SMotor_1_INST_IRQHandler                                TIMG6_IRQHandler
+#define SMotor_1_INST_INT_IRQN                                  (TIMG6_INT_IRQn)
+#define SMotor_1_INST_CLK_FREQ                                           8000000
 /* GPIO defines for channel 0 */
-#define GPIO_SMotor_C0_PORT                                                GPIOA
-#define GPIO_SMotor_C0_PIN                                        DL_GPIO_PIN_29
-#define GPIO_SMotor_C0_IOMUX                                      (IOMUX_PINCM4)
-#define GPIO_SMotor_C0_IOMUX_FUNC                     IOMUX_PINCM4_PF_TIMG6_CCP0
-#define GPIO_SMotor_C0_IDX                                   DL_TIMER_CC_0_INDEX
+#define GPIO_SMotor_1_C0_PORT                                              GPIOA
+#define GPIO_SMotor_1_C0_PIN                                      DL_GPIO_PIN_29
+#define GPIO_SMotor_1_C0_IOMUX                                    (IOMUX_PINCM4)
+#define GPIO_SMotor_1_C0_IOMUX_FUNC                   IOMUX_PINCM4_PF_TIMG6_CCP0
+#define GPIO_SMotor_1_C0_IDX                                 DL_TIMER_CC_0_INDEX
+
+/* Defines for SMotor_2 */
+#define SMotor_2_INST                                                      TIMG8
+#define SMotor_2_INST_IRQHandler                                TIMG8_IRQHandler
+#define SMotor_2_INST_INT_IRQN                                  (TIMG8_INT_IRQn)
+#define SMotor_2_INST_CLK_FREQ                                          32000000
 /* GPIO defines for channel 1 */
-#define GPIO_SMotor_C1_PORT                                                GPIOA
-#define GPIO_SMotor_C1_PIN                                        DL_GPIO_PIN_30
-#define GPIO_SMotor_C1_IOMUX                                      (IOMUX_PINCM5)
-#define GPIO_SMotor_C1_IOMUX_FUNC                     IOMUX_PINCM5_PF_TIMG6_CCP1
-#define GPIO_SMotor_C1_IDX                                   DL_TIMER_CC_1_INDEX
+#define GPIO_SMotor_2_C1_PORT                                              GPIOA
+#define GPIO_SMotor_2_C1_PIN                                      DL_GPIO_PIN_30
+#define GPIO_SMotor_2_C1_IOMUX                                    (IOMUX_PINCM5)
+#define GPIO_SMotor_2_C1_IOMUX_FUNC                   IOMUX_PINCM5_PF_TIMG8_CCP1
+#define GPIO_SMotor_2_C1_IDX                                 DL_TIMER_CC_1_INDEX
 
 
 
@@ -267,7 +273,8 @@ void SYSCFG_DL_initPower(void);
 void SYSCFG_DL_GPIO_init(void);
 void SYSCFG_DL_SYSCTL_init(void);
 void SYSCFG_DL_Motor_init(void);
-void SYSCFG_DL_SMotor_init(void);
+void SYSCFG_DL_SMotor_1_init(void);
+void SYSCFG_DL_SMotor_2_init(void);
 void SYSCFG_DL_TIMER_0_init(void);
 void SYSCFG_DL_Debug_init(void);
 void SYSCFG_DL_K230_init(void);
