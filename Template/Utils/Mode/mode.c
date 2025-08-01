@@ -19,11 +19,14 @@ void test_Cordi(void)//在设定位置输出坐标
 
 void test_Circle(void)//测试圆周运动
 {
-    if(!turn_func())
+	while(1)
+	{if(!turn_func())
     {
         Break(); // Break the loop if the robot is not turning
         return; // Exit the function
     }
+		Delay_ms(10);
+	}
 }
 
 void test_track(void)
@@ -43,7 +46,7 @@ void test_track(void)
 
 void proB_1(void)
 {
-    int cn = SetCircleNum(CircleNum);
+    int cn = 2;//SetCircleNum(CircleNum);
     #ifdef MODE_DEBUG
     char debug_message[50];
     sprintf(debug_message, "CircleNum: %d", cn);
@@ -51,6 +54,7 @@ void proB_1(void)
     #endif
     while(1)
     {
+			getTrackingSensorData(Digital);
         if(half_Detect() && (cn * 4 == edge + 1))//注意不要忘记给detect加延时
         {
             Break(); // Break the loop if the condition is met
@@ -58,8 +62,9 @@ void proB_1(void)
         }
         if(!turn_func()) // Check if the robot is turning
         {
-            track(0.3); // Call the track function with a linear velocity of 0.3
+            lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
+				Delay_ms(10);
     }
 }
 
@@ -68,11 +73,13 @@ void proB_2_3(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProB2/3", 8); // Display the mode name on the OLED
     #endif
+	while(1){
     if(!Init())
     {
         PID_SMotor_Cont(); // Call the PID control function for the motor
         Delay_ms(10); // Delay for 10 milliseconds
     }
+	}
 }
 
 void proH_1(void)
@@ -84,7 +91,10 @@ void proH_1(void)
     
     while(1)
     {
-        if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
+			getTrackingSensorData(Digital);
+   
+
+			if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -142,27 +152,22 @@ int SetCircleNum(char num)
 bool turn_func(void)
 {
     static int isturn = 0; // Variable to track if the robot is turning
-    if(half_Detect() && isturn == 0)//注意不要忘记给detect加延时
+		static uint32_t starttime = 0;
+		if(tick < starttime + 1000 && isturn)
+		{
+			LSet(100);
+			RSet(350);
+			return true;
+		}
+		isturn = 0;
+    if(half_Detect() && isturn == 0)
     {
         edge ++; // Increment the edge variable
         isturn = 1; // Set the turning flag
+				starttime = tick;
+			return true;
     }
-    if(isturn == 1 && !empty_Detect())//注意不要忘记给detect加延时
-    {
-        isturn = 0; // Reset the turning flag
-    }
-    else if(isturn == 1 && empty_Detect())
-    {
-        // Perform the turn operation
-        #ifdef ENCODER
-        runCircle(turn_radius, turn_speed, 360, LEFT); // Run a circle with defined radius, speed, and angle in left direction
-        #endif
-        #ifndef ENCODER
-        LSet(100); // Set the left motor speed to 100
-        RSet(300); // Set the right motor speed to 300
-				#endif
-    }
-    return isturn; // Return the current turning state
+		return false;
 }
 
 bool Init(void)

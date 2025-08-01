@@ -74,24 +74,23 @@ float thetaGrayscale()
 bool Road_detect(int nummin, int nummax)
 {
     static int last_time = 0;
-    if (tick - last_time < 100) // 防抖动
-    {
-        return false; // 如果上次检测时间小于100ms，则不进行检测
-    }
+//    if (tick - last_time < 100) // 防抖动
+//    {
+//        return false; // 如果上次检测时间小于100ms，则不进行检测
+//    }
     int sumIRDetect = 0;
     int i = 0;
     while(i < 8){	if(Digital[i]==0) sumIRDetect ++; i++;}
-    if(sumIRDetect <= nummax && sumIRDetect >= nummin) 
+    if(sumIRDetect <= nummax && sumIRDetect >= nummin)
 		{
-			
-    last_time = tick;
+		//last_time = tick;
 			return 1;
 		}
     else return 0;
 }
 bool half_Detect(){
 //三岔路口检测
-	return Road_detect(5, 7);
+	return Road_detect(3, 6);
 }
 
 bool cross_Roads_Detect(){

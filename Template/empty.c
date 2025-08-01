@@ -63,7 +63,7 @@ int main(void)
 	// OLED Init
 	OLED_Init() ;
 	//Car1 Init
-	//MECInit();
+	MECInit();
 //	LSet(0);
 //	RSet(0);
 	//Laser Init
@@ -71,14 +71,15 @@ int main(void)
 //	Laser_Ask_for_Loc();
 //	menu_init();
 //	menu_begin();
+	proB_1();
 	
-	//test_track();
 	while (1) 
 	{
-		getTrackingSensorData(Digtal);
-		snprintf(message, sizeof(message), "%.5f",getSpeed());
-		OLED_ShowString(0,4, message, 8);
-		Delay_ms(40);
+		LSet(100);
+//		getTrackingSensorData(Digtal);
+//		snprintf(message, sizeof(message), "%.5f",getSpeed());
+//		OLED_ShowString(0,4, message, 8);
+//		Delay_ms(40);
 	}
 }
 
