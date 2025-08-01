@@ -35,8 +35,6 @@
 
 #include "Init_SMotor.h"
 
-//激光通信头文件
-#include "Laser_USART.h"
 
 //八路传感器头文件
 #include "TrackingSensor.h"

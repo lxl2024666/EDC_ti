@@ -1,7 +1,7 @@
 Dependencies for Project 'empty_LP_MSPM0G3507_nortos_keil', Target 'empty_LP_MSPM0G3507_nortos_keil': (DO NOT MODIFY !)
 CompilerVersion: 6230000::V6.23::ARMCLANG
-F (../empty.c)(0x688C2311)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MMD)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+F (../empty.c)(0x688C34A6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/empty.o -MMD)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -82,25 +82,25 @@ I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
-F (../empty.syscfg)(0x688C1A21)()
+F (../empty.syscfg)(0x688C3657)()
 F (startup_mspm0g350x_uvision.s)(0x688C1A21)(--cpu Cortex-M0+ -g --diag_suppress=A1950W--pd "__UVISION_VERSION SETA 542"--pd "__MSPM0G3507__ SETA 1"--list .\startup_mspm0g350x_uvision.lst--xref -o .\objects\startup_mspm0g350x_uvision.o--depend .\objects\startup_mspm0g350x_uvision.d)
 F (../ti_msp_dl_config.h)(0x688C1A21)()
-F (../ti_msp_dl_config.c)(0x688C1A21)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
+F (../ti_msp_dl_config.c)(0x688C3664)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/ti_msp_dl_config.o -MMD)
 I (..\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -250,27 +250,27 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\BSP\OLED\OLED.h)(0x688B75C3)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\BSP\Motor_Encoder\tb6612fng.c)(0x688B8898)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tb6612fng.o -MMD)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
@@ -425,9 +425,9 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 F (..\Utils\Initialize\Initialize.c)(0x688C1B5F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/initialize.o -MMD)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -514,13 +514,13 @@ I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 F (..\Utils\Initialize\Init_SMotor.c)(0x688B75C3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/init_smotor.o -MMD)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
@@ -600,7 +600,7 @@ I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 F (..\Utils\Motion\kinematics.c)(0x688B8676)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/kinematics.o -MMD)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -681,25 +681,25 @@ I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\Utils\Motion\pid.c)(0x688B75C3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/pid.o -MMD)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 F (..\Utils\Motion\tracking.c)(0x688C1EC3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/tracking.o -MMD)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -779,20 +779,20 @@ I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\Utils\Motion\Cont_SMotor.c)(0x688B84A1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/cont_smotor.o -MMD)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
@@ -873,23 +873,23 @@ I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\BSP\OLED\OLED.h)(0x688B75C3)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\Utils\Sensor\SensorProc.c)(0x688C2811)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/sensorproc.o -MMD)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
@@ -971,22 +971,22 @@ I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\BSP\OLED\OLED.h)(0x688B75C3)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\BSP\SMotor\SMotor.c)(0x688B8898)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/smotor.o -MMD)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
@@ -1064,28 +1064,29 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\BSP\OLED\OLED.h)(0x688B75C3)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
-F (..\BSP\Laser_USART\Laser_USART.c)(0x688B75C3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/laser_usart.o -MMD)
+F (..\BSP\Laser_USART\Laser_USART.c)(0x688C2B43)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/laser_usart.o -MMD)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -1160,10 +1161,9 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 F (..\BSP\TrackingSensor\TrackingSensor.c)(0x688C1A76)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/trackingsensor.o -MMD)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -1244,19 +1244,19 @@ I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\Utils\Mode\circle_list.c)(0x688B75C3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/circle_list.o -MMD)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
@@ -1339,28 +1339,28 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
-F (..\Utils\Mode\mode.c)(0x688C27D6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode.o -MMD)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+F (..\Utils\Mode\mode.c)(0x688C348A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode.o -MMD)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -1441,15 +1441,15 @@ I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
@@ -1457,7 +1457,7 @@ I (..\Utils\Mode\circle_list.h)(0x688B75C3)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\Utils\Mode\mode_tree.c)(0x688B75C3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/mode_tree.o -MMD)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
 I (..\..\..\source\ti\devices\msp\msp.h)(0x686639FA)
 I (..\..\..\source\ti\devices\DeviceFamily.h)(0x686639FA)
@@ -1538,19 +1538,19 @@ I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)
 F (..\BSP\key\key.c)(0x688C1B1D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/key.o -MMD)
 I (..\BSP\key\key.h)(0x688B75C3)
@@ -1628,27 +1628,27 @@ I (..\..\..\source\ti\driverlib\dl_vref.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\BSP\OLED\OLED.h)(0x688B75C3)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 F (..\BSP\OLED\OLED.c)(0x688B8898)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -Wno-covered-switch-default -Wno-unreachable-code-break -I ../../../source/third_party/CMSIS/Core/Include -I ../../../source -I ../BSP/OLED -I ../Utils -I ../../Template -I ../BSP/Motor_Encoder -I ../BSP/LED -I ../BSP/JY61P -I ../Utils/Initialize -I ../Utils/Motion -I ../Utils/Sensor -I ../BSP/SMotor -I ../BSP/Laser_USART -I ../BSP/TrackingSensor -I ../BSP/key -I ../Utils/Mode -I ../BSP/TrackingSensor-D__UVISION_VERSION="542" -D__MSPM0G3507__ -D__MSPM0G3507__-o ./objects/oled.o -MMD)
 I (..\BSP\OLED\OLED.h)(0x688B75C3)
 I (..\..\Template\ti_msp_dl_config.h)(0x688C1A21)
@@ -1726,24 +1726,24 @@ I (..\..\..\source\ti\driverlib\dl_wwdt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_interrupt.h)(0x686639FC)
 I (..\..\..\source\ti\driverlib\m0p\dl_systick.h)(0x686639FC)
 I (..\BSP\OLED\OLED_Font.h)(0x688B87BC)
-I (..\Utils\AllHeader.h)(0x688B84DB)
+I (..\Utils\AllHeader.h)(0x688C328D)
 I (..\Utils\Delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\tb6612fng.h)(0x688B75C3)
 I (..\Utils\Motion\tracking.h)(0x688B75C3)
 I (..\Utils\Motion\tracking_delay.h)(0x688B75C3)
 I (..\BSP\Motor_Encoder\Hall_Encoder.h)(0x688C1A21)
-I (..\Utils\Initialize\Initialize.h)(0x688C1A21)
+I (..\Utils\Initialize\Initialize.h)(0x688C3371)
 I (..\Utils\Motion\kinematics.h)(0x688C1A21)
+I (..\BSP\Laser_USART\Laser_USART.h)(0x688C2C14)
 I (..\Utils\Motion\pid.h)(0x688B75C3)
 I (..\Utils\Sensor\SensorProc.h)(0x688B84D3)
 I (..\Utils\Motion\Cont_SMotor.h)(0x688B8373)
 I (..\BSP\SMotor\SMotor.h)(0x688B75C3)
 I (..\Utils\Initialize\Init_SMotor.h)(0x688B75C3)
 I (..\Utils\Sensor\Rotation.h)(0x688B75C3)
-I (..\BSP\Laser_USART\Laser_USART.h)(0x688B75C3)
 I (..\BSP\TrackingSensor\TrackingSensor.h)(0x688B75C3)
 I (..\Utils\Mode\menu.h)(0x688B75C3)
 I (..\Utils\Mode\mode_tree.h)(0x688B75C3)
 I (..\Utils\Mode\circle_list.h)(0x688B75C3)
-I (..\Utils\Mode\mode.h)(0x688B7AF0)
+I (..\Utils\Mode\mode.h)(0x688C34B9)
 I (..\BSP\key\key.h)(0x688B75C3)

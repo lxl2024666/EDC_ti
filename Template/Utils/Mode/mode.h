@@ -6,6 +6,7 @@
 void test_dis(void);
 void test_Cordi(void);
 void test_Circle(void);
+void test_Connect(void);
 void test_track(void);
 
 void proB_1(void);

@@ -29,6 +29,18 @@ void test_Circle(void)//测试圆周运动
 	}
 }
 
+void test_Connect(void)
+{
+    char message[50];
+    while(1)
+    {
+        sprintf(message, "LE: %d, RE: %d", Laser_error, Rect_error);
+        OLED_ShowString(0, 0, message, 8); // Display the error messages on the OLED
+        sprintf(message, "LL0: %d, LL1: %d", Laser_Loc[0], Laser_Loc[1]);
+        OLED_ShowString(0, 1, message, 8); // Display the laser location on the OLED
+    }
+}
+
 void test_track(void)
 {
     // Test the track function with a linear velocity of 0.3

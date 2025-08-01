@@ -1,5 +1,6 @@
 ./objects/laser_usart.o: ..\BSP\Laser_USART\Laser_USART.c \
-  ..\..\Template\ti_msp_dl_config.h ..\..\..\source\ti\devices\msp\msp.h \
+  ..\BSP\Laser_USART\Laser_USART.h ..\..\Template\ti_msp_dl_config.h \
+  ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
   ..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
@@ -71,5 +72,4 @@
   ..\..\..\source\ti\driverlib\dl_vref.h \
   ..\..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\..\source\ti\driverlib\m0p\dl_systick.h \
-  ..\BSP\Laser_USART\Laser_USART.h
+  ..\..\..\source\ti\driverlib\m0p\dl_systick.h

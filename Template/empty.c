@@ -38,8 +38,12 @@
 //OLED以及状态机
 //普通电机左右未测试
 // 激光位置串口通信测试
-extern uint8_t USART_LASER_RX_BUF[USART_LASER_RX_BUF_LEN] ;
-extern int Laser_Loc[USART_LASER_RX_BUF_LEN] ;
+
+// ---------导入CANMV相关---------
+
+// 错误状态标志位:	// -1:初始化	// 0 : 正常	// 1 : 初始时没找到	// 2 : 丢失	//  3 : 掉帧
+
+// ---------导入CANMV相关---------
 
 //灰度传感器数据变量
 uint8_t Digtal[8];
@@ -52,13 +56,19 @@ char message[50];
 int main(void)
 {
 	SYSCFG_DL_init();
+	SysTick_Config(32000);
+	__enable_irq();
 	
 	//编码器初始化
 	encoder_init();
+	
 
 	//定时器初始化
 	timer_init();
 	DL_TimerG_startCounter(TIMER_0_INST);
+	
+	// CanMV初始化
+	Laser_USART_Init() ;
 	
 	// OLED Init
 	OLED_Init() ;
@@ -71,8 +81,9 @@ int main(void)
 //	Laser_Ask_for_Loc();
 //	menu_init();
 //	menu_begin();
-	proB_1();
-	
+
+	test_Connect();
+	DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
 	while (1) 
 	{
 		LSet(100);
@@ -83,26 +94,22 @@ int main(void)
 	}
 }
 
-// 激光串口的中断服务函数
-void UART_0_INST_IRQHandler(void)
+//串口的中断服务函数
+void UART_2_INST_IRQHandler(void)
 {
     //如果产生了串口中断
     switch( DL_UART_getPendingInterrupt(LASER_UART) )
     {
 			  //如果是接收中断
         case DL_UART_IIDX_RX:
-					  // 处理数据(直接不要变量接收了,直接函数return为参数)
-						Laser_Loc_Update( DL_UART_Main_receiveData(LASER_UART) ) ;
-				    //重新要求发送激光数据
-            Laser_Ask_for_Loc();
-						#ifdef LASER_DEBUG
-						Laser_send_char(DL_UART_Main_receiveData(LASER_UART)) ;	// 看看回显,我发现打开这个debug之后函数发送回显会丢失第三个数据
-						#endif
+					// 对CANMV的传输的数据进行处理
+					CanMV_Mode() ;
             break;
         default://其他的串口中断
             break;
     }
 }
+
 
 void SysTick_Handler(void)
 {

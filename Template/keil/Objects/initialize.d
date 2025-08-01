@@ -79,7 +79,7 @@
   ..\BSP\Motor_Encoder\Hall_Encoder.h ..\Utils\Motion\pid.h \
   ..\Utils\Sensor\SensorProc.h ..\Utils\Motion\Cont_SMotor.h \
   ..\BSP\SMotor\SMotor.h ..\Utils\Initialize\Init_SMotor.h \
-  ..\Utils\Sensor\Rotation.h ..\BSP\Laser_USART\Laser_USART.h \
-  ..\BSP\TrackingSensor\TrackingSensor.h ..\Utils\Mode\menu.h \
-  ..\Utils\Mode\mode_tree.h ..\Utils\Mode\circle_list.h \
-  ..\Utils\Mode\mode.h ..\BSP\key\key.h
+  ..\Utils\Sensor\Rotation.h ..\BSP\TrackingSensor\TrackingSensor.h \
+  ..\Utils\Mode\menu.h ..\Utils\Mode\mode_tree.h \
+  ..\Utils\Mode\circle_list.h ..\Utils\Mode\mode.h ..\BSP\key\key.h \
+  ..\BSP\Laser_USART\Laser_USART.h

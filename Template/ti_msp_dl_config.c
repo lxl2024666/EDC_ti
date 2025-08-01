@@ -474,6 +474,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_K230_init(void)
     DL_UART_Main_enableInterrupt(K230_INST,
                                  DL_UART_MAIN_INTERRUPT_RX |
                                  DL_UART_MAIN_INTERRUPT_TX);
+    /* Setting the Interrupt Priority */
+    NVIC_SetPriority(K230_INST_INT_IRQN, 0);
 
 
     DL_UART_Main_enable(K230_INST);

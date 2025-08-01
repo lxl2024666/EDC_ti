@@ -198,6 +198,7 @@ UART1.rxPinConfig.$name                = "ti_driverlib_gpio_GPIOPinGeneric13";
 UART2.$name                            = "K230";
 UART2.targetBaudRate                   = 115200;
 UART2.enabledInterrupts                = ["RX","TX"];
+UART2.interruptPriority                = "0";
 UART2.peripheral.$assign               = "UART2";
 UART2.peripheral.rxPin.$assign         = "PA24";
 UART2.peripheral.txPin.$assign         = "PA23";

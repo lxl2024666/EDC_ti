@@ -4,6 +4,8 @@
 // �˶�ѧͷ�ļ�������������ֱ��ת�亯��
 #include "kinematics.h"
 #include "AllHeader.h"
+//激光通信头文件
+#include "Laser_USART.h"
 
 // Parameters for the encoder
 #define PPR 13  // The Pulses Per Revolution of encoder
@@ -49,6 +51,12 @@ extern double GyroscopeChannelData[10]; // Array to hold gyroscope data
 extern uint32_t tick; // Global tick counter for timing
 extern float sInedge; // Variable to track distance traveled in the edge
 extern int edge; // Variable to track the current edge for target coordinate calculation
+
+extern int Laser_error ;
+extern int Rect_error  ;
+// CANMV相关数组
+extern uint16_t Laser_Loc[Laser_RX_Num / 2] ;		// 激光位置数组,0-3为值 01 target xy, 23 real xy
+extern uint16_t  Rect_Loc[Rect_RX_Num  / 2] ;		// 矩形位置数组,0-3为值
 
 void MECInit();
 void LMotorSet(MOVETYPE type, uint16_t duty);
