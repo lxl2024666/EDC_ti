@@ -9,27 +9,41 @@ const float turn_speed = 0.3; // Define the turn speed
 int isturn = 0; // Variable to track if the robot is turning
 
 #define DEBUG // Uncomment to enable debug mode
-#define LCS 90
-#define RCS   
-void test_dis(void)//ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define TLCS 80 //×ªÍäÊ±×óÂÖµÄËÙ¶È
+#define TRCS 360 //×ªÍäÊ±ÓÒÂÖµÄËÙ¶È
+#define TURN_TIME 800 //×ªÍäÊ±¼äÈç¹û×ªÍä½Ç¶È²»¹»ºÏÊÊµ÷½ÚÕâ¸ö
+void test_dis(void)//±àÂëÆ÷²âÊÔº¯Êı
 {
-
+    sInedge = 0; // Reset the sInedge variable
+    while(sInedge < 1.0f) // Continue until the distance traveled is less than 1.0
+    {
+        LSet(100); // Set the left motor speed to 100
+        RSet(100);
+        UpdateSInedge(); // Update the sInedge variable with the current speed
+        Delay_ms(10); // Delay for 10 milliseconds
+    }
+    Break(); // Stop the motors when the distance is reached
 }
 
-
-void test_Cordi(void)//ï¿½ï¿½ï¿½è¶¨Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+void test_Cordi(void)//²½½øµç»ú²âÊÔº¯Êı
 {
 	YP_SMotor_Init();
     // Implement the functionality for test_Cordi here
 	YP_SMotor_SetSpeed(30,10);
+	while(1)
+	{
+		YP_SMotor_UpdateState();
+		YP_SMotor_SetSpeed(30,10);
+		Delay_ms(10);
+	}
 }
 
-void test_Circle(void)//ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½Ë¶ï¿½
+void test_Circle(void)//Ô²ĞÎÔË¶¯²âÊÔº¯Êı
 {
 	while(1)
 	{
-		LSet(90);
-		RSet(350);
+		LSet(TLCS);
+		RSet(TRCS);
 	}
 }
 
@@ -62,7 +76,7 @@ void test_track(void)
 
 void proB_1(void)
 {
-    int cn = 2;//SetCircleNum(CircleNum);
+    int cn = SetCircleNum(CircleNum);
     #ifdef MODE_DEBUG
     char debug_message[50];
     sprintf(debug_message, "CircleNum: %d", cn);
@@ -91,9 +105,8 @@ void proB_2_3(void)
     #endif
 	YP_SMotor_Init();
 	while(1){
-    if(!Init())
+    if(Init())
     {
-		YP_SMotor_SetSpeed(0, 0); // Set the speed of the motors to zero
         PID_SMotor_Cont(); // Call the PID control function for the motor
         Delay_ms(10); // Delay for 10 milliseconds
     }
@@ -106,13 +119,13 @@ void proH_1(void)
     OLED_ShowString(0, 0, "ProH1", 8); // Display the mode name on the OLED
     #endif
     int cn = SetCircleNum(CircleNum);
-    
+    YP_SMotor_Init();
     while(1)
     {
 		getTrackingSensorData(Digital);
-   
+        UpdateSInedge(); // Update the sInedge variable with the current speed
 
-		if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
+		if(half_Detect() && (cn * 4 == edge)) // Check if the half detection condition is met
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -121,6 +134,7 @@ void proH_1(void)
         {
             lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
+        SetLaserPosition(); // Set the laser position based on the current mode
         SetTargetCenter(); // Set the target center for the robot
         Compute_excur();
         PID_SMotor_Cont(); // Call the PID control function for the motor
@@ -137,7 +151,10 @@ void proH_2(void)
     YP_SMotor_Init();
     while(1)
     {
-        if(half_Detect() && (4 == edge + 1)) // Check if the half detection condition is met
+        getTrackingSensorData(Digital);
+        UpdateSInedge(); // Update the sInedge variable with the current speed
+
+        if(half_Detect() && (4 == edge)) // Check if the half detection condition is met
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -146,6 +163,7 @@ void proH_2(void)
         {
             lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
+        SetLaserPosition(); // Set the laser position for the robot
         SetTargetCircle(); // Set the target circle for the robot
         Compute_excur();
         PID_SMotor_Cont(); // Call the PID control function for the motor
@@ -170,15 +188,10 @@ int SetCircleNum(char num)
 bool turn_func(void)
 {
     static uint32_t starttime = 0;
-    #ifdef DEBUG
-    char debug_message[50];
-    sprintf(debug_message, "Edge: %d, isturn: %d", edge, isturn);
-    OLED_ShowString(0, 0, debug_message, 8); // Display the edge and turning status on the OLED
-        #endif
 		if(tick < starttime + 1000 && isturn)
 		{
-			LSet(90);
-			RSet(350);
+			LSet(TLCS);
+			RSet(TRCS);
 			return true;
 		}
 		isturn = 0;
@@ -199,6 +212,10 @@ bool turn_func(void)
 
 bool Init(void)
 {
-    
-    return false; // Return false to indicate initialization failure
+    if(Laser_error == 1)
+    {
+        YP_SMotor_SetSpeed(-120, 0); // Set the speed of the motors to -120
+        return false; // Return false to indicate initialization failure
+    }
+    return true; // Return true to indicate successful initialization
 }

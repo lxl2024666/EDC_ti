@@ -45,7 +45,7 @@ void SMotor_SetSpeed(SMotor *motor, float angular_speed) {
         #endif
         return;
     }
-    double aspeed = angular_speed;
+    motor->state.angular_speed = angular_speed;
     if(angular_speed == 0) {
         DL_TimerG_setCaptureCompareValue(motor->pwm_timer, 0, motor->pwm_channel); // Stop PWM
         return; // No speed set, stop the motor
@@ -71,7 +71,7 @@ void SMotor_SetSpeed(SMotor *motor, float angular_speed) {
     if (target_arr > 65535) {
         target_arr = 65535; // Limit to maximum value for 16-bit timer
     }
-
+		
     DL_TimerG_setLoadValue(motor->pwm_timer, target_arr); // 设置新的ARR值
     DL_TimerG_setCaptureCompareValue(motor->pwm_timer, target_arr / 2, motor->pwm_channel); // 占空比50%
 }

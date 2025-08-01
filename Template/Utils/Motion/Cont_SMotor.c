@@ -9,6 +9,9 @@ bool is_updated = false; // 是否更新了数据
 bool is_new_mode = true; // 是否进入了新模式
 Attitude cor = {0.0f, 0.0f}; // 校准数据
 
+#define LP_X 0.5f // 线性位置X坐标
+#define LP_Y 0.5f // 线性位置Y坐标
+
 void PID_SMotor_Cont(void)
 {
     static PIDdata pid_x, pid_y;
@@ -23,16 +26,21 @@ void PID_SMotor_Cont(void)
         last_update_time = current_time; // 更新上次更新时间
         return; // 如果是新模式则不进行PID计算
     }
-    if(!is_updated) return; // 如果数据未更新则返回
-    is_updated = false; // 重置更新标志
-    float dt = (current_time - last_update_time) / 1000.0f; // 时间间隔
-    PID_Update(&pid_x, target_position.x, laser_position.x, dt);
-    PID_Update(&pid_y, target_position.y, laser_position.y, dt);
-    last_update_time = current_time; // 更新上次更新时间
-    // 计算PID输出
-    float output_wyaw = -1 * PID_Compute(&pid_x, config_x.Kp, config_x.Ki, config_x.Kd);
-    float output_wpitch = PID_Compute(&pid_y, config_y.Kp, config_y.Ki, config_y.Kd);
-    // 发送控制命令
+    float output_wyaw = 0.0f; // 输出的偏航速度
+    float output_wpitch = 0.0f;
+    if(is_updated) {
+        is_updated = false; // 重置更新标志
+        float dt = (current_time - last_update_time) / 1000.0f; // 时间间隔
+        PID_Update(&pid_x, target_position.x, laser_position.x, dt);
+        PID_Update(&pid_y, target_position.y, laser_position.y, dt);
+        last_update_time = current_time; // 更新上次更新时间
+        // 计算PID输出
+        output_wyaw = -1 * PID_Compute(&pid_x, config_x.Kp, config_x.Ki, config_x.Kd);
+        output_wpitch = PID_Compute(&pid_y, config_y.Kp, config_y.Ki, config_y.Kd);
+        // 发送控制命令
+    }
+    output_wpitch += cor.pitch; // 添加俯仰角校准
+    output_wyaw += cor.yaw; // 添加偏航角校准
     YP_SMotor_SetSpeed(output_wyaw, output_wpitch); // 设置舵机速度
     YP_SMotor_UpdateState(); // 更新舵机状态
     #ifdef SMOTOR_DEBUG
@@ -61,6 +69,20 @@ void SetTargetCenter(void)
     }
 }
 
+void SetLaserPosition(void)
+{
+    if(!Laser_error)
+    {
+        laser_position.x = Laser_Loc[2]; // 设置激光雷达位置X坐标
+        laser_position.y = Laser_Loc[3]; // 设置激光雷达位置Y坐标
+    }
+    else
+    {
+        laser_position.x = LP_X; // 设置激光雷达位置X坐标为线性位置X
+        laser_position.y = LP_Y; // 设置激光雷达位置Y坐标为线性位置Y
+    }
+}
+
 void SetTargetCircle(void)
 {
     if(!Rect_error)
@@ -74,7 +96,8 @@ void Compute_excur(void)
 {
     if(isturn) 
     {
-        
+        const float w;
+        cor.yaw = -w; // 计算偏航角
     }
     float d = getDistance(); // 获取距离
     // 计算偏差

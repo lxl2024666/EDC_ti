@@ -72,14 +72,7 @@ void RSet(int16_t duty);
 void Break(); // Set both motors to break mode
 // This function sets both motors to break mode, stopping them quickly
 
-// RotationAngles getRotationAngles(); // Get the current rotation angles from the MS601M sensor
-float getYaw(); // Get the current yaw angle from the MS601M sensor
-float getWz(); // Get the current angular velocity (wz) from the MS601M sensor
-float CalibrateYawOffset(); // Calibrate the yaw offset
-
-// Get the current data and update the car state
-void UpdateData(); // Update the current data with the latest sensor readings
-void UpdateData_Car(); // Update the car state with the latest sensor readings
+void UpdateSInedge(void);
 
 void error_handler(void); // Handle errors by stopping motors and displaying error messages
 void delay_cycles(uint32_t cycles); // Simple delay function for TI platform

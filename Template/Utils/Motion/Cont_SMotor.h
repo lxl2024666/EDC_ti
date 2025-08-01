@@ -32,6 +32,8 @@ void PID_SMotor_Cont(void); // 控制函数
 void SetTargetCenter(void); // 设置目标中心位置函数
 void SetTargetCircle(void); // 设置目标圆位置函数
 
+void SetLaserPosition(void);
+
 void Compute_excur(void); // 计算偏差函数 
 
 float getDistance();

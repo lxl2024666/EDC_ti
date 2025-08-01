@@ -111,7 +111,7 @@ extern "C" {
 #define SMotor_2_INST                                                      TIMG8
 #define SMotor_2_INST_IRQHandler                                TIMG8_IRQHandler
 #define SMotor_2_INST_INT_IRQN                                  (TIMG8_INT_IRQn)
-#define SMotor_2_INST_CLK_FREQ                                          32000000
+#define SMotor_2_INST_CLK_FREQ                                           8000000
 /* GPIO defines for channel 1 */
 #define GPIO_SMotor_2_C1_PORT                                              GPIOA
 #define GPIO_SMotor_2_C1_PIN                                      DL_GPIO_PIN_30
