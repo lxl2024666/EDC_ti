@@ -18,10 +18,12 @@ Coordinate paper_to_camera(Coordinate paper)
     paper.x /= PAPERWIDE;
     paper.y /= PAPERHIGHT;
     Coordinate camera;
-    camera.x = (paperCornerC[1].x - paperCornerC[0].x) * paper.x 
-    + (paperCornerC[3].x - paperCornerC[0].x) * paper.y;
-    camera.y = (paperCornerC[1].y - paperCornerC[0].y) * paper.x
-    + (paperCornerC[3].y - paperCornerC[0].y) * paper.y;
+    camera.x = paper.y * (paperCornerC[3].x - paperCornerC[0].x)
+     + paper.x * (paperCornerC[2].x - paperCornerC[3].x) 
+     + (1 - paper.y) * (paperCornerC[1].x - paperCornerC[0].x);
+    camera.y = paper.y * (paperCornerC[3].y - paperCornerC[0].y)
+    + paper.x * (paperCornerC[2].y - paperCornerC[3].y)
+    + (1 - paper.y) * (paperCornerC[1].y - paperCornerC[0].y);
     return camera;
 }
 
