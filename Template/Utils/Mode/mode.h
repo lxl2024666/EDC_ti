@@ -18,4 +18,5 @@ int SetCircleNum(char num);
 bool turn_func(void);
 
 bool Init(void);
+
 #endif

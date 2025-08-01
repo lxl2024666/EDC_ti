@@ -43,14 +43,17 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-extern CarState car; // Declare car state for kinematics
+
 extern Data current_data; // Declare current data for kinematics
 extern uint8_t Digital[8]; // Declare an array for digital sensor readings
 extern char error_message[100]; // Buffer for error messages
-extern double GyroscopeChannelData[10]; // Array to hold gyroscope data
+
 extern uint32_t tick; // Global tick counter for timing
+
 extern float sInedge; // Variable to track distance traveled in the edge
 extern int edge; // Variable to track the current edge for target coordinate calculation
+extern int isturn; // Variable to track if the robot is turning
+
 extern char message[100]; // Buffer for messages
 
 extern int Laser_error ;

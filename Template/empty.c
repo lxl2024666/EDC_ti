@@ -76,27 +76,17 @@ int main(void)
 	
 	// OLED Init
 	
-	  OLED_Init() ; // **
+	 OLED_Init() ; // **
 	
 	//Car1 Init
-	  MECInit();
-//	LSet(0);
-//	RSet(0);
+	 MECInit();
 	Key_Init();
-
 	menu_init();
 	menu_begin();
 	
 	while (1) 
 	{
-               if( DL_GPIO_readPins(Key_PORT, Key_PIN_1_PIN) == 0 )
-                {
-                        DL_GPIO_setPins(LED_PORT, LED_LED0_PIN);  //LED控制输出高电平
-                }
-                else//如果PA21引脚为高电平
-                {
-                        DL_GPIO_clearPins(LED_PORT, LED_LED0_PIN);//LED控制输出低电平
-                }
+    
 	}
 }
 

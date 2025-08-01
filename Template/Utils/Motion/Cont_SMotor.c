@@ -72,24 +72,48 @@ void SetTargetCircle(void)
 
 void Compute_excur(void)
 {
+    if(isturn) 
+    {
+        
+    }
+    float d = getDistance(); // 获取距离
     // 计算偏差
     switch(edge % 4)
     {
         case 0:
-            // 处理边缘情况0
+            cor.yaw = - (getSpeed() * fabs(0.5f - sInedge) / d) / d; // 计算偏差
             break;
         case 1:
             // 处理边缘情况1
+            cor.yaw = (getSpeed() * 0.5f / d) / d;
             break;
         case 2:
             // 处理边缘情况2
+            cor.yaw = (getSpeed() * fabs(0.5f - sInedge) / d) / d;
             break;
         case 3:
             // 处理边缘情况3
+            cor.yaw = - (getSpeed() * 0.5f / d) / d;
             break;
         default:
             // 处理其他情况
             break;
     }
     return; // 退出函数
+}
+
+float getDistance(void)
+{
+    switch(edge % 4)
+    {
+        case 0:
+            return sqrt(pow(0.5f - sInedge, 2) + pow(0.5f, 2)); // 计算距离
+        case 1:
+            return sqrt(pow(0.5f, 2) + pow(0.5f + sInedge, 2)); // 计算距离
+        case 2:
+            return sqrt(pow(0.5f - sInedge, 2) + pow(1.5f, 2));
+        case 3:
+            return sqrt(pow(0.5f, 2) + pow(1.5f - sInedge, 2));
+    }
+		return 0;
 }

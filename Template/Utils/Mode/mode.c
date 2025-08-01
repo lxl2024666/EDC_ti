@@ -6,11 +6,16 @@ extern char CircleNum; // Variable to hold the current circle number
 const float turn_radius = 0.3; // Define the turn radius
 const float turn_speed = 0.3; // Define the turn speed
 
+int isturn = 0; // Variable to track if the robot is turning
+
 #define DEBUG // Uncomment to enable debug mode
+#define LCS 90
+#define RCS   
 void test_dis(void)//���ĸ��ս��������
 {
 
 }
+
 
 void test_Cordi(void)//���趨λ���������
 {
@@ -27,12 +32,9 @@ void test_Cordi(void)//���趨λ���������
 void test_Circle(void)//����Բ���˶�
 {
 	while(1)
-	{if(!turn_func())
-    {
-        Break(); // Break the loop if the robot is not turning
-        return; // Exit the function
-    }
-		Delay_ms(10);
+	{
+		LSet(90);
+		RSet(350);
 	}
 }
 
@@ -122,7 +124,7 @@ void proH_1(void)
         }
         if(!turn_func()) // Check if the robot is turning
         {
-            track(0.3); // Call the track function with a linear velocity of 0.3
+            lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
         SetTargetCenter(); // Set the target center for the robot
         Compute_excur();
@@ -172,9 +174,8 @@ int SetCircleNum(char num)
 
 bool turn_func(void)
 {
-    static int isturn = 0; // Variable to track if the robot is turning
-		static uint32_t starttime = 0;
-        #ifdef DEBUG
+    static uint32_t starttime = 0;
+    #ifdef DEBUG
     char debug_message[50];
     sprintf(debug_message, "Edge: %d, isturn: %d", edge, isturn);
     OLED_ShowString(0, 0, debug_message, 8); // Display the edge and turning status on the OLED
