@@ -50,18 +50,6 @@ void EncoderParamInit(EncoderParam *param, int wheelLength, int ppr)
 	param->wheelLength = wheelLength; // Set wheel length in mm
 	param->ppr = ppr; // Set Pulses Per Revolution
 }
-
-void LRInit(GPTIMER_Regs *LTimer, GPTIMER_Regs *RTimer,
-			int wheelLength, int ppr, // The last two parameters are for encoder parameters
-			GPTIMER_Regs *realTimer)
-	//set global variables for left and right encoders
-{
-	EncoderInit(LTimer, realTimer, wheelLength, ppr);
-	EncoderInit(RTimer, realTimer, wheelLength, ppr);
-	
-	LRFlag = 1; // Set flag to indicate left and right encoders are initialized
-}
-
 void UpdateSpeed(int i)
 	//get the speed of the motor
 	//E is the encoder speed struct, reload_tim is the timer used to measure real time
@@ -112,47 +100,4 @@ double getDis(int index)
 {
 	return encoders[index].dis; // Return the distance traveled by the wheel
 	// The distance is already updated in UpdateSpeed function
-}
-
-//Functions below are speciafic for left and right encoders
-double cSpeed()
-{
-	if(LRFlag == 0)
-	{
-		return 0.0; // No left and right encoders initialized
-	}
-	return (getSpeed(0) + getSpeed(1)) / 2.0; // Average speed of left and right encoders
-}
-double lSpeed()
-{
-	if(LRFlag == 0)
-	{
-		return 0.0; // No left encoder initialized
-	}
-	return getSpeed(0); // Speed of left encoder
-}
-double rSpeed()
-{
-	if(LRFlag == 0)
-	{
-		return 0.0; // No right encoder initialized
-	}
-	return getSpeed(1); // Speed of right encoder
-}
-
-double lDis()
-{
-	if(LRFlag == 0)
-	{
-		return 0.0; // No left encoder initialized
-	}
-	return getDis(0); // Distance traveled by left wheel
-}
-double rDis()
-{
-	if(LRFlag == 0)
-	{
-		return 0.0; // No right encoder initialized
-	}
-	return getDis(1); // Distance traveled by right wheel
 }

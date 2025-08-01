@@ -191,7 +191,7 @@
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>1</hadIROM2>
             <StupSel>0</StupSel>
-            <useUlib>1</useUlib>
+            <useUlib>0</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -480,11 +480,6 @@
         <Group>
           <GroupName>Sensor</GroupName>
           <Files>
-            <File>
-              <FileName>Rotation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Utils\Sensor\Rotation.c</FilePath>
-            </File>
             <File>
               <FileName>SensorProc.c</FileName>
               <FileType>1</FileType>

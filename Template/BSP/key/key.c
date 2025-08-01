@@ -10,7 +10,7 @@
     
     // 更新上次电平状态
     key->last_level = key->current_level;
-}
+}*/
 
 /**
  * @brief 按键扫描处理 (需要在主循环或定时器中调用)

@@ -5,7 +5,6 @@ extern char CircleNum; // Variable to hold the current circle number
 //Test function for the mode system
 const float turn_radius = 0.3; // Define the turn radius
 const float turn_speed = 0.3; // Define the turn speed
-int edge = 0; // Initialize edge variable for target coordinate calculation
 
 void test_dis(void)//在四个拐角输出距离
 {
@@ -32,7 +31,7 @@ void test_track(void)
     // Test the track function with a linear velocity of 0.3
     while(1)
     {
-			getTrackingSensorData(Digital);
+		getTrackingSensorData(Digital);
         lineWalking_low();
         if(empty_Detect()) // Check if the empty detection condition is met
         {
@@ -44,8 +43,7 @@ void test_track(void)
 
 void proB_1(void)
 {
-    int cn = SetCircleNum(CircleNum);//未实现
-    int isturn = 0; // Variable to track if the robot is turning
+    int cn = SetCircleNum(CircleNum);
     #ifdef MODE_DEBUG
     char debug_message[50];
     sprintf(debug_message, "CircleNum: %d", cn);
@@ -70,7 +68,11 @@ void proB_2_3(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProB2/3", 8); // Display the mode name on the OLED
     #endif
-
+    if(!Init())
+    {
+        PID_SMotor_Cont(); // Call the PID control function for the motor
+        Delay_ms(10); // Delay for 10 milliseconds
+    }
 }
 
 void proH_1(void)
@@ -78,8 +80,24 @@ void proH_1(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProH1", 8); // Display the mode name on the OLED
     #endif
+    int cn = SetCircleNum(CircleNum);
+    
     while(1)
     {
+        if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
+        {
+            Break(); // Break the loop if the condition is met
+            return; // Exit the function
+        }
+        if(!turn_func()) // Check if the robot is turning
+        {
+            track(0.3); // Call the track function with a linear velocity of 0.3
+        }
+        SetTargetCenter(); // Set the target center for the robot
+        Compute_excur();
+        PID_SMotor_Cont(); // Call the PID control function for the motor
+        Delay_ms(10); // Delay for 10 milliseconds   
+        // Implement the functionality for ProH1 here
     }
 }
 
@@ -88,10 +106,23 @@ void proH_2(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProH2", 8); // Display the mode name on the OLED
     #endif
+    
     while(1)
     {
-        // Implement the functionality for ProH2 here
-        // For example, you can call a function to perform a specific task
+        if(half_Detect() && (4 == edge + 1)) // Check if the half detection condition is met
+        {
+            Break(); // Break the loop if the condition is met
+            return; // Exit the function
+        }
+        if(!turn_func()) // Check if the robot is turning
+        {
+            track(0.3); // Call the track function with a linear velocity of 0.3
+        }
+        SetTargetCircle(); // Set the target circle for the robot
+        Compute_excur();
+        PID_SMotor_Cont(); // Call the PID control function for the motor
+        Delay_ms(10); // Delay for 10 milliseconds   
+        // Implement the functionality for ProH1 here
     }
 
 }
@@ -123,7 +154,18 @@ bool turn_func(void)
     else if(isturn == 1 && empty_Detect())
     {
         // Perform the turn operation
+        #ifdef ENCODER
         runCircle(turn_radius, turn_speed, 360, LEFT); // Run a circle with defined radius, speed, and angle in left direction
+        #endif
+        #ifndef ENCODER
+        LSet(100); // Set the left motor speed to 100
+        RSet(300); // Set the right motor speed to 300
+				#endif
     }
     return isturn; // Return the current turning state
+}
+
+bool Init(void)
+{
+    return false; // Return false to indicate initialization failure
 }
