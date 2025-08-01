@@ -98,7 +98,7 @@ double getSpeed(void)
 		speed = get_encoder_count();
 		dir = (get_encoder_dir() == D)? 1: -1;
 		
-		return speed * 0.001440 * dir ;
+		return speed * 0.0561 * dir ;
 		//0.01440
 		// Left number is computed by (length of the circle) * (frequence of the clock / (leftSpeed add number for every single circle
 		// which is (6.6e-2 * pi * 100 / (360 * 2))

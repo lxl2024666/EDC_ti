@@ -16,6 +16,8 @@ void PID_SMotor_Cont(void)
 {
     static PIDdata pid_x, pid_y;
     static uint32_t last_update_time = 0;
+    static float last_output_wyaw = 0.0f; // 上一次偏航速度输出
+    static float last_output_wpitch = 0.0f;
     PIDConfig config_x = {1.0f, 0.1f, 0.01f};
     PIDConfig config_y = {1.0f, 0.1f, 0.01f};
     uint32_t current_time = tick;
@@ -28,7 +30,11 @@ void PID_SMotor_Cont(void)
     }
     float output_wyaw = 0.0f; // 输出的偏航速度
     float output_wpitch = 0.0f;
-    if(is_updated) {
+    if(!is_updated && (!Laser_error || !Rect_error)) {
+        output_wyaw = last_output_wyaw; // 如果没有更新数据，则使用上一次的输出
+        output_wpitch = last_output_wpitch;
+    }
+    else if(is_updated) {
         is_updated = false; // 重置更新标志
         float dt = (current_time - last_update_time) / 1000.0f; // 时间间隔
         PID_Update(&pid_x, target_position.x, laser_position.x, dt);
