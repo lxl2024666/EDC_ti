@@ -1,6 +1,7 @@
 ./objects/menu.o: ..\Utils\Mode\menu.c ..\Utils\Mode\menu.h \
-  ..\Utils\Mode\mode_tree.h ..\BSP\OLED\oled.h \
-  ..\..\Template\ti_msp_dl_config.h ..\..\..\source\ti\devices\msp\msp.h \
+  ..\Utils\Mode\mode_tree.h ..\Utils\Mode\circle_list.h \
+  ..\BSP\OLED\oled.h ..\..\Template\ti_msp_dl_config.h \
+  ..\..\..\source\ti\devices\msp\msp.h \
   ..\..\..\source\ti\devices\DeviceFamily.h \
   ..\..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
   ..\..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
@@ -80,5 +81,5 @@
   ..\Utils\Motion\pid.h ..\Utils\Sensor\SensorProc.h \
   ..\Utils\Motion\Cont_SMotor.h ..\BSP\SMotor\SMotor.h \
   ..\Utils\Initialize\Init_SMotor.h ..\Utils\Sensor\Rotation.h \
-  ..\BSP\TrackingSensor\TrackingSensor.h ..\Utils\Mode\circle_list.h \
-  ..\Utils\Mode\mode.h ..\BSP\key\key.h
+  ..\BSP\TrackingSensor\TrackingSensor.h ..\Utils\Mode\mode.h \
+  ..\BSP\key\key.h

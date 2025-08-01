@@ -141,7 +141,9 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
 		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(Key_PIN_1_IOMUX);
+    DL_GPIO_initDigitalInputFeatures(Key_PIN_1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_UP,
+		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
     DL_GPIO_initDigitalOutput(SMotor_IO_DIR1_IOMUX);
 
@@ -228,7 +230,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_enableInterrupt(GPIOA, Motor_IO_E1A_PIN |
 		Motor_IO_E2A_PIN);
     DL_GPIO_clearPins(GPIOB, LED_LED0_PIN |
-		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
 		SMotor_IO_DIR2_PIN |
 		SMotor_IO_EN1_PIN |
@@ -237,7 +238,6 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		Motor_IO_BIN1_PIN |
 		Motor_IO_BIN2_PIN);
     DL_GPIO_enableOutput(GPIOB, LED_LED0_PIN |
-		Key_PIN_1_PIN |
 		SMotor_IO_DIR1_PIN |
 		SMotor_IO_DIR2_PIN |
 		SMotor_IO_EN1_PIN |
@@ -330,10 +330,10 @@ static const DL_TimerG_ClockConfig gSMotorClockConfig = {
 };
 
 static const DL_TimerG_PWMConfig gSMotorConfig = {
-    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN,
+    .pwmMode = DL_TIMER_PWM_MODE_EDGE_ALIGN_UP,
     .period = 1000,
     .isTimerWithFourCC = false,
-    .startTimer = DL_TIMER_STOP,
+    .startTimer = DL_TIMER_START,
 };
 
 SYSCONFIG_WEAK void SYSCFG_DL_SMotor_init(void) {
@@ -352,14 +352,14 @@ SYSCONFIG_WEAK void SYSCFG_DL_SMotor_init(void) {
 		DL_TIMERG_CAPTURE_COMPARE_0_INDEX);
 
     DL_TimerG_setCaptCompUpdateMethod(SMotor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERG_CAPTURE_COMPARE_0_INDEX);
-    DL_TimerG_setCaptureCompareValue(SMotor_INST, 1000, DL_TIMER_CC_0_INDEX);
+    DL_TimerG_setCaptureCompareValue(SMotor_INST, 0, DL_TIMER_CC_0_INDEX);
 
     DL_TimerG_setCaptureCompareOutCtl(SMotor_INST, DL_TIMER_CC_OCTL_INIT_VAL_LOW,
 		DL_TIMER_CC_OCTL_INV_OUT_DISABLED, DL_TIMER_CC_OCTL_SRC_FUNCVAL,
 		DL_TIMERG_CAPTURE_COMPARE_1_INDEX);
 
     DL_TimerG_setCaptCompUpdateMethod(SMotor_INST, DL_TIMER_CC_UPDATE_METHOD_IMMEDIATE, DL_TIMERG_CAPTURE_COMPARE_1_INDEX);
-    DL_TimerG_setCaptureCompareValue(SMotor_INST, 1000, DL_TIMER_CC_1_INDEX);
+    DL_TimerG_setCaptureCompareValue(SMotor_INST, 0, DL_TIMER_CC_1_INDEX);
 
     DL_TimerG_enableClock(SMotor_INST);
 

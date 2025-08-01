@@ -21,8 +21,8 @@
 #include <stdint.h>
 
 // 按键配置 - 根据实际硬件修改
-#define KEY_PORT                GPIOA                   // 按键 GPIO端口
-#define KEY_PIN                 DL_GPIO_PIN_18          // 按键 GPIO引脚
+#define KEY_PORT                Key_PORT                  // 按键 GPIO端口
+#define KEY_PIN                 Key_PIN_1_PIN          // 按键 GPIO引脚
 
 // 按键逻辑电平定义
 #define KEY_PRESSED_LEVEL       0                       // 按键按下时的电平 (0=低电平有效, 1=高电平有效)

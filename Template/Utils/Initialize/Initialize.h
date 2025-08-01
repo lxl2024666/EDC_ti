@@ -51,6 +51,7 @@ extern double GyroscopeChannelData[10]; // Array to hold gyroscope data
 extern uint32_t tick; // Global tick counter for timing
 extern float sInedge; // Variable to track distance traveled in the edge
 extern int edge; // Variable to track the current edge for target coordinate calculation
+extern char message[100]; // Buffer for messages
 
 extern int Laser_error ;
 extern int Rect_error  ;

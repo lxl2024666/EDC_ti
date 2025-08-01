@@ -7,17 +7,24 @@ const float turn_radius = 0.3; // Define the turn radius
 const float turn_speed = 0.3; // Define the turn speed
 
 #define DEBUG // Uncomment to enable debug mode
-void test_dis(void)//åœ¨å››ä¸ªæ‹è§’è¾“å‡ºè·ç¦»
+void test_dis(void)//ÔÚËÄ¸ö¹Õ½ÇÊä³ö¾àÀë
 {
 
 }
 
-void test_Cordi(void)//åœ¨è®¾å®šä½ç½®è¾“å‡ºåæ ‡
+void test_Cordi(void)//ÔÚÉè¶¨Î»ÖÃÊä³ö×ø±ê
 {
+	YP_SMotor_Init();
     // Implement the functionality for test_Cordi here
+	YP_SMotor_SetSpeed(0,0);
+	while(1)
+	{
+		YP_SMotor_UpdateState();
+		Delay_ms(10);
+	}
 }
 
-void test_Circle(void)//æµ‹è¯•åœ†å‘¨è¿åŠ¨
+void test_Circle(void)//²âÊÔÔ²ÖÜÔË¶¯
 {
 	while(1)
 	{if(!turn_func())
@@ -67,7 +74,7 @@ void proB_1(void)
     while(1)
     {
 		getTrackingSensorData(Digital);
-        if(half_Detect() && (cn * 4 == edge + 1))//æ³¨æ„ä¸è¦å¿˜è®°ç»™detectåŠ å»¶æ—¶
+        if(half_Detect() && (cn * 4 == edge + 1))//×¢Òâ²»ÒªÍü¼Ç¸ødetect¼ÓÑÓÊ±
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -85,9 +92,11 @@ void proB_2_3(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProB2/3", 8); // Display the mode name on the OLED
     #endif
+	YP_SMotor_Init();
 	while(1){
     if(!Init())
     {
+		YP_SMotor_SetSpeed(0, 0); // Set the speed of the motors to zero
         PID_SMotor_Cont(); // Call the PID control function for the motor
         Delay_ms(10); // Delay for 10 milliseconds
     }
@@ -103,7 +112,7 @@ void proH_1(void)
     
     while(1)
     {
-			getTrackingSensorData(Digital);
+		getTrackingSensorData(Digital);
    
 
 		if(half_Detect() && (cn * 4 == edge + 1)) // Check if the half detection condition is met
@@ -128,7 +137,7 @@ void proH_2(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProH2", 8); // Display the mode name on the OLED
     #endif
-    
+    YP_SMotor_Init();
     while(1)
     {
         if(half_Detect() && (4 == edge + 1)) // Check if the half detection condition is met
@@ -138,7 +147,7 @@ void proH_2(void)
         }
         if(!turn_func()) // Check if the robot is turning
         {
-            track(0.3); // Call the track function with a linear velocity of 0.3
+            lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
         SetTargetCircle(); // Set the target circle for the robot
         Compute_excur();
@@ -194,5 +203,6 @@ bool turn_func(void)
 
 bool Init(void)
 {
+    
     return false; // Return false to indicate initialization failure
 }

@@ -2,6 +2,7 @@
 #define MENU_H
 
 #include "mode_tree.h"
+#include "circle_list.h"
 #include "oled.h"
 #include "stdbool.h"
 

@@ -20,9 +20,23 @@
 static ModeTree *now_mode_tree = NULL; // Pointer to the current mode tree
 char CircleNum = '0'; // Variable to hold the current circle number
 
+// Static string buffers for menu node names to avoid using string literals
+static char circle_name_1[] = "1";
+static char circle_name_2[] = "2";
+static char circle_name_3[] = "3";
+static char circle_name_4[] = "4";
+static char circle_name_5[] = "5";
+
+// Static menu list for menu navigation
+static CircleList static_menu_list;
+
 
 void menu_init(void)
 {// Initialize the menu system
+    // Initialize static memory pools
+    initModeTreePool();
+    initCircleListPool();
+    
     ModeNode rootNode = {NULL, "Root"}; // Create the root node
     now_mode_tree = createModeTree(rootNode); // Create the mode tree with the root node
     if (now_mode_tree == NULL) {
@@ -81,10 +95,12 @@ void menu_init(void)
     addChild(proHMenu, ProHMenu1);//有下一级菜单
     addChild(proHMenu, ProHMenu2);//无下一级菜单
 
+    // Use static string buffers instead of dynamic allocation
+    char *circle_names[] = {circle_name_1, circle_name_2, circle_name_3, circle_name_4, circle_name_5};
+    
     for(int i = 0; i < 5; i++)
     {
-        char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
-        ModeNode CircleNode = {proB_1, CircleNum};
+        ModeNode CircleNode = {proB_1, circle_names[i]};
         ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
         addChild(ProBMenu1, circleMenu); // Add the circle menu to the Problem B menu
         if (circleMenu == NULL) {
@@ -97,8 +113,7 @@ void menu_init(void)
 
     for(int i = 0; i < 2; i++)
     {
-        char CircleNum[2] = {'0' + i + 1, '\0'}; // Convert to character '1', '2', etc.
-        ModeNode CircleNode = {proH_1, CircleNum};
+        ModeNode CircleNode = {proH_1, circle_names[i]};
         ModeTree *circleMenu = createModeTree(CircleNode); // Create a circle menu node
         addChild(ProHMenu1, circleMenu); // Add the circle menu to the Problem H menu
         if (circleMenu == NULL) {
@@ -119,8 +134,8 @@ void menu_function(void)
 {
     // Implement the menu function here
     OLED_Clear(); // Clear the OLED display
-    CircleList menu_list;
-    CircleList_Init(&menu_list);
+    CircleList_Clear(&static_menu_list); // Clear the static menu list
+    CircleList_Init(&static_menu_list); // Initialize the static menu list
 
     if(now_mode_tree == NULL)
     {
@@ -134,14 +149,20 @@ void menu_function(void)
     }
     if(now_mode_tree->parent != NULL)
     {
-        CircleList_Insert(&menu_list, now_mode_tree->parent);
+        if (CircleList_Insert(&static_menu_list, now_mode_tree->parent) != 0) {
+            OLED_ShowString(0, 0, "Menu list full", 8);
+            return;
+        }
     }
     ModeTree *child = getFirstChild(now_mode_tree);
     while (child != NULL) {
-        CircleList_Insert(&menu_list, child); // Insert each child node into the circular list
+        if (CircleList_Insert(&static_menu_list, child) != 0) {
+            OLED_ShowString(0, 0, "Menu list full", 8);
+            return;
+        }
         child = getNextSibling(child); // Move to the next sibling
     }
-    CircleListNode *current = menu_list.head; // Start from the head of the circular list
+    CircleListNode *current = static_menu_list.head; // Start from the head of the circular list
     int index = 0; // Index for displaying menu items
     do{
         if (current->data != NULL && current->data->nodes.mode_name != NULL) {
@@ -156,7 +177,7 @@ void menu_function(void)
             index++;
         }
         current = current->next; // Move to the next node in the circular list
-    } while (current != menu_list.head); // Loop until we come back to the head
+    } while (current != static_menu_list.head); // Loop until we come back to the head
     int total = index; // Total number of menu items
     index = 0; // Reset index for displaying the select arrow
     OLED_ShowChar(END_X - 8, index, '<', 8); // Show a select arrow at the end of the menu

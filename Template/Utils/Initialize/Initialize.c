@@ -10,7 +10,7 @@ char error_message[100]; // Buffer for error messages
 double GyroscopeChannelData[10] = {0};
 float sInedge = 0.0f; // Initialize sInedge for tracking distance
 int edge = 0; // Initialize edge variable for target coordinate calculation
-
+char message[100]; // Buffer for messages
 
 void MECInit()
 {

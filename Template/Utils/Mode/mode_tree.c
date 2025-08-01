@@ -1,17 +1,44 @@
 #include "mode_tree.h"
 #include "stdio.h"
-#include "stdlib.h"
 #include "AllHeader.h"
 
-ModeTree *createModeTree(ModeNode node) {
-    ModeTree *newTree = (ModeTree *)malloc(sizeof(ModeTree));
-    if (newTree == NULL) {
-        return NULL; // Memory allocation failed
+// Static memory pool for tree nodes
+static ModeTree tree_pool[MAX_TREE_NODES];
+static bool pool_initialized = false;
+
+void initModeTreePool(void) {
+    for (int i = 0; i < MAX_TREE_NODES; i++) {
+        tree_pool[i].is_used = false;
+        tree_pool[i].firstChild = NULL;
+        tree_pool[i].nextSibling = NULL;
+        tree_pool[i].parent = NULL;
     }
-    newTree->nodes = node;
-    newTree->firstChild = NULL;
-    newTree->nextSibling = NULL;
-    return newTree;
+    pool_initialized = true;
+}
+
+ModeTree *createModeTree(ModeNode node) {
+    if (!pool_initialized) {
+        initModeTreePool();
+    }
+    
+    // Find an unused node in the pool
+    for (int i = 0; i < MAX_TREE_NODES; i++) {
+        if (!tree_pool[i].is_used) {
+            tree_pool[i].nodes = node;
+            tree_pool[i].firstChild = NULL;
+            tree_pool[i].nextSibling = NULL;
+            tree_pool[i].parent = NULL;
+            tree_pool[i].is_used = true;
+            return &tree_pool[i];
+        }
+    }
+    
+    // No free nodes available
+    #ifdef INITIALIZE_H
+    sprintf(error_message, "No free tree nodes available");
+    #endif
+    error_handler();
+    return NULL;
 }
 
 void addChild(ModeTree *parent, ModeTree *child) {

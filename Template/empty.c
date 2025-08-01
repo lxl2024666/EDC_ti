@@ -40,8 +40,16 @@
 // 激光位置串口通信测试
 
 // ---------导入CANMV相关---------
+// 导入CANMV相关库
+#include "Laser_USART.h"
 
 // 错误状态标志位:	// -1:初始化	// 0 : 正常	// 1 : 初始时没找到	// 2 : 丢失	//  3 : 掉帧
+extern int Laser_error ;
+extern int Rect_error  ;
+
+// CANMV相关数组
+extern uint16_t Laser_Loc[Laser_RX_Num / 2] ;		// 激光位置数组,0-3为值
+extern uint16_t  Rect_Loc[Rect_RX_Num  / 2] ;		// 矩形位置数组,0-3为值
 
 // ---------导入CANMV相关---------
 
@@ -51,40 +59,37 @@ uint8_t Digtal[8];
 // 测试区
 int a;
 uint32_t tick;
-char message[50];
-
 int main(void)
 {
 	SYSCFG_DL_init();
-//	SysTick_Config(32000);
-//	__enable_irq();
-	
+	__enable_irq();
 	//编码器初始化
 	encoder_init();
 	
-
+	
 	//定时器初始化
 	timer_init();
 	DL_TimerG_startCounter(TIMER_0_INST);
 	
 	// CanMV初始化
-//	Laser_USART_Init() ;
-	Delay_ms(10);
+	Laser_USART_Init() ;
+	
 	// OLED Init
-  	OLED_Init();
+	
+	  OLED_Init() ; // **
+	
 	//Car1 Init
-	MECInit();
+	  MECInit();
 //	LSet(0);
 //	RSet(0);
 
 //	menu_init();
 //	menu_begin();
-
-	proB_1();
-	DL_GPIO_togglePins(LED_PORT , LED_LED0_PIN) ;
+//	test_Connect(); // 注释
+	test_Cordi();
 	while (1) 
 	{
-		LSet(100);
+		
 //		getTrackingSensorData(Digtal);
 //		snprintf(message, sizeof(message), "%.5f",getSpeed());
 //		OLED_ShowString(0,4, message, 8);
@@ -92,21 +97,28 @@ int main(void)
 	}
 }
 
-//串口的中断服务函数
-void UART_2_INST_IRQHandler(void)
+// 现在
+void UART2_IRQHandler(void)  // 真正的名字
 {
-    //如果产生了串口中断
     switch( DL_UART_getPendingInterrupt(LASER_UART) )
     {
-			  //如果是接收中断
         case DL_UART_IIDX_RX:
-					// 对CANMV的传输的数据进行处理
-					CanMV_Mode() ;
+            CanMV_Mode() ;
             break;
-        default://其他的串口中断
+        default:
             break;
     }
 }
 
-
-
+void SysTick_Handler(void)
+{
+		// 自分频
+		static int k = 0 ;
+		k ++ ;
+		tick ++;
+		if (k == 1000)
+		{
+			
+			k = 0 ;
+		}
+}
