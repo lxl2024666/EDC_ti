@@ -184,14 +184,14 @@ void menu_function(void)
     while(1)
     {
         // Implement menu navigation and selection logic here
-        if(Key_short_press()) 
+        if(Key_long_press()) 
         {
             // If Key1 is pressed, select the current menu item
             CircleNum = current->data->nodes.mode_name[0]; // Store the selected menu item name
             select_menu(current->data);
             break; // Exit the menu function after selection
         }
-        if(Key_long_press())
+        if(Key_short_press())
         {
             // If Key2 is pressed, navigate to the next menu item
             current = current->next;

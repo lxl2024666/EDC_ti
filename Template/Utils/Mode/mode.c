@@ -7,19 +7,19 @@ const float turn_radius = 0.3; // Define the turn radius
 const float turn_speed = 0.3; // Define the turn speed
 
 #define DEBUG // Uncomment to enable debug mode
-void test_dis(void)//ÔÚËÄ¸ö¹Õ½ÇÊä³ö¾àÀë
+void test_dis(void)//ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 {
 
 }
 
-void test_Cordi(void)//ÔÚÉè¶¨Î»ÖÃÊä³ö×ø±ê
+void test_Cordi(void)//ï¿½ï¿½ï¿½è¶¨Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 {
 	YP_SMotor_Init();
     // Implement the functionality for test_Cordi here
 	YP_SMotor_SetSpeed(30,10);
 }
 
-void test_Circle(void)//²âÊÔÔ²ÖÜÔË¶¯
+void test_Circle(void)//ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½Ë¶ï¿½
 {
 	while(1)
 	{if(!turn_func())
@@ -69,7 +69,7 @@ void proB_1(void)
     while(1)
     {
 		getTrackingSensorData(Digital);
-        if(half_Detect() && (cn * 4 == edge + 1))//×¢Òâ²»ÒªÍü¼Ç¸ødetect¼ÓÑÓÊ±
+        if(half_Detect() && (cn * 4 == edge))
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -78,7 +78,7 @@ void proB_1(void)
         {
             lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
-				Delay_ms(10);
+		Delay_ms(10);
     }
 }
 
