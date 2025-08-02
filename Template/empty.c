@@ -83,17 +83,16 @@ int main(void)
 
 	//Car1 Init
 	 MECInit();
+	
+//	test_Cordi();
+	
 	Key_Init();
-	menu_init();
-	menu_begin();
 	
-	
+//	menu_init();
+//	menu_begin();
+	proH_2();
 	while (1) 
 	{
-    	YP_SMotor_SetSpeed(0, 10);
-			Delay_ms(1000);
-		YP_SMotor_SetSpeed(0, 0);
-			Delay_ms(1000);
 	}
 }
 
