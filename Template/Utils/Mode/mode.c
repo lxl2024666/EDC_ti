@@ -8,7 +8,7 @@ extern char CircleNum; // Variable to hold the current circle number
 int isturn = 0; // Variable to track if the robot is turning
 bool turning = false;
 
-void test_dis(void)//±àÂëÆ÷²âÊÔº¯Êý
+void test_dis(void)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½
 {
     while(1)
 		{
@@ -18,7 +18,7 @@ void test_dis(void)//±àÂëÆ÷²âÊÔº¯Êý
 		
 }
 
-void test_Cordi(void)//²½½øµç»ú²âÊÔº¯Êý
+void test_Cordi(void)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½
 {
 	YP_SMotor_Init();
     // Implement the functionality for test_Cordi here
@@ -31,7 +31,7 @@ void test_Cordi(void)//²½½øµç»ú²âÊÔº¯Êý
 	}
 }
 
-void test_Circle(void)//Ô²ÐÎÔË¶¯²âÊÔº¯Êý
+void test_Circle(void)//Ô²ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½
 {
 	while(1)
 	{
@@ -75,7 +75,7 @@ void test_track(void)
     }
 }
 
-void proB_1(void)//µÚ¶þ²½
+void proB_1(void)//ï¿½Ú¶ï¿½ï¿½ï¿½
 {
     int cn = SetCircleNum(CircleNum);
     #ifdef MODE_DEBUG
@@ -119,9 +119,7 @@ void proB_2_3(void)
 
 void proH_1(void)
 {
-    #ifdef MODE_DEBUG
-    OLED_ShowString(0, 0, "ProH1", 8); // Display the mode name on the OLED
-    #endif
+    
     int cn = SetCircleNum(CircleNum);
     YP_SMotor_Init();
     while(1)
@@ -140,7 +138,7 @@ void proH_1(void)
         }
         SetLaserPosition(); // Set the laser position based on the current mode
         SetTargetCenter(); // Set the target center for the robot
-        Compute_excur();
+        Compute_excur();//
         PID_SMotor_Cont(); // Call the PID control function for the motor
         Delay_ms(10); // Delay for 10 milliseconds   
         // Implement the functionality for ProH1 here
@@ -189,7 +187,7 @@ int SetCircleNum(char num)
     }
 }
 
-bool turn_func(void)//µÚ¶þ²½
+bool turn_func(void)//ï¿½Ú¶ï¿½ï¿½ï¿½
 {
     static float nowSInedge = 0; // Variable to track the current sInedge value
     if(half_Detect() && isturn == 0) // Check if the half detection condition is met
@@ -201,17 +199,17 @@ bool turn_func(void)//µÚ¶þ²½
     {
 			float first_dis = DisSensorToWheel * 1e-3 + nowSInedge  - 0.12;
 			float second_dis = first_dis+ DEG_TO_RAD(90) * WHEEL_DIS * 1e-3 * 0.995;
-        if(sInedge < first_dis) // Check if the sInedge value is less than the threshold ×ßµÄÔ¶ÁË£¬µ÷Õâ¸ö¾àÀë
+        if(sInedge < first_dis) // Check if the sInedge value is less than the threshold ï¿½ßµï¿½Ô¶ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
-            LSet(300); // Set the left motor speed to 300//×ßµÄ²»¹»Ö± µ÷×ÅÁ½¸ölspeed rspeed
+            LSet(300); // Set the left motor speed to 300//ï¿½ßµÄ²ï¿½ï¿½ï¿½Ö± ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½lspeed rspeed
             RSet(300); // Set the right motor speed to 300
             return true; // Return true to indicate that the robot is turning
         }
         else if(sInedge >= first_dis &&
-             sInedge < second_dis )//×ªÍä½Ç¶ÈºÜµÍµ÷Õâ¸ö
+             sInedge < second_dis )//×ªï¿½ï¿½Ç¶ÈºÜµÍµï¿½ï¿½ï¿½ï¿½
         {
 						turning = true;
-            LSet(-200); // Set the left motor speed to -300//Èç¹û×ªÍä²»¹»Ô­µØ£¬µ÷Õâ¸ö
+            LSet(-200); // Set the left motor speed to -300//ï¿½ï¿½ï¿½×ªï¿½ä²»ï¿½ï¿½Ô­ï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             RSet(200); // Set the right motor speed to 300
             return true; // Return true to indicate that the robot is turning
         }
