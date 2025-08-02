@@ -45,9 +45,19 @@ void Delay_us(uint32_t xus)
  */
 void Delay_ms(uint32_t xms)
 {
-    uint32_t start_time = tick;
-	while(tick < start_time + xms);
-		
+	uint32_t start_time, current_tick;
+      __disable_irq(); // 禁用中断
+      start_time = tick;
+      __enable_irq(); // 恢复中断
+
+			while(1) {
+        __disable_irq();
+        current_tick = tick;
+        __enable_irq();
+        if ((uint32_t)(current_tick - start_time) >= xms) {
+            break;
+        }
+    }
 }
 
 /**
@@ -60,3 +70,11 @@ void Delay_s(uint32_t xs)
         Delay_ms(1000);
 }
 
+
+uint32_t Gettick()
+{
+	__disable_irq(); // 禁用中断
+      uint32_t t = tick;
+      __enable_irq(); // 恢复中断
+	return t;
+} 

@@ -72,6 +72,10 @@ void menu_init(void)
     ModeNode test_cordi_mode = {test_Cordi, "Test Coordinate"}; // Create a test coordinate node
     ModeNode test_circle_mode = {test_Circle, "Test Circle"}; // Create a test circle node
     ModeNode test_track_mode = {test_track, "Test Track"}; // Create a test track node
+    ModeNode test_connect_mode = {test_Connect, "Test Connect"}; // Create a test connect node
+
+    // Add the test nodes to the test menu
+    addChild(testMenu, createModeTree(test_connect_mode)); // Add the connect test node
 
     addChild(testMenu, createModeTree(test_dis_mode));
     addChild(testMenu, createModeTree(test_cordi_mode));

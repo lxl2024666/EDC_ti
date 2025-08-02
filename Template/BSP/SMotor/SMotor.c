@@ -1,6 +1,7 @@
 #include "SMotor.h"
 #include "AllHeader.h"
 
+extern SMotor yawMotor;
 void SMotor_Init(SMotor *motor, GPIO_Regs *Dir_port, uint32_t Dir_pin,
                  GPTIMER_Regs *pwm_timer, DL_TIMER_CC_INDEX pwm_channel) {
     if (motor == NULL || pwm_timer == NULL) {
@@ -46,10 +47,16 @@ void SMotor_SetSpeed(SMotor *motor, float angular_speed) {
         return;
     }
     motor->state.angular_speed = angular_speed;
-    if(angular_speed == 0) {
+		
+						if( motor == &yawMotor && DL_GPIO_readPins(motor->Dir_port, motor->Dir_pin) == 0){
+					int a = 1 ;}
+						
+					
+    if(fabs(angular_speed) == 0) {
         DL_TimerG_setCaptureCompareValue(motor->pwm_timer, 0, motor->pwm_channel); // Stop PWM
-        return; // No speed set, stop the motor
-    } else if(angular_speed > 0) {
+        return; // Nospeed set, stop the motor
+    } else if(angular_speed > 0) {	
+					
         if(motor->parameters.Anti_Dir == SMOTOR_DIR_HIGH) {
             DL_GPIO_setPins(motor->Dir_port, motor->Dir_pin); // Set direction to clockwise
         } else {
@@ -59,14 +66,14 @@ void SMotor_SetSpeed(SMotor *motor, float angular_speed) {
         if(motor->parameters.Anti_Dir == SMOTOR_DIR_HIGH) {
             DL_GPIO_clearPins(motor->Dir_port, motor->Dir_pin); // Set direction to counter-clockwise
         } else {
-            DL_GPIO_setPins(motor->Dir_port, motor->Dir_pin);
+					DL_GPIO_setPins(motor->Dir_port, motor->Dir_pin);
         }
         angular_speed = -angular_speed; // Ensure speed is positive for PWM
     }
     
     uint32_t tim_clk = GetClockFre(motor->pwm_timer);
     uint32_t target_frequency = GetStepFrequency(angular_speed, motor);
-    uint32_t now_prescaler = 4; // Default prescaler value
+    uint32_t now_prescaler = 32 * 8 * 2; // Default prescaler value
     uint32_t target_arr = tim_clk / (target_frequency * now_prescaler) - 1; // Calculate ARR value
     if (target_arr > 65535) {
         target_arr = 65535; // Limit to maximum value for 16-bit timer

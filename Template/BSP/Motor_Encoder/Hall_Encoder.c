@@ -26,7 +26,6 @@ ENCODER_DIR get_encoder_dir(void)
 void encoder_update(void)
 {
 	motor_encoder.count = motor_encoder.temp_count;
-
 	//确定方向
 	motor_encoder.dir = ( motor_encoder.count >= 0 ) ? D : R;
 
@@ -89,7 +88,7 @@ void TIMER_0_INST_IRQHandler(void)
 	}
 }
 
-double getSpeed(void)
+double getSpeed(void)//编码器，第一步
 {
 		static int speed = 255;
 		static int dir = 255;
@@ -98,8 +97,8 @@ double getSpeed(void)
 		speed = get_encoder_count();
 		dir = (get_encoder_dir() == D)? 1: -1;
 		
-		return speed * 0.0561 * dir ;
-		//0.01440
+		return speed * 0.0561 * dir * 0.108 * 1.05;
+		//0.01440    speed * 0.0561 * dir * 0.108 * 1.05;
 		// Left number is computed by (length of the circle) * (frequence of the clock / (leftSpeed add number for every single circle
 		// which is (6.6e-2 * pi * 100 / (360 * 2))
 }

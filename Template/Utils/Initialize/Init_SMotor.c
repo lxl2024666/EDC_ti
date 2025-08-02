@@ -52,9 +52,6 @@ void YP_SMotor_SetSpeed(float yaw_speed, float pitch_speed) {
 				SMotor_SetSpeed(&yawMotor, 0);
         return; // 如果俯仰角度超过限制，停止电机
     }
-    sprintf(message, "Yaw: %.2f, Pitch: %.2f", yawMotor.state.current_position, pitchMotor.state.current_position);
-    // 设置PITCH电机速度 (俯仰控制)
-    OLED_ShowString(0, 0, message, 8); // 显示当前角度信息
 		SMotor_SetSpeed(&yawMotor, yaw_speed);
     SMotor_SetSpeed(&pitchMotor, pitch_speed);
 }

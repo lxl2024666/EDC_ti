@@ -17,14 +17,32 @@ Coordinate paper_to_camera(Coordinate paper)
 {
     paper.x /= PAPERWIDE;
     paper.y /= PAPERHIGHT;
+    paperCornerC[3].x = Rect_Loc[0];
+    paperCornerC[3].y = Rect_Loc[1];
+    paperCornerC[2].x = Rect_Loc[2];
+    paperCornerC[2].y = Rect_Loc[3];
+    paperCornerC[1].x = Rect_Loc[4];
+    paperCornerC[1].y = Rect_Loc[5];
+    paperCornerC[0].x = Rect_Loc[6];
+    paperCornerC[0].y = Rect_Loc[7];
     Coordinate camera;
-    camera.x = paper.y * (paperCornerC[3].x - paperCornerC[0].x)
-     + paper.x * (paperCornerC[2].x - paperCornerC[3].x) 
-     + (1 - paper.y) * (paperCornerC[1].x - paperCornerC[0].x);
-    camera.y = paper.y * (paperCornerC[3].y - paperCornerC[0].y)
-    + paper.x * (paperCornerC[2].y - paperCornerC[3].y)
-    + (1 - paper.y) * (paperCornerC[1].y - paperCornerC[0].y);
-    return camera;
+     float u = paper.x / PAPERWIDE;
+    float v = paper.y / PAPERHIGHT;
+
+    // 步骤 2: 沿四边形的顶部边缘（从角点0到角点1）进行线性插值。
+    float top_x = (1.0f - u) * paperCornerC[0].x + u * paperCornerC[1].x;
+    float top_y = (1.0f - u) * paperCornerC[0].y + u * paperCornerC[1].y;
+
+    // 步骤 3: 沿四边形的底部边缘（从角点3到角点2）进行线性插值。
+    float bottom_x = (1.0f - u) * paperCornerC[3].x + u * paperCornerC[2].x;
+    float bottom_y = (1.0f - u) * paperCornerC[3].y + u * paperCornerC[2].y;
+
+    // 步骤 4: 在顶部插值点和底部插值点之间，进行最终的垂直方向插值。
+    Coordinate camera_coord;
+    camera_coord.x = (1.0f - v) * top_x + v * bottom_x;
+    camera_coord.y = (1.0f - v) * top_y + v * bottom_y;
+
+    return camera_coord;
 }
 
 //以下函数用于通过视觉传感器以及编码器获得所需的光点坐标（未测）
@@ -103,4 +121,9 @@ bool cross_Roads_Detect(){
 bool empty_Detect()
 {
 	return Road_detect(0, 0);
+}
+
+bool centerDetect()
+{
+	return Digital[3] == 0;
 }

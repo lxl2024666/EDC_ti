@@ -148,9 +148,13 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_UP,
 		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
-    DL_GPIO_initDigitalOutput(SMotor_IO_DIR1_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(SMotor_IO_DIR1_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
-    DL_GPIO_initDigitalOutput(SMotor_IO_DIR2_IOMUX);
+    DL_GPIO_initDigitalOutputFeatures(SMotor_IO_DIR2_IOMUX,
+		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
+		 DL_GPIO_DRIVE_STRENGTH_LOW, DL_GPIO_HIZ_DISABLE);
 
     DL_GPIO_initDigitalOutput(SMotor_IO_EN1_IOMUX);
 
@@ -228,6 +232,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		OLED_SCL_PIN);
     DL_GPIO_setLowerPinsPolarity(GPIOA, DL_GPIO_PIN_2_EDGE_RISE);
     DL_GPIO_setUpperPinsPolarity(GPIOA, DL_GPIO_PIN_21_EDGE_RISE);
+    DL_GPIO_setLowerPinsInputFilter(GPIOA, DL_GPIO_PIN_2_INPUT_FILTER_3_CYCLES);
+    DL_GPIO_setUpperPinsInputFilter(GPIOA, DL_GPIO_PIN_21_INPUT_FILTER_3_CYCLES);
     DL_GPIO_clearInterruptStatus(GPIOA, Motor_IO_E1A_PIN |
 		Motor_IO_E2A_PIN);
     DL_GPIO_enableInterrupt(GPIOA, Motor_IO_E1A_PIN |
@@ -322,14 +328,14 @@ SYSCONFIG_WEAK void SYSCFG_DL_Motor_init(void) {
 
 }
 /*
- * Timer clock configuration to be sourced by  / 1 (32000000 Hz)
+ * Timer clock configuration to be sourced by  / 8 (4000000 Hz)
  * timerClkFreq = (timerClkSrc / (timerClkDivRatio * (timerClkPrescale + 1)))
- *   8000000 Hz = 32000000 Hz / (1 * (3 + 1))
+ *   62500 Hz = 4000000 Hz / (8 * (63 + 1))
  */
 static const DL_TimerG_ClockConfig gSMotor_1ClockConfig = {
     .clockSel = DL_TIMER_CLOCK_BUSCLK,
-    .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
-    .prescale = 3U
+    .divideRatio = DL_TIMER_CLOCK_DIVIDE_8,
+    .prescale = 63U
 };
 
 static const DL_TimerG_PWMConfig gSMotor_1Config = {
@@ -366,14 +372,14 @@ SYSCONFIG_WEAK void SYSCFG_DL_SMotor_1_init(void) {
 
 }
 /*
- * Timer clock configuration to be sourced by  / 1 (32000000 Hz)
+ * Timer clock configuration to be sourced by  / 8 (4000000 Hz)
  * timerClkFreq = (timerClkSrc / (timerClkDivRatio * (timerClkPrescale + 1)))
- *   8000000 Hz = 32000000 Hz / (1 * (3 + 1))
+ *   62500 Hz = 4000000 Hz / (8 * (63 + 1))
  */
 static const DL_TimerG_ClockConfig gSMotor_2ClockConfig = {
     .clockSel = DL_TIMER_CLOCK_BUSCLK,
-    .divideRatio = DL_TIMER_CLOCK_DIVIDE_1,
-    .prescale = 3U
+    .divideRatio = DL_TIMER_CLOCK_DIVIDE_8,
+    .prescale = 63U
 };
 
 static const DL_TimerG_PWMConfig gSMotor_2Config = {

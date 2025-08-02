@@ -11,8 +11,8 @@
 #include "Cont_SMotor.h"
 
 //以下是关于视觉处理部分的宏定义
-#define PAPERWIDE 250 //单位mm
-#define PAPERHIGHT 250 //单位mm
+#define PAPERWIDE 315 //单位mm
+#define PAPERHIGHT 212 //单位mm
 #define CIRCLERADIUS 60 //单位mm
 
 #define XDISM 500
@@ -33,5 +33,6 @@ bool Road_detect(int nummin, int nummax);
 bool half_Detect();
 bool cross_Roads_Detect();
 bool empty_Detect(); // Check if no road is detected
+bool centerDetect();
 
 #endif // SENSOR_PROC_H

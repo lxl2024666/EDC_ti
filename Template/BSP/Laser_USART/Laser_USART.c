@@ -77,9 +77,12 @@ void Deal_Rx(uint8_t rxtemp)
   }
   else
   {
+		
 		// ??????????????????????????
     if(g_start == 0)
     {
+			if(Laser_error == 1)
+			return;;
 			// *???????*
 			Laser_error = 3 ;
 			Rect_error  = 3 ;
@@ -103,8 +106,11 @@ void Deal_Rx(uint8_t rxtemp)
 				Laser_error = 0 ;
 				Rect_error  = 0 ;
       }
+			
       if(Sensor_Rx_Count >= USART_LASER_RX_BUF_LEN)//??????
       {
+				if(Laser_error == 1)
+				return;
 				// *???????*
 				Laser_error = 3 ;
 				Rect_error  = 3 ;
@@ -182,7 +188,7 @@ void CanMV_Mode(void)
 		Get_Laser_Loc(Laser_Loc) ;
 		Get_Rect_Loc(Rect_Loc)  ; 
 	}
-	// ????????????
-	Update_Error(Laser_Loc , Laser_RX_Num / 2 , &Laser_error , &Laser_Find_None_Init) ;
+	// ???????????? 激光的real的x,y是一定有数据的，不能作为判断数组空的条件，所以只看数组前半部分的矩形中心的targetx , y，如果没有识别到矩形中心，就判为空
+	Update_Error(Laser_Loc , Laser_RX_Num / 2 / 2 , &Laser_error , &Laser_Find_None_Init) ;
 	Update_Error(Rect_Loc  ,  Rect_RX_Num / 2 ,  &Rect_error , &Rect_Find_None_Init ) ;
 }

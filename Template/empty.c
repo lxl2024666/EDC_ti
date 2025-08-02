@@ -60,6 +60,8 @@ uint8_t Digtal[8];
 int a;
 uint32_t tick;
 int main(void)
+
+
 {
 	SYSCFG_DL_init();
 	__enable_irq();
@@ -77,7 +79,8 @@ int main(void)
 	// OLED Init
 	
 	 OLED_Init() ; // **
-	
+
+
 	//Car1 Init
 	 MECInit();
 	Key_Init();
@@ -87,7 +90,10 @@ int main(void)
 	
 	while (1) 
 	{
-    
+    	YP_SMotor_SetSpeed(0, 10);
+			Delay_ms(1000);
+		YP_SMotor_SetSpeed(0, 0);
+			Delay_ms(1000);
 	}
 }
 

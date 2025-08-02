@@ -43,12 +43,6 @@ float PID_IR_Calc_Custom(int16_t actual_value, float kp, float ki, float kd)
     return pid_out;
 }
 
-// --- 高速巡线 ---
-void lineWalking_high(void)
-{
-    lineWalking_core(IRR_SPEED_HIGH, IRTrack_Trun_KP_HIGH, IRTrack_Trun_KI_HIGH, IRTrack_Trun_KD_HIGH);
-}
-
 // --- 低速巡线 ---
 void lineWalking_low(void)
 {

@@ -3,26 +3,19 @@
 
 extern char CircleNum; // Variable to hold the current circle number
 //Test function for the mode system
-const float turn_radius = 0.3; // Define the turn radius
-const float turn_speed = 0.3; // Define the turn speed
+
 
 int isturn = 0; // Variable to track if the robot is turning
+bool turning = false;
 
-#define DEBUG // Uncomment to enable debug mode
-#define TLCS 80 //转弯时左轮的速度
-#define TRCS 360 //转弯时右轮的速度
-#define TURN_TIME 800 //转弯时间如果转弯角度不够合适调节这个
 void test_dis(void)//编码器测试函数
 {
-    sInedge = 0; // Reset the sInedge variable
-    while(sInedge < 1.0f) // Continue until the distance traveled is less than 1.0
-    {
-        LSet(100); // Set the left motor speed to 100
-        RSet(100);
-        UpdateSInedge(); // Update the sInedge variable with the current speed
-        Delay_ms(10); // Delay for 10 milliseconds
-    }
-    Break(); // Stop the motors when the distance is reached
+    while(1)
+		{
+			LSet(-200);
+			RSet(200);
+		}
+		
 }
 
 void test_Cordi(void)//步进电机测试函数
@@ -33,7 +26,7 @@ void test_Cordi(void)//步进电机测试函数
 	while(1)
 	{
 		YP_SMotor_UpdateState();
-		YP_SMotor_SetSpeed(30,10);
+		YP_SMotor_SetSpeed(90,10);
 		Delay_ms(10);
 	}
 }
@@ -42,8 +35,15 @@ void test_Circle(void)//圆形运动测试函数
 {
 	while(1)
 	{
-		LSet(TLCS);
-		RSet(TRCS);
+		UpdateSInedge();
+		getTrackingSensorData(Digital);
+		if(!turn_func())
+		{
+			Break();
+			break;
+		}
+		Delay_ms(10);
+		
 	}
 }
 
@@ -52,10 +52,11 @@ void test_Connect(void)
     char message[50];
     while(1)
     {
-        sprintf(message, "LE: %d, RE: %d", Laser_error, Rect_error);
-        OLED_ShowString(0, 0, message, 8); // Display the error messages on the OLED
-        sprintf(message, "LL0: %d, LL1: %d", Laser_Loc[0], Laser_Loc[1]);
-        OLED_ShowString(0, 1, message, 8); // Display the laser location on the OLED
+		Coordinate cor = {0.0f, 0.0f};
+        Coordinate paper = {0.1, 0.1}; // Get the center coordinates of the paper
+        cor = paper_to_camera(paper);
+        sprintf(message, "Camera: (%.2f, %.2f)", cor.x, cor.y); // Format the message
+        OLED_ShowString(0, 0, message, 8);
     }
 }
 
@@ -74,7 +75,7 @@ void test_track(void)
     }
 }
 
-void proB_1(void)
+void proB_1(void)//第二步
 {
     int cn = SetCircleNum(CircleNum);
     #ifdef MODE_DEBUG
@@ -85,7 +86,8 @@ void proB_1(void)
     while(1)
     {
 		getTrackingSensorData(Digital);
-        if(half_Detect() && (cn * 4 == edge))
+			UpdateSInedge();
+        if(half_Detect() && (cn * 4 == edge - 1))
         {
             Break(); // Break the loop if the condition is met
             return; // Exit the function
@@ -105,11 +107,13 @@ void proB_2_3(void)
     #endif
 	YP_SMotor_Init();
 	while(1){
+		SetLaserPosition(); // Set the laser position based on the current mode
+    SetTargetCenter(); // Set the target center for the robot
     if(Init())
     {
         PID_SMotor_Cont(); // Call the PID control function for the motor
-        Delay_ms(10); // Delay for 10 milliseconds
     }
+		 Delay_ms(10); // Delay for 10 milliseconds
 	}
 }
 
@@ -185,36 +189,47 @@ int SetCircleNum(char num)
     }
 }
 
-bool turn_func(void)
+bool turn_func(void)//第二步
 {
-    static uint32_t starttime = 0;
-		if(tick < starttime + 1000 && isturn)
-		{
-			LSet(TLCS);
-			RSet(TRCS);
-			return true;
-		}
-		isturn = 0;
-    if(half_Detect() && isturn == 0)
+    static float nowSInedge = 0; // Variable to track the current sInedge value
+    if(half_Detect() && isturn == 0) // Check if the half detection condition is met
     {
-        #ifdef DEBUG
-    char debug_message[50];
-    sprintf(debug_message, "Edge: %d, isturn: %d", edge, isturn);
-    OLED_ShowString(0, 0, debug_message, 8); // Display the edge and turning status on the OLED
-        #endif
-        edge ++; // Increment the edge variable
-        isturn = 1; // Set the turning flag
-				starttime = tick;
-			return true;
+        isturn = 1; // Set the isturn flag to indicate that the robot is turning
+        nowSInedge = sInedge; // Store the current sInedge value
+    }
+    if(isturn == 1) // Check if the robot is turning
+    {
+			float first_dis = DisSensorToWheel * 1e-3 + nowSInedge  - 0.12;
+			float second_dis = first_dis+ DEG_TO_RAD(90) * WHEEL_DIS * 1e-3 * 0.995;
+        if(sInedge < first_dis) // Check if the sInedge value is less than the threshold 走的远了，调这个距离
+        {
+            LSet(300); // Set the left motor speed to 300//走的不够直 调着两个lspeed rspeed
+            RSet(300); // Set the right motor speed to 300
+            return true; // Return true to indicate that the robot is turning
+        }
+        else if(sInedge >= first_dis &&
+             sInedge < second_dis )//转弯角度很低调这个
+        {
+						turning = true;
+            LSet(-200); // Set the left motor speed to -300//如果转弯不够原地，调这个
+            RSet(200); // Set the right motor speed to 300
+            return true; // Return true to indicate that the robot is turning
+        }
+				
+				turning = false;
+        sInedge = 0; // Reset the sInedge variable after the turn
+        isturn = 0;
+        edge++; // Increment the edge variable after the turn
     }
 		return false;
+		
 }
 
 bool Init(void)
 {
     if(Laser_error == 1)
     {
-        YP_SMotor_SetSpeed(-120, 0); // Set the speed of the motors to -120
+        YP_SMotor_SetSpeed(-90, 0); // Set the speed of the motors to -120
         return false; // Return false to indicate initialization failure
     }
     return true; // Return true to indicate successful initialization
