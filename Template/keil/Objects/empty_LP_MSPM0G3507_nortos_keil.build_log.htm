@@ -3,32 +3,32 @@
 <pre>
 <h1>�Vision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ��Vision V5.42.0.0
-Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: qing Yang, ss, LIC=ZB4EI-TIFTF-HLWCL-01URP-QK6DE-DNBHI
+IDE-Version: ��Vision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Vincent Wang, HUST, LIC=PE7DL-0DT3T-RA5DM-X9M7L-IZFP9-TVWG9
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.42.0.0
-Toolchain Path:  D:\keil_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.23
-Assembler:       Armasm.exe V6.23
-Linker/Locator:  ArmLink.exe V6.23
-Library Manager: ArmAr.exe V6.23
-Hex Converter:   FromElf.exe V6.23
-CPU DLL:         SARMCM3.DLL V5.42.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.39.0.0
+Toolchain Path:  D:\Application\Keil5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
 Dialog DLL:      DARMCM1.DLL V1.19.6.0
-Target DLL:      Segger\JL2CM3.dll V2.99.45.0
+Target DLL:      Segger\JL2CM3.dll V2.99.43.0
 Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
-D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\keil\empty_LP_MSPM0G3507_nortos_keil.uvprojx
-Project File Date:  08/01/2025
+D:\TI\mspm0_sdk_2_05_00_05\EDC_ti\Template\keil\empty_LP_MSPM0G3507_nortos_keil.uvprojx
+Project File Date:  08/02/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.23', folder: 'D:\keil_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.21', folder: 'D:\Application\Keil5\ARM\ARMCLANG\Bin'
 Rebuild target 'empty_LP_MSPM0G3507_nortos_keil'
-Before Build - User command #1: cmd.exe /C "D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\keil\../../../tools/keil/syscfg.bat 'D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\keil\' empty.syscfg"
-Using Sysconfig Tool from "D:\profiles\TI\sysconfig_1.24.1\sysconfig_cli.bat"
+Before Build - User command #1: cmd.exe /C "D:\TI\mspm0_sdk_2_05_00_05\EDC_ti\Template\keil\../../../tools/keil/syscfg.bat 'D:\TI\mspm0_sdk_2_05_00_05\EDC_ti\Template\keil\' empty.syscfg"
+Using Sysconfig Tool from "D:\TI\sysconfig_1.24.0\sysconfig_cli.bat"
 "Update the file located at <sdk path>/tools/keil/syscfg.bat to use a different version"
 Running script...
 Validating...
@@ -36,110 +36,25 @@ info: Motor(/ti/driverlib/PWM): Peripheral does not retain register contents in 
 info: SMotor_1(/ti/driverlib/PWM): Peripheral does not retain register contents in STOP or STANDBY modes. User should take care to save and restore register configuration in application. See Retention Configuration section for more details.
 info: TIMER_0(/ti/driverlib/TIMER): Peripheral does not retain register contents in STOP or STANDBY modes. User should take care to save and restore register configuration in application. See Retention Configuration section for more details.
 Generating Code (empty.syscfg)...
-Unchanged D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.c...
-Unchanged D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\ti_msp_dl_config.h...
-Unchanged D:\profiles\TI\M0_SDK\mspm0_sdk_2_05_01_00\EDC_ti\Template\Event.dot...
+Unchanged D:\TI\mspm0_sdk_2_05_00_05\EDC_ti\Template\ti_msp_dl_config.c...
+Unchanged D:\TI\mspm0_sdk_2_05_00_05\EDC_ti\Template\ti_msp_dl_config.h...
+Unchanged D:\TI\mspm0_sdk_2_05_00_05\EDC_ti\Template\Event.dot...
+compiling empty.c...
 assembling startup_mspm0g350x_uvision.s...
 compiling ti_msp_dl_config.c...
-compiling Laser_USART.c...
-compiling pid.c...
-../Utils/Delay.c(54): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   54 |         __disable_irq();
-      | ^
-../Utils/Delay.c(54): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   54 |         __disable_irq();
-      |   ^
-../Utils/Delay.c(54): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   54 |         __disable_irq();
-      |     ^
-../Utils/Delay.c(54): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   54 |         __disable_irq();
-      |       ^
-../Utils/Delay.c(55): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   55 |         current_tick = tick;
-      | ^
-../Utils/Delay.c(55): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   55 |         current_tick = tick;
-      |   ^
-../Utils/Delay.c(55): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   55 |         current_tick = tick;
-      |     ^
-../Utils/Delay.c(55): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   55 |         current_tick = tick;
-      |       ^
-../Utils/Delay.c(56): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   56 |         __enable_irq();
-      | ^
-../Utils/Delay.c(56): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   56 |         __enable_irq();
-      |   ^
-../Utils/Delay.c(56): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   56 |         __enable_irq();
-      |     ^
-../Utils/Delay.c(56): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   56 |         __enable_irq();
-      |       ^
-../Utils/Delay.c(57): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   57 |         if ((uint32_t)(current_tick - start_time) >= xms) {
-      | ^
-../Utils/Delay.c(57): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   57 |         if ((uint32_t)(current_tick - start_time) >= xms) {
-      |   ^
-../Utils/Delay.c(57): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   57 |         if ((uint32_t)(current_tick - start_time) >= xms) {
-      |     ^
-../Utils/Delay.c(57): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   57 |         if ((uint32_t)(current_tick - start_time) >= xms) {
-      |       ^
-../Utils/Delay.c(58): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   58 |             break;
-      | ^
-../Utils/Delay.c(58): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   58 |             break;
-      |   ^
-../Utils/Delay.c(58): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   58 |             break;
-      |     ^
-../Utils/Delay.c(58): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   58 |             break;
-      |       ^
-../Utils/Delay.c(58): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   58 |             break;
-      |         ^
-../Utils/Delay.c(58): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   58 |             break;
-      |           ^
-../Utils/Delay.c(59): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   59 |         }
-      | ^
-../Utils/Delay.c(59): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   59 |         }
-      |   ^
-../Utils/Delay.c(59): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   59 |         }
-      |     ^
-../Utils/Delay.c(59): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   59 |         }
-      |       ^
-../Utils/Delay.c(60): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   60 |     }
-      | ^
-../Utils/Delay.c(60): warning: treating Unicode character as whitespace [-Wunicode-whitespace]
-   60 |     }
-      |   ^
-28 warnings generated.
-compiling Delay.c...
+compiling kinematics.c...
 compiling tb6612fng.c...
+compiling Delay.c...
+compiling Initialize.c...
+compiling pid.c...
 compiling Init_SMotor.c...
 compiling Hall_Encoder.c...
-compiling SMotor.c...
-compiling kinematics.c...
-compiling Initialize.c...
-compiling empty.c...
-compiling TrackingSensor.c...
-compiling Cont_SMotor.c...
-compiling SensorProc.c...
 compiling tracking.c...
+compiling SensorProc.c...
+compiling TrackingSensor.c...
+compiling Laser_USART.c...
+compiling SMotor.c...
+compiling Cont_SMotor.c...
 compiling circle_list.c...
 compiling menu.c...
 compiling mode.c...
@@ -147,9 +62,9 @@ compiling mode_tree.c...
 compiling key.c...
 compiling OLED.c...
 linking...
-Program Size: Code=25680 RO-data=3288 RW-data=48 ZI-data=6504  
+Program Size: Code=22792 RO-data=2820 RW-data=32 ZI-data=5528  
 FromELF: creating hex file...
-".\Objects\empty_LP_MSPM0G3507_nortos_keil.axf" - 0 Error(s), 28 Warning(s).
+".\Objects\empty_LP_MSPM0G3507_nortos_keil.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -161,7 +76,7 @@ Package Vendor: TexasInstruments
 <h2>Collection of Component include folders:</h2>
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:48
 </pre>
 </body>
 </html>

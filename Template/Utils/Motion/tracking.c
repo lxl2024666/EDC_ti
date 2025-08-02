@@ -2,7 +2,7 @@
 #include "AllHeader.h"
 
 #define IRR_SPEED_HIGH  300  // 高速巡线速度
-#define IRR_SPEED_LOW   300  // 低速巡线速度
+#define IRR_SPEED_LOW   350  // 低速巡线速度
 
 // 高速PID参数
 #define IRTrack_Trun_KP_HIGH 50

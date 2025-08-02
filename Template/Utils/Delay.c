@@ -51,13 +51,13 @@ void Delay_ms(uint32_t xms)
       __enable_irq(); // 恢复中断
 
 			while(1) {
-        __disable_irq();
-        current_tick = tick;
-        __enable_irq();
-        if ((uint32_t)(current_tick - start_time) >= xms) {
-            break;
-        }
-    }
+        __disable_irq();
+        current_tick = tick;
+        __enable_irq();
+        if ((uint32_t)(current_tick - start_time) >= xms) {
+            break;
+        }
+    }
 }
 
 /**

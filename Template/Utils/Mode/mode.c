@@ -21,13 +21,15 @@ void test_dis(void)//编码器测试函数
 void test_Cordi(void)//步进电机测试函数
 {
 	YP_SMotor_Init();
-    // Implement the functionality for test_Cordi here
-	YP_SMotor_SetSpeed(30,10);
+//    // Implement the functionality for test_Cordi here
 	while(1)
 	{
-		YP_SMotor_UpdateState();
-		YP_SMotor_SetSpeed(90,10);
-		Delay_ms(10);
+	YP_SMotor_SetSpeed(180,0);
+		LSet(300);RSet(300);
+		Delay_ms(500);
+				LSet(-300);RSet(-300);
+			YP_SMotor_SetSpeed(-180,0);
+		Delay_ms(500);
 	}
 }
 
@@ -122,7 +124,9 @@ void proH_1(void)
     #ifdef MODE_DEBUG
     OLED_ShowString(0, 0, "ProH1", 8); // Display the mode name on the OLED
     #endif
-    int cn = SetCircleNum(CircleNum);
+//    int cn = SetCircleNum(CircleNum);
+		int cn = SetCircleNum(1);
+	
     YP_SMotor_Init();
     while(1)
     {
@@ -136,13 +140,15 @@ void proH_1(void)
         }
         if(!turn_func()) // Check if the robot is turning
         {
+					  DL_GPIO_setPins(LED_PORT, LED_LED0_PIN);
             lineWalking_low(); // Call the track function with a linear velocity of 0.3
         }
+				else{				DL_GPIO_clearPins(LED_PORT, LED_LED0_PIN);}
         SetLaserPosition(); // Set the laser position based on the current mode
         SetTargetCenter(); // Set the target center for the robot
         Compute_excur();
         PID_SMotor_Cont(); // Call the PID control function for the motor
-        Delay_ms(10); // Delay for 10 milliseconds   
+        Delay_ms(50); // Delay for 10 milliseconds   
         // Implement the functionality for ProH1 here
     }
 }
@@ -161,6 +167,8 @@ void proH_2(void)
         if(half_Detect() && (4 == edge)) // Check if the half detection condition is met
         {
             Break(); // Break the loop if the condition is met
+						DL_GPIO_clearPins(SMotor_IO_PORT, SMotor_IO_EN1_PIN);
+						DL_GPIO_clearPins(SMotor_IO_PORT, SMotor_IO_EN2_PIN);
             return; // Exit the function
         }
         if(!turn_func()) // Check if the robot is turning
@@ -199,20 +207,20 @@ bool turn_func(void)//第二步
     }
     if(isturn == 1) // Check if the robot is turning
     {
-			float first_dis = DisSensorToWheel * 1e-3 + nowSInedge  - 0.12;
-			float second_dis = first_dis+ DEG_TO_RAD(90) * WHEEL_DIS * 1e-3 * 0.995;
+			float first_dis = DisSensorToWheel * 1e-3 + nowSInedge  - 0.06;
+			float second_dis = first_dis+ DEG_TO_RAD(90) * WHEEL_DIS * 1e-3 * 0.8;
         if(sInedge < first_dis) // Check if the sInedge value is less than the threshold 走的远了，调这个距离
         {
-            LSet(300); // Set the left motor speed to 300//走的不够直 调着两个lspeed rspeed
-            RSet(300); // Set the right motor speed to 300
+            LSet(200); // Set the left motor speed to 300//走的不够直 调着两个lspeed rspeed
+            RSet(200); // Set the right motor speed to 300
             return true; // Return true to indicate that the robot is turning
         }
         else if(sInedge >= first_dis &&
              sInedge < second_dis )//转弯角度很低调这个
         {
 						turning = true;
-            LSet(-200); // Set the left motor speed to -300//如果转弯不够原地，调这个
-            RSet(200); // Set the right motor speed to 300
+            LSet(-120); // Set the left motor speed to -300//如果转弯不够原地，调这个
+            RSet(120); // Set the right motor speed to 300
             return true; // Return true to indicate that the robot is turning
         }
 				

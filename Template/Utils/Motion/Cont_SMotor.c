@@ -49,7 +49,12 @@ void PID_SMotor_Cont(void)
     }
     output_wpitch += cor.pitch; // 添加俯仰角校准
     output_wyaw += cor.yaw; // 添加偏航角校准
-    YP_SMotor_SetSpeed(output_wyaw, output_wpitch); // 设置舵机速度
+		
+		char message [50];	
+		snprintf(message, 50, "PID Yaw = %.2f", output_wyaw);
+		OLED_ShowString(0, 4, message, 8);
+		
+    YP_SMotor_SetSpeed( output_wyaw, output_wpitch); // 设置舵机速度
     YP_SMotor_UpdateState(); // 更新舵机状态
 }
 
@@ -86,10 +91,12 @@ void Compute_excur(void)
 {
     if(turning) 
     {
-        const float w = 182.0f; // 目标偏航角
+        const float w = 120.0f; // 目标偏航角
         cor.yaw = -w; // 计算偏航角
+				DL_GPIO_setPins(LED_PORT, LED_LED0_PIN);
 		return; // 退出函数
     }
+						DL_GPIO_clearPins(LED_PORT, LED_LED0_PIN);
     float d = getDistance(); // 获取距离
     // 计算偏差
     switch(edge % 4)
